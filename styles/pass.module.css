@@ -1,0 +1,183 @@
+@import url("https://fonts.googleapis.com/css2?family=Staatliches&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap");
+
+.html {
+  height: 100vh;
+  display: grid;
+  font-family: "Staatliches", cursive;
+  background: #d83565;
+  color: black;
+  font-size: 14px;
+  letter-spacing: 0.1em;
+}
+
+.ticket {
+  margin: auto;
+  display: flex;
+  background: white;
+  flex-direction: column;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+.left {
+  display: flex;
+}
+
+.image {
+  height: 250px;
+  width: 250px;
+  background-image: url("../public/asees1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0.85;
+}
+
+.admit {
+  position: absolute;
+  color: darkgray;
+  height: 250px;
+  padding: 0 10px;
+  letter-spacing: 0.15em;
+  display: flex;
+  text-align: center;
+  justify-content: space-around;
+  writing-mode: vertical-rl;
+  transform: rotate(-180deg);
+}
+
+.admit span:nth-child(2) {
+  color: white;
+  font-weight: 700;
+}
+
+.left .ticket-number {
+  height: 250px;
+  width: 250px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding: 5px;
+}
+
+.ticketinfo {
+  padding: 10px 30px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.date {
+  border-top: 1px solid gray;
+  border-bottom: 1px solid gray;
+  padding: 5px 0;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.date span {
+  width: 100px;
+}
+
+.date span:first-child {
+  text-align: left;
+}
+
+.date span:last-child {
+  text-align: right;
+}
+
+.date .june-29 {
+  color: #d83565;
+  font-size: 20px;
+}
+
+.showname {
+  font-size: 32px;
+  font-family: "Nanum Pen Script", cursive;
+  color: #d83565;
+}
+
+.showname h1 {
+  font-size: 48px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: #4a437e;
+}
+
+.time {
+  padding: 10px 0;
+  color: #4a437e;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-weight: 700;
+}
+
+.time span {
+  font-weight: 400;
+  color: gray;
+}
+
+.left .time {
+  font-size: 16px;
+}
+
+.location {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  padding-top: 8px;
+  border-top: 1px solid gray;
+}
+
+.location .separator {
+  font-size: 20px;
+}
+
+.right {
+  width: 180px;
+  border-left: 1px dashed #404040;
+}
+
+.right .admit-one {
+  color: darkgray;
+}
+
+.right .admit span:nth-child(2) {
+  color: gray;
+}
+
+.right .rightinfo {
+  height: auto;
+  padding: 10px 10px 10px 35px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.right .showname h1 {
+  font-size: 18px;
+}
+
+.barcode {
+  height: 100px;
+}
+
+.barcode :nth-child(1) {
+  color: #d83565;
+}
+.barcode :nth-child(3) {
+  color: #4a437e;
+}
+
+.right .ticket-number {
+  color: gray;
+}

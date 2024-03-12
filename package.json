@@ -1,0 +1,56 @@
+{
+  "name": "samavesh-x-vassaunt",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "prepare": "husky install"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
+    "@mui/icons-material": "^5.11.0",
+    "@mui/lab": "^5.0.0-alpha.120",
+    "@mui/material": "^5.11.8",
+    "@next/font": "13.1.6",
+    "@nextui-org/react": "^1.0.0-beta.12",
+    "@react-three/fiber": "^8.11.0",
+    "axios": "^1.3.3",
+    "copy-to-clipboard": "^3.3.3",
+    "eslint": "8.33.0",
+    "eslint-config-next": "13.1.6",
+    "form": "^0.2.4",
+    "framer-motion": "^9.0.2",
+    "framer-motion-3d": "^9.0.2",
+    "jsonwebtoken": "^9.0.0",
+    "material-react-toastify": "^2.0.1",
+    "material-ui-password-field": "^2.1.2",
+    "mui-one-time-password-input": "^1.0.4",
+    "next": "13.1.6",
+    "password-field": "^1.0.6",
+    "react": "18.2.0",
+    "react-chrono": "^1.21.3",
+    "react-countdown": "^2.3.5",
+    "react-dom": "18.2.0",
+    "react-fast-marquee": "^1.3.5",
+    "react-hook-form": "^7.43.1",
+    "react-hydration-provider": "^1.0.2",
+    "react-router-dom": "^6.8.1",
+    "react-to-print": "^2.14.11",
+    "react-toastify": "^9.1.1",
+    "react-validate": "^0.2.1",
+    "three": "^0.149.0",
+    "zustand": "^4.3.2"
+  },
+  "devDependencies": {
+    "husky": "^8.0.3",
+    "lint-staged": "^13.1.1",
+    "prettier": "2.8.4"
+  },
+  "lint-staged": {
+    "**/*": "prettier --write --ignore-unknown"
+  }
+}
