@@ -9,6 +9,7 @@ import Speakers from "@/components/speakers";
 import Organisers from "@/components/organisers";
 import { Button } from "@mui/material";
 import Link from "next/link";
+import Script from "next/script";
 import Head from "next/head";
 import Caraousel from "@/components/Caraousel";
 import AppContext from "context/AppContext";
@@ -64,6 +65,39 @@ const Hero = () => {
   };
   return (
     <>
+      <Script
+        src="https://cdn.jsdelivr.net/npm/tsparticles-confetti@2.12.0/tsparticles.confetti.bundle.min.js"
+        strategy="beforeInteractive"
+      ></Script>
+      <Script id="blast_effect">
+        {`const end = Date.now() + 30 * 150;
+
+          // Google colors
+          const colors = ["#4285F4", "#0F9D58", "#F4B400", "#DB4437"];
+          
+          (function frame() {
+            confetti({
+              particleCount: 2,
+              angle: 60,
+              spread: 55,
+              origin: { x: 0 },
+              colors: colors,
+            });
+          
+            confetti({
+              particleCount: 2,
+              angle: 120,
+              spread: 55,
+              origin: { x: 1 },
+              colors: colors,
+            });
+          
+            if (Date.now() < end) {
+              requestAnimationFrame(frame);
+            }
+          })();
+          `}
+      </Script>
       <div id="home"></div>
       <Head>
         <title>Samavesh-X-Vassaunt</title>
