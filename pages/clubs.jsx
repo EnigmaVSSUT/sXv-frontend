@@ -22,7 +22,7 @@ function Clubs() {
   React.useEffect(() => {
     setLoading(true);
     axios
-      .get("https://fest-backend-p8lk.onrender.com/api/clubs/getClubs")
+      .get("https://sxv-backend.onrender.com/api/clubs/getClubs")
       .then((response) => {
         setClubs(response.data.clubs);
         // console.log(response.data.clubs);

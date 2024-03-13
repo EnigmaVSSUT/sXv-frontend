@@ -29,7 +29,7 @@ const PaymentPage = () => {
       const userToken = localStorage.getItem("token");
       const getPaymentStatus = async () => {
         const { data } = await axios.post(
-          "https://fest-backend-p8lk.onrender.com/api/payment/getpayment",
+          "https://sxv-backend.onrender.com/api/payment/getpayment",
           {},
           {
             headers: {
@@ -51,7 +51,7 @@ const PaymentPage = () => {
         }
         if (!data.link_url) {
           const { data } = await axios.post(
-            "https://fest-backend-p8lk.onrender.com/api/payment/makepayment",
+            "https://sxv-backend.onrender.com/api/payment/makepayment",
             {},
             {
               headers: {

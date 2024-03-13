@@ -4,10 +4,10 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  experimental: {
-    scrollRestoration: true,
-    scrollBehavior: true,
-  },
+  // experimental: {
+  //   scrollRestoration: true,
+  //   scrollBehavior: true,
+  // },
 };
 
 module.exports = nextConfig;

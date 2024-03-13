@@ -41,7 +41,7 @@ const ClubCard = ({ title, about, venue, time, src }) => {
       // const userToken = localStorage.getItem("token");
       // const getPaymentStatus = async () => {
       //   const { data } = await axios.post(
-      //     "https://fest-backend-p8lk.onrender.com//api/payment/getpayment",
+      //     "https://sxv-backend.onrender.com//api/payment/getpayment",
       //     {},
       //     {
       //       headers: {

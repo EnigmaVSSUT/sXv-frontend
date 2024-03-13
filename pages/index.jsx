@@ -49,7 +49,7 @@ const Hero = () => {
     console.log(token);
     if (token) {
       axios
-        .get("https://fest-backend-p8lk.onrender.com/api/ticket/genTicket", {
+        .get("https://sxv-backend.onrender.com/api/ticket/genTicket", {
           headers: { authorisation: token },
         })
         .then((data) => {

@@ -28,14 +28,11 @@ const Account = () => {
       setUser(response.data);
     });
     axios
-      .get(
-        "https://fest-backend-p8lk.onrender.com/api/events/getParticipations",
-        {
-          headers: {
-            authorisation: localStorage.getItem("token"),
-          },
-        }
-      )
+      .get("https://sxv-backend.onrender.com/api/events/getParticipations", {
+        headers: {
+          authorisation: localStorage.getItem("token"),
+        },
+      })
       .then((response) => {
         // console.log(response.data.events);
         setEvents(response.data.events);
