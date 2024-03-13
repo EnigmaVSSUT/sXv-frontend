@@ -9,15 +9,26 @@
   padding: 0;
   scroll-behavior: smooth;
   box-sizing: border-box;
+  /* font-family: "Righteous", sans-serif; */
   /* font-family: 'BentonSans Comp Black'; */
   /* font-family: 'bentonsans-comp-black-regular', sans-serif; */
 }
 html {
   scroll-behavior: smooth !important;
 }
-/* @font-face {
+@font-face {
   font-family: "Product Sans";
   src: url("/fonts/ProductSansRegular.ttf");
+}
+@font-face {
+  font-family: "Righteous";
+  src: url("/fonts/Righteous-400.ttf");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Tangelo";
+  src: url("/fonts/Tangelo.ttf");
 }
 
 @font-face {
@@ -28,12 +39,7 @@ html {
 @font-face {
   font-family: "BentonSans Comp Black";
   src: url("/fonts/BentonSansCompBlack.otf");
-} */
-
-/* @font-face {
-  font-family: "tangelo";
-  src: url("/fonts/BentonSansCompBlack.otf");
-} */
+}
 
 a {
   text-decoration: none;
@@ -104,29 +110,9 @@ body {
     size: 5.2in 3.36in;
   }
 }
-/* .red {
+.red {
   color: #ed1d24 !important;
 }
 .black {
   color: #000000 !important;
-} */
-
-/* color-scheme */
-.blue {
-  color: #6ac6eb !important;
-}
-.cream {
-  color: #f9efd7 !important;
-}
-.red {
-  color: #fe6651 !important;
-}
-.green {
-  color: #00af9a !important;
-}
-.purple {
-  color: #c980db !important;
-}
-.yellow {
-  color: #fccb30 !important;
 }
