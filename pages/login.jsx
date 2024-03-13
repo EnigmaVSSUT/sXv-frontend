@@ -167,6 +167,17 @@ const Form = () => {
           >
             Login
           </LoadingButton>
+
+          <Typography
+            sx={{
+              cursor: "pointer",
+              textAlign: "center",
+              textDecoration: "underline",
+            }}
+            onClick={() => {}}
+          >
+            Forget Password ?
+          </Typography>
         </Stack>
         <Box
           sx={{
