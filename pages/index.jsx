@@ -62,6 +62,13 @@ const Hero = () => {
       );
     }
   };
+
+  const time = new Date();
+  time.setMinutes(time.getMinutes() + 8);
+  time.setSeconds(time.getSeconds() + 0);
+  time.setHours(time.getHours() + 1);
+  time.setDate(time.getDate() + 12);
+
   return (
     <>
       <div id="home"></div>
@@ -109,16 +116,26 @@ const Hero = () => {
             >
               THE ANNUAL
               <br />
-              TECHNO-CULTURAL
+              <span
+                style={{
+                  backgroundColor: "#6ac6eb",
+                  color: "white",
+                  padding: "0 10px",
+                  boxShadow: "6px 6px 0px -3px #30302f",
+                }}
+              >
+                TECHNO-CULTURAL
+              </span>
               <br />
               FEST OF VSSUT
-              <Timersv />
+              <Timersv expiryTimestamp={time} />
               <Button
                 variant="contained"
                 sx={{
                   bottom: "20px",
                   fontSize: "15px",
                   padding: "10px 50px",
+                  boxShadow: "6px 6px 0px -3px #30302f",
                 }}
                 onClick={() => {
                   GenTicket();

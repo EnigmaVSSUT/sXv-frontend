@@ -220,6 +220,7 @@ const Header = () => {
                 </Link>
               </Typography>
             </ListItem>
+
             <ListItem>
               <Typography variant="nav">
                 <Link href="/#theme" onClick={() => setOpen(false)}>
@@ -227,6 +228,7 @@ const Header = () => {
                 </Link>
               </Typography>
             </ListItem>
+
             <ListItem>
               <Typography variant="nav">
                 <Link href="/events" onClick={() => setOpen(false)}>
@@ -234,6 +236,7 @@ const Header = () => {
                 </Link>
               </Typography>
             </ListItem>
+
             <ListItem>
               <Typography variant="nav">
                 <Link href="/clubs" onClick={() => setOpen(false)}>
@@ -241,6 +244,7 @@ const Header = () => {
                 </Link>
               </Typography>
             </ListItem>
+
             <ListItem>
               <Typography variant="nav">
                 <Link href="/#sponsors" onClick={() => setOpen(false)}>
@@ -248,6 +252,7 @@ const Header = () => {
                 </Link>
               </Typography>
             </ListItem>
+
             <ListItem>
               <Typography variant="nav">
                 <Link href="/#organisers" onClick={() => setOpen(false)}>
@@ -255,6 +260,7 @@ const Header = () => {
                 </Link>
               </Typography>
             </ListItem>
+
             <ListItem>
               <Typography variant="nav">
                 <Link href="/ContactUs" onClick={() => setOpen(false)}>
@@ -262,6 +268,7 @@ const Header = () => {
                 </Link>
               </Typography>
             </ListItem>
+
             <ListItem>
               <Button
                 variant="contained"
