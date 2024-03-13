@@ -51,7 +51,7 @@ const ClubPage = () => {
     // )
   }, [club]);
   const getDownloadUrl = (dUrl) => {
-    let downloadUrl = `https://drive.google.com/uc?export=download&id=${
+    let downloadUrl = ` https://drive.google.com/thumbnail?id=${
       dUrl?.split("/")[5]
     }`;
     return downloadUrl;
