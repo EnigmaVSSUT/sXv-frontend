@@ -2,6 +2,8 @@
 @import url(//db.onlinewebfonts.com/c/282c8e780436765ea68a4dd5f89256fb?family=Formula+Condensed);
 @import url(//db.onlinewebfonts.com/c/05093c1553c8ca12edeb59994bedc772?family=Product+Sans);
 @import url(//db.onlinewebfonts.com/c/5719adfbee8edfbb73d99a70e46fd4f8?family=Product+Sans+Thin); */
+@import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -13,7 +15,7 @@
 html {
   scroll-behavior: smooth !important;
 }
-@font-face {
+/* @font-face {
   font-family: "Product Sans";
   src: url("/fonts/ProductSansRegular.ttf");
 }
@@ -26,7 +28,12 @@ html {
 @font-face {
   font-family: "BentonSans Comp Black";
   src: url("/fonts/BentonSansCompBlack.otf");
-}
+} */
+
+/* @font-face {
+  font-family: "tangelo";
+  src: url("/fonts/BentonSansCompBlack.otf");
+} */
 
 a {
   text-decoration: none;
@@ -97,9 +104,29 @@ body {
     size: 5.2in 3.36in;
   }
 }
-.red {
+/* .red {
   color: #ed1d24 !important;
 }
 .black {
   color: #000000 !important;
+} */
+
+/* color-scheme */
+.blue {
+  color: #6ac6eb !important;
+}
+.cream {
+  color: #f9efd7 !important;
+}
+.red {
+  color: #fe6651 !important;
+}
+.green {
+  color: #00af9a !important;
+}
+.purple {
+  color: #c980db !important;
+}
+.yellow {
+  color: #fccb30 !important;
 }
