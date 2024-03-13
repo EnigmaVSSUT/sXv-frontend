@@ -14,7 +14,7 @@ function Clubs() {
   const [clubs, setClubs] = useState([]);
   const [loading, setLoading] = useState(false);
   const getDownloadUrl = (dUrl) => {
-    let downloadUrl = `https://drive.google.com/uc?export=download&id=${
+    let downloadUrl = `https://drive.google.com/thumbnail?id=${
       dUrl?.split("/")[5]
     }`;
     return downloadUrl;
@@ -22,7 +22,7 @@ function Clubs() {
   React.useEffect(() => {
     setLoading(true);
     axios
-      .get("https://fest-backend-p8lk.onrender.com/api/clubs/getClubs")
+      .get("https://sxv-backend.onrender.com/api/clubs/getClubs")
       .then((response) => {
         setClubs(response.data.clubs);
         // console.log(response.data.clubs);

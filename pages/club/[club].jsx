@@ -25,7 +25,7 @@ const ClubPage = () => {
     // console.log(router.query.club);
     axios
       .get(
-        `https://fest-backend-p8lk.onrender.com/api/clubs/getClubDetailsById/${router.query.club}`
+        `https://sxv-backend.onrender.com/api/clubs/getClubDetailsById/${router.query.club}`
       )
       .then((response) => {
         // console.log(response.data.club[0]);
@@ -33,7 +33,7 @@ const ClubPage = () => {
       });
     axios
       .get(
-        `https://fest-backend-p8lk.onrender.com/api/events/getEventsByClub/${router.query.club}`
+        `https://sxv-backend.onrender.com/api/events/getEventsByClub/${router.query.club}`
       )
       .then((response) => {
         // console.log(response.data)
@@ -43,15 +43,15 @@ const ClubPage = () => {
 
   useEffect(() => {
     // console.log(router);
-    // axios.get(`https://fest-backend-p8lk.onrender.com//api/clubs/getClubDetailsById/${router.query.club}`).then((response) => {
+    // axios.get(`https://sxv-backend.onrender.com//api/clubs/getClubDetailsById/${router.query.club}`).then((response) => {
     //   setClubFetched(response.data.club)
     // })
-    // axios.get(`https://fest-backend-p8lk.onrender.com//api/clubs/getEventsByClub/${router.query.club}`).then(response =>
+    // axios.get(`https://sxv-backend.onrender.com//api/clubs/getEventsByClub/${router.query.club}`).then(response =>
     //   setEvents(response.data.events)
     // )
   }, [club]);
   const getDownloadUrl = (dUrl) => {
-    let downloadUrl = `https://drive.google.com/uc?export=download&id=${
+    let downloadUrl = ` https://drive.google.com/thumbnail?id=${
       dUrl?.split("/")[5]
     }`;
     return downloadUrl;

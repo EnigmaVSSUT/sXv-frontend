@@ -18,7 +18,7 @@ const ContactUS = () => {
     } else {
       setLoading(true);
       await axios
-        .post("https://fest-backend-p8lk.onrender.com/api/contact/contactUs", {
+        .post("https://sxv-backend.onrender.com/api/contact/contactUs", {
           name,
           email,
           number,

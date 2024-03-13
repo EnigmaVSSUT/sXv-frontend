@@ -62,6 +62,14 @@ const Form = () => {
     });
   };
 
+  //confirmpassword visibility
+  const handleClickShowconfirmPassword = () => {
+    setValues({
+      ...values,
+      showconfirmPassword: !values.showconfirmPassword,
+    });
+  };
+
   const handleMouseDownPassword = (event) => {
     event.preventDefault();
   };
@@ -84,7 +92,7 @@ const Form = () => {
   const [phnnum, setPhnnum] = useState();
   const [verifyLoad, setVerifyLoad] = useState(false);
 
-  const regexExp = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+  const regexExp = /^\w+([\.-]?\w+)@\w+([\.-]?\w+)(\.\w{2,3})+$/;
 
   const handleOpen = async () => {
     if (
@@ -236,14 +244,16 @@ const Form = () => {
         />
         <link rel="shortcut icon" href="svlogo.ico" />
       </Head>
-      <Typography variant="h4" color="initial">
-        JOIN THE AVENGERS
-      </Typography>
+      <Stack sx={{ width: "100%" }} direction={"row"} justifyContent="center">
+        <Typography variant="h4" color="initial" sx={{ marginTop: "20px" }}>
+          JOIN THE CARNIVAL
+        </Typography>
+      </Stack>
       <Stack direction={{ xs: "coloumn", md: "row" }} gap="30px">
         <TextField
           required
           id="name"
-          size="small"
+          // size="small"
           label="Name"
           variant="outlined"
           value={name}
@@ -254,7 +264,7 @@ const Form = () => {
         <TextField
           required
           id="email"
-          size="small"
+          // size="small"
           label="Email"
           variant="outlined"
           value={email}
@@ -263,13 +273,40 @@ const Form = () => {
           }}
         />
       </Stack>
-      <Stack>
-        <InputLabel htmlFor="outlined-adornment-password">Password*</InputLabel>
-        <OutlinedInput
+      <Stack sx={{ direction: "column", gap: "25px" }}>
+        {/* <InputLabel htmlFor="outlined-adornment-password" >Password*</InputLabel> */}
+        <TextField
+          variant="outlined"
+          // size="small"
+          id="pwd"
+          type={values.showPassword ? "text" : "password"}
+          value={pwd}
+          onChange={(e) => {
+            setPwd(e.target.value);
+          }}
+          InputProps={{
+            endAdornment: (
+              <InputAdornment position="end">
+                <IconButton
+                  aria-label="toggle password visibility"
+                  onClick={handleClickShowPassword}
+                  onMouseDown={handleMouseDownPassword}
+                  edge="end"
+                >
+                  {values.showPassword ? <VisibilityOff /> : <Visibility />}
+                </IconButton>
+              </InputAdornment>
+            ),
+          }}
+          label="Password"
+        />
+
+        {/* <OutlinedInput
           id="pwd"
           type={values.showPassword ? "text" : "password"}
           value={pwd}
           size="small"
+          variant="outlined" 
           onChange={(e) => {
             setPwd(e.target.value);
           }}
@@ -280,18 +317,51 @@ const Form = () => {
                 onClick={handleClickShowPassword}
                 onMouseDown={handleMouseDownPassword}
                 edge="end"
+                
               >
                 {values.showPassword ? <VisibilityOff /> : <Visibility />}
               </IconButton>
             </InputAdornment>
           }
           label="Password"
+        />  */}
+
+        <TextField
+          id="cpwd"
+          label="Confirm-Password*"
+          variant="outlined"
+          // size="small"
+          type={values.showconfirmPassword ? "text" : "password"}
+          value={cpwd}
+          onChange={(e) => {
+            setCpwd(e.target.value);
+          }}
+          InputProps={{
+            endAdornment: (
+              <InputAdornment position="end">
+                <IconButton
+                  aria-label="toggle password visibility"
+                  onClick={handleClickShowconfirmPassword}
+                  onMouseDown={handleMouseDownPassword}
+                  edge="end"
+                >
+                  {values.showconfirmPassword ? (
+                    <VisibilityOff />
+                  ) : (
+                    <Visibility />
+                  )}
+                </IconButton>
+              </InputAdornment>
+            ),
+          }}
         />
 
-        <InputLabel htmlFor="outlined-adornment-password">
+        {/* <InputLabel htmlFor="outlined-adornment-password" sx={{marginTop: "28px"}}>
           Confirm-Password*
         </InputLabel>
         <OutlinedInput
+        
+          
           id="cpwd"
           size="small"
           type={values.showPassword ? "text" : "password"}
@@ -312,9 +382,9 @@ const Form = () => {
             </InputAdornment>
           }
           label="Confirm-Password"
-        />
+        /> */}
 
-        <FormControl sx={{ marginTop: "10px" }}>
+        <FormControl>
           <FormLabel id="demo-row-radio-buttons-group-label">
             Institution
           </FormLabel>
@@ -359,11 +429,11 @@ const Form = () => {
             label="Registration Number"
             variant="outlined"
             fullWidth="true"
-            size="small"
+            // size="small"
             type="number"
             value={regnum}
             sx={{
-              marginTop: "10px",
+              // marginTop: "10px",
               display: !reg ? "none" : "block",
             }}
             onChange={(e) => {
@@ -374,14 +444,14 @@ const Form = () => {
             required
             type="number"
             id="phnnum"
-            size="small"
+            // size="small"
             label="Phone-Number"
             variant="outlined"
             value={phnnum}
             fullWidth="false"
-            sx={{
-              marginTop: "10px",
-            }}
+            // sx={{
+            //   marginTop: "10px",
+            // }}
             onChange={(e) => {
               setPhnnum(e.target.value);
             }}
@@ -391,11 +461,11 @@ const Form = () => {
             id="institution-name"
             label="Institution Name"
             value={colgname}
-            size="small"
+            // size="small"
             variant="outlined"
             fullWidth="false"
             sx={{
-              marginTop: "10px",
+              // marginTop: "10px",
               display: college ? "block" : "none",
             }}
             onChange={(e) => {
@@ -403,9 +473,10 @@ const Form = () => {
             }}
           />
         </Stack>
-
-        <InputLabel id="demo-simple-select-label">Graduation-Year</InputLabel>
-        <Select
+        {/* 
+        <InputLabel id="demo-simple-select-label"  variant="standard" sx={{marginTop:"28px"}}>Graduation-Year</InputLabel> */}
+        {/* <Select
+          variant="outlined"
           labelId="demo-simple-select-label"
           id="demo-simple-select"
           value={year}
@@ -416,24 +487,42 @@ const Form = () => {
           }}
           fullWidth="false"
         >
-          <MenuItem value={2023}>2023</MenuItem>
+          
           <MenuItem value={2024}>2024</MenuItem>
           <MenuItem value={2025}>2025</MenuItem>
           <MenuItem value={2026}>2026</MenuItem>
           <MenuItem value={2027}>2027</MenuItem>
+          <MenuItem value={2027}>2028</MenuItem>
           <MenuItem value={2028}>Other</MenuItem>
-        </Select>
+        </Select> */}
+        <FormControl fullWIdth>
+          <InputLabel id="demo-simple-select-label">Graduation-Year</InputLabel>
+          <Select
+            // size="medium"
+            labelId="demo-simple-select-label"
+            id="demo-simple-select"
+            value={year}
+            label="Graduation-year"
+            onChange={(e) => {
+              setYear(e.target.value);
+            }}
+          >
+            <MenuItem value={2024}>2024</MenuItem>
+            <MenuItem value={2025}>2025</MenuItem>
+            <MenuItem value={2026}>2026</MenuItem>
+            <MenuItem value={2027}>2027</MenuItem>
+            <MenuItem value={2027}>2028</MenuItem>
+            <MenuItem value={2028}>Other</MenuItem>
+          </Select>
+        </FormControl>
 
         <TextField
           required
           id="branch"
-          size="small"
+          // size="small"
           label="Branch"
           variant="outlined"
           value={branch}
-          sx={{
-            marginTop: "10px",
-          }}
           onChange={(e) => {
             setBranch(e.target.value);
           }}
