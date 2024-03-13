@@ -58,6 +58,14 @@ const Form = () => {
     });
   };
 
+  //confirm password visibility
+  const handleClickShowcnfPassword = () => {
+    setValues({
+      ...values,
+      showcnfPassword: !values.showcnfPassword,
+    });
+  };
+
   const handleMouseDownPassword = (event) => {
     event.preventDefault();
   };
@@ -69,7 +77,7 @@ const Form = () => {
     setLoading(true);
     // console.log({ email: email }, { password: pwd });
     const { data } = await axios.post(
-      "https://sxv-backend.onrender.com/api/auth/login",
+      "https://fest-backend-p8lk.onrender.com/api/auth/login",
       { email: email, password: pwd },
       {
         headers: {
@@ -111,7 +119,7 @@ const Form = () => {
         <Stack
           //   maxWidth="550px"
           height="auto"
-          padding="25px"
+          padding="20px"
           margin="0 auto"
           gap="25px"
           alignItems="center"
@@ -124,26 +132,26 @@ const Form = () => {
           <Typography
             variant="h3"
             color="initial"
-            sx={{ marginTop: "80px", marginBottom: "45px" }}
+            sx={{ marginTop: "111px", marginBottom: "28px" }}
           >
-            Login
+            Set a new password
           </Typography>
-          <TextField
-            sx={{ width: "80%" }}
+          {/* <TextField
+          sx={{width:"80%"}}
             required
             id="name"
-            label="Email"
+            label="New Password"
             variant="outlined"
             value={email}
             size="small"
             onChange={(e) => {
               setEmail(e.target.value);
             }}
-          />
-          <Stack sx={{ marginTop: "10px", width: "80%" }}>
+          /> */}
+          <Stack sx={{ width: "80%", direction: "column", gap: "28px" }}>
             <TextField
               id="pwd"
-              label="Password*"
+              label="New Password*"
               type={values.showPassword ? "text" : "password"}
               value={pwd}
               size="small"
@@ -161,6 +169,37 @@ const Form = () => {
                       edge="end"
                     >
                       {values.showPassword ? <VisibilityOff /> : <Visibility />}
+                    </IconButton>
+                  </InputAdornment>
+                ),
+              }}
+            />
+
+            {/* <Stack sx={{ marginTop: "10px",width:"80%"}}> */}
+            <TextField
+              id="pwd"
+              label="Confirm Password*"
+              type={values.showPassword ? "text" : "password"}
+              value={pwd}
+              size="small"
+              onChange={(e) => {
+                setPwd(e.target.value);
+              }}
+              variant="outlined" // Set the variant to outlined here
+              InputProps={{
+                endAdornment: (
+                  <InputAdornment position="end">
+                    <IconButton
+                      aria-label="toggle password visibility"
+                      onClick={handleClickShowcnfPassword}
+                      onMouseDown={handleMouseDownPassword}
+                      edge="end"
+                    >
+                      {values.showcnfPassword ? (
+                        <VisibilityOff />
+                      ) : (
+                        <Visibility />
+                      )}
                     </IconButton>
                   </InputAdornment>
                 ),
@@ -196,9 +235,9 @@ const Form = () => {
             loading={loading}
             variant="contained"
             onClick={() => submit(email, pwd)}
-            sx={{ width: "80%", marginTop: "10px" }}
+            sx={{ width: "80%", marginTop: "10px", marginBottom: "80px" }}
           >
-            Login
+            Submit
           </LoadingButton>
         </Stack>
         <Box
@@ -208,15 +247,7 @@ const Form = () => {
               md: "block",
             },
           }}
-        >
-          <Image
-            alt="helper image"
-            src="/login/login.png"
-            height="400"
-            width="400"
-            sx={{}}
-          />
-        </Box>
+        ></Box>
       </Stack>
     </Stack>
   );
