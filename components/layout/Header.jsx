@@ -49,7 +49,7 @@ const Header = () => {
       <Typography
         sx={{
           color: "#C0000A",
-          fontFamily: "BentonSans Comp Black",
+          fontFamily: "Tangelo",
           fontSize: "1.7rem",
         }}
       >
@@ -73,25 +73,25 @@ const Header = () => {
         }}
       >
         <Typography variant="nav">
-          <Link href="/#home">HOME</Link>
+          <Link href="/#home">Home</Link>
         </Typography>
         <Typography variant="nav">
-          <Link href="/#theme">THEME</Link>
+          <Link href="/#theme">Theme</Link>
         </Typography>
         <Typography variant="nav">
-          <Link href="/events">EVENTS</Link>
+          <Link href="/events">Events</Link>
         </Typography>
         <Typography variant="nav">
-          <Link href="/clubs">COMMITTEES</Link>
+          <Link href="/clubs">Committies</Link>
         </Typography>
         <Typography variant="nav">
-          <Link href="/#sponsors">SPONSORS</Link>
+          <Link href="/#sponsors">Sponsors</Link>
         </Typography>
         <Typography variant="nav">
-          <Link href="/#organisers">THE TEAM</Link>
+          <Link href="/#organisers">The Team</Link>
         </Typography>
         <Typography variant="nav">
-          <Link href="/ContactUs">CONTACT US</Link>
+          <Link href="/ContactUs">Contact Us</Link>
         </Typography>
       </Box>
       <Box>
@@ -110,15 +110,31 @@ const Header = () => {
             >
               <Button
                 variant="contained"
-                sx={{ borderRadius: "20px", marginRight: "10px" }}
+                sx={{
+                  borderRadius: "20px",
+                  marginRight: "10px",
+                  boxShadow: "4px 4px 0px -2px #30302f",
+                  "&:hover": {
+                    boxShadow: "4px 4px 0px -2px #30302f",
+                  },
+                }}
               >
                 Register
               </Button>
             </Link>
 
             <Link hidden={router.pathname === "/login"} href="/login">
-              <Button variant="contained" sx={{ borderRadius: "20px" }}>
-                Login
+              <Button
+                variant="contained"
+                sx={{
+                  borderRadius: "20px",
+                  boxShadow: "4px 4px 0px -2px #30302f",
+                  "&:hover": {
+                    boxShadow: "4px 4px 0px -2px #30302f",
+                  },
+                }}
+              >
+                Log In
               </Button>
             </Link>
           </Box>

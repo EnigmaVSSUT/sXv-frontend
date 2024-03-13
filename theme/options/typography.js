@@ -6,44 +6,46 @@ const typographyOptions = {
   },
   nav: {
     fontSize: "1rem",
-    fontWeight: 800,
-    fontFamily: "Product sans",
+    // fontWeight: 800,
+    fontFamily: "Righteous",
+    fontWeight: 400,
+    // textTransform:"capitalize"
   },
   h1: {
     fontSize: "96px",
-    fontFamily: "American Captain",
+    fontFamily: "Tangelo",
   },
   h2: {
     fontSize: "64px",
-    fontFamily: "American Captain",
+    fontFamily: "Tangelo",
   },
   h3: {
     fontSize: "48px",
-    fontFamily: "American Captain",
+    fontFamily: "Tangelo",
   },
   h4: {
     fontSize: "40px",
-    fontFamily: "American Captain",
+    fontFamily: "Tangelo",
   },
   h5: {
     fontSize: "36px",
-    fontFamily: "American Captain",
+    fontFamily: "Tangelo",
   },
   h6: {
     fontSize: "32px",
-    fontFamily: "American Captain",
+    fontFamily: "Tangelo",
   },
   overline: {
     fontWeight: 600,
   },
   ACTitle: {
     fontSize: "20px",
-    fontFamily: "American Captain",
+    fontFamily: "Tangelo",
     textTransform: "uppercase",
   },
   ACLabel: {
     fontSize: "16px",
-    fontFamily: "American Captain",
+    fontFamily: "Tangelo",
     textTransform: "uppercase",
   },
 };

@@ -170,6 +170,9 @@ const Hero = () => {
                   fontSize: "15px",
                   padding: "10px 50px",
                   boxShadow: "6px 6px 0px -3px #30302f",
+                  "&:hover": {
+                    boxShadow: "6px 6px 0px -3px #30302f",
+                  },
                 }}
                 onClick={() => {
                   GenTicket();
