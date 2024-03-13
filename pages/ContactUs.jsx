@@ -69,11 +69,16 @@ const ContactUS = () => {
             Contact Us
           </Typography>
           <Stack
+            sx={{ marginBottom: "170px", marginTop: "30px" }}
             direction={{ xs: "column-reverse", md: "row" }}
             gap="40px"
             justifyContent="center"
           >
-            <Stack padding="18px" border="1px solid grey" borderRadius="5px">
+            <Stack
+              padding="18px"
+              border="1px solid grey"
+              sx={{ boxShadow: "12px 14px  #00AF9A , 12px 13px 0 2px #000000" }}
+            >
               <Typography variant="h4" color="primary">
                 Event Location
               </Typography>
@@ -144,7 +149,7 @@ const ContactUS = () => {
                 onClick={submitQuery}
                 loading={loading}
                 variant="contained"
-                sx={{ width: "100%" }}
+                sx={{ width: "100%", boxShadow: "2px 4px  #000000" }}
               >
                 Submit
               </LoadingButton>

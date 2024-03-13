@@ -107,33 +107,66 @@ const Form = () => {
         alignItems="center"
       >
         <ToastContainer />
+
         <Stack
           //   maxWidth="550px"
           height="auto"
           padding="25px"
           margin="0 auto"
           gap="25px"
+          alignItems="center"
           sx={{
             width: {
               md: "500px",
             },
           }}
         >
-          <Typography variant="h3" color="initial">
-            Login :
+          <Typography
+            variant="h3"
+            color="initial"
+            sx={{ marginTop: "80px", marginBottom: "45px" }}
+          >
+            Login
           </Typography>
           <TextField
+            sx={{ width: "80%" }}
             required
             id="name"
             label="Email"
             variant="outlined"
             value={email}
+            size="small"
             onChange={(e) => {
               setEmail(e.target.value);
             }}
           />
-          <Stack sx={{ marginTop: "10px" }}>
-            <InputLabel htmlFor="outlined-adornment-password">
+          <Stack sx={{ marginTop: "10px", width: "80%" }}>
+            <TextField
+              id="pwd"
+              label="Password*"
+              type={values.showPassword ? "text" : "password"}
+              value={pwd}
+              size="small"
+              onChange={(e) => {
+                setPwd(e.target.value);
+              }}
+              variant="outlined" // Set the variant to outlined here
+              InputProps={{
+                endAdornment: (
+                  <InputAdornment position="end">
+                    <IconButton
+                      aria-label="toggle password visibility"
+                      onClick={handleClickShowPassword}
+                      onMouseDown={handleMouseDownPassword}
+                      edge="end"
+                    >
+                      {values.showPassword ? <VisibilityOff /> : <Visibility />}
+                    </IconButton>
+                  </InputAdornment>
+                ),
+              }}
+            />
+            {/* <InputLabel htmlFor="outlined-adornment-password">
               Password*
             </InputLabel>
             <OutlinedInput
@@ -157,16 +190,17 @@ const Form = () => {
                 </InputAdornment>
               }
               label="Password"
-            />
+            /> */}
           </Stack>
           <LoadingButton
             loading={loading}
             variant="contained"
             onClick={() => submit(email, pwd)}
-            sx={{ width: "100%" }}
+            sx={{ width: "80%", marginTop: "10px" }}
           >
             Login
           </LoadingButton>
+          <Typography>forgot password?</Typography>
         </Stack>
         <Box
           sx={{
