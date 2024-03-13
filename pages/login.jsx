@@ -69,7 +69,7 @@ const Form = () => {
     setLoading(true);
     // console.log({ email: email }, { password: pwd });
     const { data } = await axios.post(
-      "https://fest-backend-p8lk.onrender.com/api/auth/login",
+      "https://sxv-backend.onrender.com/api/auth/login",
       { email: email, password: pwd },
       {
         headers: {

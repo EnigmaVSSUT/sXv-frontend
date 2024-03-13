@@ -133,7 +133,7 @@ const Form = () => {
       setOtpTyped("");
       setOpen(false);
       const { data } = await axios.post(
-        "https://fest-backend-p8lk.onrender.com/api/auth/signup",
+        "https://sxv-backend.onrender.com/api/auth/signup",
         {
           username: name,
           email,
@@ -188,7 +188,7 @@ const Form = () => {
     setOtpTyped("");
     setOtpLoading(true);
     const { data } = await axios.post(
-      "https://fest-backend-p8lk.onrender.com/api/auth/sendOTP",
+      "https://sxv-backend.onrender.com/api/auth/sendOTP",
       { email },
       {
         headers: {
