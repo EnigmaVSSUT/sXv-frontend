@@ -36,16 +36,16 @@ const Caraousel = () => {
           // sx={{ height: "200px"}}
         >
           <Typography
-            variant="h2"
+            variant="h1"
             color="initial"
             mb={5}
             sx={{
-              WebkitTextStrokeColor: "#857370",
-              WebkitTextStrokeWidth: "3px",
+              // WebkitTextStrokeColor: "#000000",
+              // WebkitTextStrokeWidth: "3px",
               textAlign: "center",
               justifyContent: "center",
               strokeWidth: "3px",
-              color: "transparent",
+              color: "#000000",
               letterSpacing: "1.5px",
               marginBottom: {
                 xl: "100px",

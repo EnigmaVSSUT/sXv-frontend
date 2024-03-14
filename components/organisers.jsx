@@ -99,21 +99,56 @@ const Speakers = () => {
       >
         The Team
       </Typography>
-      <Typography
-        textAlign="center"
-        margin="20px 0"
-        variant="h3"
-        sx={{
-          fontSize: "35px",
-          lineHeight: "52px",
-          WebkitTextStrokeColor: "#857370",
-          WebkitTextStrokeWidth: "2px",
-          color: "transparent",
-          letterSpacing: "1px",
-        }}
-      >
-        Hon&apos;ble Mentions
-      </Typography>
+      <Stack sx={{ width: "auto", position: "relative", height: "125px" }}>
+        <svg
+          width="54"
+          height="62"
+          viewBox="0 0 54 62"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M54 30.9779C43.408 32.0827 37.3224 33.0991 33.5863 36.4576C29.1954 40.3906 28.1555 47.5937 27 62C25.806 47.0634 24.7275 39.9045 19.913 36.0599C16.1769 33.0549 10.1298 32.0827 0 31.0221C10.5535 29.9173 16.6776 28.9009 20.3752 25.5866C24.8046 21.6094 25.8445 14.4505 27 0C28.0785 13.3015 29.0414 20.4163 32.6234 24.526C36.2054 28.6358 42.4451 29.7847 54 30.9779Z"
+            fill="#FE6651"
+          />
+        </svg>
+
+        <Typography
+          textAlign="center"
+          margin="-25px 40px -10px 40px"
+          variant="h3"
+          sx={{
+            fontSize: {
+              xs: "28px !important",
+              sm: "35px !important",
+              md: "35px !important",
+              lg: "35px !important",
+            },
+            // border: "1px solid red",
+            // fontSize: "35px",
+            lineHeight: "52px",
+            WebkitTextStrokeColor: "#000000",
+            WebkitTextStrokeWidth: "2px",
+            color: "#FFF8E5",
+            letterSpacing: "1px",
+          }}
+        >
+          HON&apos;BLE MENTIONS
+        </Typography>
+        <svg
+          width="54"
+          height="62"
+          viewBox="0 0 54 62"
+          fill="none"
+          style={{ position: "absolute", right: "0px", bottom: "0px" }}
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M54 30.9779C43.408 32.0827 37.3224 33.0991 33.5863 36.4576C29.1954 40.3906 28.1555 47.5937 27 62C25.806 47.0634 24.7275 39.9045 19.913 36.0599C16.1769 33.0549 10.1298 32.0827 0 31.0221C10.5535 29.9173 16.6776 28.9009 20.3752 25.5866C24.8046 21.6094 25.8445 14.4505 27 0C28.0785 13.3015 29.0414 20.4163 32.6234 24.526C36.2054 28.6358 42.4451 29.7847 54 30.9779Z"
+            fill="#6AC6EB"
+          />
+        </svg>
+      </Stack>
       <Stack
         direction="column"
         marginBottom="2rem"
@@ -178,22 +213,63 @@ const Speakers = () => {
             />
           ))}
         </Stack>
-        <Typography
-          textAlign="center"
-          margin="20px 0"
-          variant="h3"
+        <Stack
           sx={{
-            WebkitTextStrokeColor: "#857370",
-            WebkitTextStrokeWidth: "2px",
-            color: "transparent",
-            fontSize: "35px",
-            lineHeight: "52px",
-            fontWeight: "100",
-            letterSpacing: "1px",
+            marginTop: "30px",
+            width: "auto",
+            position: "relative",
+            height: "125px",
           }}
         >
-          Student Bodies
-        </Typography>
+          <svg
+            width="54"
+            height="62"
+            viewBox="0 0 54 62"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M54 30.9779C43.408 32.0827 37.3224 33.0991 33.5863 36.4576C29.1954 40.3906 28.1555 47.5937 27 62C25.806 47.0634 24.7275 39.9045 19.913 36.0599C16.1769 33.0549 10.1298 32.0827 0 31.0221C10.5535 29.9173 16.6776 28.9009 20.3752 25.5866C24.8046 21.6094 25.8445 14.4505 27 0C28.0785 13.3015 29.0414 20.4163 32.6234 24.526C36.2054 28.6358 42.4451 29.7847 54 30.9779Z"
+              fill="#00AF9A"
+            />
+          </svg>
+          <Typography
+            margin="-25px 40px -10px 40px"
+            textAlign="center"
+            // margin="20px 0"
+            variant="h3"
+            sx={{
+              fontSize: {
+                xs: "28px !important",
+                sm: "35px !important",
+                md: "35px !important",
+                lg: "35px !important",
+              },
+              WebkitTextStrokeColor: "#000000",
+              WebkitTextStrokeWidth: "2px",
+              color: "#FFF8E5",
+              // fontSize: "35px",
+              lineHeight: "52px",
+              fontWeight: "100",
+              letterSpacing: "1px",
+            }}
+          >
+            STUDENT BODIES
+          </Typography>
+          <svg
+            width="54"
+            height="62"
+            viewBox="0 0 54 62"
+            fill="none"
+            style={{ position: "absolute", right: "0px", bottom: "0px" }}
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M54 30.9779C43.408 32.0827 37.3224 33.0991 33.5863 36.4576C29.1954 40.3906 28.1555 47.5937 27 62C25.806 47.0634 24.7275 39.9045 19.913 36.0599C16.1769 33.0549 10.1298 32.0827 0 31.0221C10.5535 29.9173 16.6776 28.9009 20.3752 25.5866C24.8046 21.6094 25.8445 14.4505 27 0C28.0785 13.3015 29.0414 20.4163 32.6234 24.526C36.2054 28.6358 42.4451 29.7847 54 30.9779Z"
+              fill="#C980DB"
+            />
+          </svg>
+        </Stack>
         <Stack
           margin="25px auto"
           direction="row"
