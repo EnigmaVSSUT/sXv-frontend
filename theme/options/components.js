@@ -7,7 +7,9 @@ const componentsOptions = {
     styleOverrides: {
       root: {
         width: "fit-content",
-        borderRadius: "0.3rem !important",
+        borderRadius: "0.15rem !important",
+        fontFamily: "Righteous",
+        fontWeight: 400,
       },
     },
   },

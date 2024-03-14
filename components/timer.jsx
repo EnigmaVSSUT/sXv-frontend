@@ -89,7 +89,7 @@ const Timer = () => {
             </Server>
             <Client>
               <Countdown
-                date={1677868200000}
+                date={1711045800000}
                 // date={Date.now()+50000}
                 renderer={renderer}
               />
