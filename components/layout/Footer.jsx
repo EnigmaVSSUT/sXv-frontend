@@ -17,7 +17,7 @@ const Footer = () => {
     >
       <Box
         sx={{
-          backgroundColor: "#fe6651",
+          backgroundColor: "#ed1d24",
           width: "100vw",
           height: "400px",
           display: "flex",
@@ -101,12 +101,6 @@ const Footer = () => {
               >
                 <Link href="/#speakers">GUESTS</Link>
               </Typography> */}
-              <Typography
-                variant="nav"
-                sx={{ fontSize: { xs: "1rem", md: "1.1rem" } }}
-              >
-                <Link href="/#sponsors">SPONSORS</Link>
-              </Typography>
               <Typography
                 variant="nav"
                 sx={{ fontSize: { xs: "1rem", md: "1.1rem" } }}

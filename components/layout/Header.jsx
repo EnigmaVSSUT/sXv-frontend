@@ -126,19 +126,7 @@ const Header = () => {
             Committies
           </Link>
         </Typography>
-        <Typography variant="nav">
-          <Link
-            href="/#sponsors"
-            onClick={() => {
-              setLink("/#sponsors");
-            }}
-            style={{
-              color: link === "/#sponsors" ? "#ed1d24" : "black",
-            }}
-          >
-            Sponsors
-          </Link>
-        </Typography>
+
         <Typography variant="nav">
           <Link
             href="/#organisers"
