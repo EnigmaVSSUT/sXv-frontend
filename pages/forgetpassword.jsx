@@ -34,8 +34,9 @@ const Form = () => {
   const { isAuthenticated, setIsAuthenticated } = React.useContext(AppContext);
   const [loading, setLoading] = useState(false);
 
-  const [email, setEmail] = useState("");
   const [pwd, setPwd] = useState("");
+  const [cnfpwd, setCnfpwd] = useState("");
+
   const router = useRouter();
   useEffect(() => {
     if (isAuthenticated) {
@@ -44,12 +45,11 @@ const Form = () => {
   });
 
   const [values, setValues] = React.useState({
-    amount: "",
     password: "",
-    weight: "",
-    weightRange: "",
     showPassword: false,
+    showCnfPassword: false,
   });
+
   //password visibility
   const handleClickShowPassword = () => {
     setValues({
@@ -62,7 +62,7 @@ const Form = () => {
   const handleClickShowcnfPassword = () => {
     setValues({
       ...values,
-      showcnfPassword: !values.showcnfPassword,
+      showCnfPassword: !values.showCnfPassword,
     });
   };
 
@@ -70,44 +70,40 @@ const Form = () => {
     event.preventDefault();
   };
 
-  const submit = async (email, pwd) => {
-    if (!pwd || !email) {
-      return toast.warning("All field must be filled");
-    }
-    setLoading(true);
-    // console.log({ email: email }, { password: pwd });
-    const { data } = await axios.post(
-      "https://fest-backend-p8lk.onrender.com/api/auth/login",
-      { email: email, password: pwd },
-      {
-        headers: {
-          Accept: "application/json",
-          "Access-Control-Allow-Origin": "*",
-          "Content-Type": "application/json",
-        },
+  const submit = async (pwd, cnfpwd) => {
+    try {
+      if (pwd !== cnfpwd) {
+        return toast.warning("Passwords don't match. Please retry!");
       }
-    );
-    if (await data.success) {
-      toast.success("Login Sucessful");
-
-      localStorage.setItem("token", await data.token);
-      setIsAuthenticated(true);
-      // router.push("/");
-      router.back();
-      setPwd("");
-      setEmail("");
-    } else {
-      toast.error("Credentials not matching");
+      if (!pwd || !cnfpwd) {
+        return toast.warning("Passwords fields are empty");
+      }
+      setLoading(true);
+      const token = router.query.token;
+      console.log(pwd, token);
+      const message = await axios.post(
+        "http://localhost:8000/api/password/changepassword",
+        {
+          password: pwd,
+          token: token,
+        },
+        {
+          headers: {
+            Accept: "application/json",
+            "Access-Control-Allow-Origin": "*",
+            "Content-Type": "application/json",
+          },
+        }
+      );
+      console.log(message);
+      toast.success("Password changed Successfully");
+      setLoading(false);
+    } catch (error) {
+      toast.error(error);
     }
-    setLoading(false);
   };
   return (
     <Stack direction="row" justifyContent="center">
-      <Head>
-        <title>Login</title>
-        <meta name="Login Page" content="Meta description for the Home page" />
-        <link rel="shortcut icon" href="svlogo.ico" />
-      </Head>
       <Stack
         width="90%"
         direction="row"
@@ -117,7 +113,6 @@ const Form = () => {
         <ToastContainer />
 
         <Stack
-          //   maxWidth="550px"
           height="auto"
           padding="20px"
           margin="0 auto"
@@ -136,18 +131,6 @@ const Form = () => {
           >
             Set a new password
           </Typography>
-          {/* <TextField
-          sx={{width:"80%"}}
-            required
-            id="name"
-            label="New Password"
-            variant="outlined"
-            value={email}
-            size="small"
-            onChange={(e) => {
-              setEmail(e.target.value);
-            }}
-          /> */}
           <Stack sx={{ width: "80%", direction: "column", gap: "28px" }}>
             <TextField
               id="pwd"
@@ -158,7 +141,7 @@ const Form = () => {
               onChange={(e) => {
                 setPwd(e.target.value);
               }}
-              variant="outlined" // Set the variant to outlined here
+              variant="outlined"
               InputProps={{
                 endAdornment: (
                   <InputAdornment position="end">
@@ -175,17 +158,16 @@ const Form = () => {
               }}
             />
 
-            {/* <Stack sx={{ marginTop: "10px",width:"80%"}}> */}
             <TextField
               id="pwd"
               label="Confirm Password*"
-              type={values.showPassword ? "text" : "password"}
-              value={pwd}
+              type={values.showCnfPassword ? "text" : "password"}
+              value={cnfpwd}
               size="small"
               onChange={(e) => {
-                setPwd(e.target.value);
+                setCnfpwd(e.target.value);
               }}
-              variant="outlined" // Set the variant to outlined here
+              variant="outlined"
               InputProps={{
                 endAdornment: (
                   <InputAdornment position="end">
@@ -195,7 +177,7 @@ const Form = () => {
                       onMouseDown={handleMouseDownPassword}
                       edge="end"
                     >
-                      {values.showcnfPassword ? (
+                      {values.showCnfPassword ? (
                         <VisibilityOff />
                       ) : (
                         <Visibility />
@@ -205,37 +187,22 @@ const Form = () => {
                 ),
               }}
             />
-            {/* <InputLabel htmlFor="outlined-adornment-password">
-              Password*
-            </InputLabel>
-            <OutlinedInput
-              id="pwd"
-              type={values.showPassword ? "text" : "password"}
-              value={pwd}
-              size="small"
-              onChange={(e) => {
-                setPwd(e.target.value);
-              }}
-              endAdornment={
-                <InputAdornment position="end">
-                  <IconButton
-                    aria-label="toggle password visibility"
-                    onClick={handleClickShowPassword}
-                    onMouseDown={handleMouseDownPassword}
-                    edge="end"
-                  >
-                    {values.showPassword ? <VisibilityOff /> : <Visibility />}
-                  </IconButton>
-                </InputAdornment>
-              }
-              label="Password"
-            /> */}
           </Stack>
           <LoadingButton
             loading={loading}
             variant="contained"
-            onClick={() => submit(email, pwd)}
-            sx={{ width: "80%", marginTop: "10px", marginBottom: "80px" }}
+            onClick={() => submit(pwd, cnfpwd)}
+            sx={{
+              width: "80%",
+              marginTop: "10px",
+              marginBottom: "80px",
+              borderRadius: "20px",
+              marginRight: "10px",
+              boxShadow: "4px 4px 0px -2px #30302f",
+              "&:hover": {
+                boxShadow: "4px 4px 0px -2px #30302f",
+              },
+            }}
           >
             Submit
           </LoadingButton>

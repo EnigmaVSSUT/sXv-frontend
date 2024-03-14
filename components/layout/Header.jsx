@@ -14,7 +14,7 @@ import PersonIcon from "@mui/icons-material/Person";
 import MenuIcon from "@mui/icons-material/Menu";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import Link from "next/link";
-import { useState, useContext } from "react";
+import { useState, useContext, useEffect } from "react";
 import AppContext from "context/AppContext";
 import { useRouter } from "next/router";
 
@@ -27,7 +27,7 @@ const Header = () => {
     setIsAuthenticated(false);
     router.push("/");
   };
-  const [link, setLink] = useState("Home");
+  const [link, setLink] = useState(router.asPath);
   return (
     <AppBar
       sx={{
@@ -77,10 +77,11 @@ const Header = () => {
           <Link
             href="/#home"
             onClick={() => {
-              setLink("Home");
+              setLink("/#home");
+              console.log(router.asPath);
             }}
             style={{
-              color: link === "Home" ? "#ed1d24" : "black",
+              color: link === "/#home" ? "#ed1d24" : "black",
             }}
           >
             Home
@@ -90,10 +91,10 @@ const Header = () => {
           <Link
             href="/#theme"
             onClick={() => {
-              setLink("Theme");
+              setLink("/#theme");
             }}
             style={{
-              color: link === "Theme" ? "#ed1d24" : "black",
+              color: link === "/#theme" ? "#ed1d24" : "black",
             }}
           >
             Theme
@@ -103,10 +104,10 @@ const Header = () => {
           <Link
             href="/events"
             onClick={() => {
-              setLink("Events");
+              setLink("/events");
             }}
             style={{
-              color: link === "Events" ? "#ed1d24" : "black",
+              color: link === "/events" ? "#ed1d24" : "black",
             }}
           >
             Events
@@ -116,10 +117,10 @@ const Header = () => {
           <Link
             href="/clubs"
             onClick={() => {
-              setLink("Committies");
+              setLink("/clubs");
             }}
             style={{
-              color: link === "Committies" ? "#ed1d24" : "black",
+              color: link === "/clubs" ? "#ed1d24" : "black",
             }}
           >
             Committies
@@ -129,10 +130,10 @@ const Header = () => {
           <Link
             href="/#sponsors"
             onClick={() => {
-              setLink("Sponsors");
+              setLink("/#sponsors");
             }}
             style={{
-              color: link === "Sponsors" ? "#ed1d24" : "black",
+              color: link === "/#sponsors" ? "#ed1d24" : "black",
             }}
           >
             Sponsors
@@ -142,10 +143,10 @@ const Header = () => {
           <Link
             href="/#organisers"
             onClick={() => {
-              setLink("The Team");
+              setLink("/#organisers");
             }}
             style={{
-              color: link === "The Team" ? "#ed1d24" : "black",
+              color: link === "/#organisers" ? "#ed1d24" : "black",
             }}
           >
             The Team
@@ -155,10 +156,10 @@ const Header = () => {
           <Link
             href="/ContactUs"
             onClick={() => {
-              setLink("Contact Us");
+              setLink("/ContactUs");
             }}
             style={{
-              color: link === "Contact Us" ? "#ed1d24" : "black",
+              color: link === "/ContactUs" ? "#ed1d24" : "black",
             }}
           >
             Contact Us

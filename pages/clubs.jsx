@@ -11,10 +11,13 @@ import AppContext from "context/AppContext";
 // Import Image component from 'next/image'
 import Image from "next/image";
 import { useContext } from "react";
+import { useRouter } from "next/router";
+
 function Clubs() {
   const ref = useRef();
   const { setClub } = useContext(AppContext);
   const [clubs, setClubs] = useState([]);
+  const router = useRouter();
   const [loading, setLoading] = useState(false);
   const getDownloadUrl = (dUrl) => {
     let downloadUrl = `https://drive.google.com/thumbnail?id=${
@@ -90,6 +93,10 @@ function Clubs() {
                 // border: "1px solid black",
                 width: "100%",
                 margin: "3rem 0",
+                cursor: "pointer",
+              }}
+              onClick={() => {
+                router.push(`/club/${club._id}`);
               }}
             >
               <Stack
