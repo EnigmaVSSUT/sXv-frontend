@@ -22,7 +22,7 @@ const SmallCard = ({
           boxShadow: "12px 14px  #9747FF , 12px 13px 0 1px #000000",
         }}
       >
-        <Box sx={{ border: "1.5px solid black", width: "23%", height: "55%" }}>
+        <Box sx={{ border: "5px solid black", width: "23%", height: "55%" }}>
           <img src={eventimageurl} width="100%" height="100%"></img>
         </Box>
         <Box sx={{ display: "flex", flexDirection: "column", gap: "5px" }}>
