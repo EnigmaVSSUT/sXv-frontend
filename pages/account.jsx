@@ -53,6 +53,7 @@ const Account = () => {
           gap="40px"
           justifyContent="center"
           alignItems="center"
+          // sx={{fontFamily:"Righteous"}}
         >
           <ToastContainer />
           <Head>
@@ -63,17 +64,28 @@ const Account = () => {
             />
             <link rel="shortcut icon" href="svlogo.ico" />
           </Head>
-          <Grid>
+          <Grid
+          // sx={{fontFamily:'Righteous'}}
+          >
             <Typography variant="h5">
-              Name : <span className="red">{user?.username} </span>
+              <span className="red">Name : </span> {user?.username}
             </Typography>
-            <Typography variant="h5">Institution : {user?.college}</Typography>
-            <Typography variant="h5">Branch : {user?.branch}</Typography>
             <Typography variant="h5">
-              Graduation Year : {user?.graduationYear}
+              <span className="red">Institution :</span> {user?.college}
             </Typography>
-            <Typography variant="h5">email: {user?.email}</Typography>
-            <Typography variant="h5">number : {user?.phone}</Typography>
+            <Typography variant="h5">
+              <span className="red">Branch :</span> {user?.branch}
+            </Typography>
+            <Typography variant="h5">
+              <span className="red">Graduation Year :</span>{" "}
+              {user?.graduationYear}
+            </Typography>
+            <Typography variant="h5">
+              <span className="red">email: </span> {user?.email}
+            </Typography>
+            <Typography variant="h5">
+              <span className="red">number :</span> {user?.phone}
+            </Typography>
           </Grid>
         </Stack>
         <hr></hr>
@@ -85,8 +97,18 @@ const Account = () => {
           sx={{
             width: "100%",
             justifyContent: "center",
+            textAlign: "center",
           }}
         >
+          {/* <Typography variant="h5"><span className="red">Registered Events</span></Typography> */}
+          <Grid item xs={12} textAlign="center">
+            {" "}
+            {/* Adjust the width as needed */}
+            <Typography variant="h3">
+              <span className="black">Registered Events</span>
+            </Typography>
+          </Grid>
+
           {events ? (
             events.map((eve) => <EventCard key={eve.eventName} event={eve} />)
           ) : (

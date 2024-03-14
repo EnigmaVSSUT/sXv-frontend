@@ -28,7 +28,7 @@ const Speakers = () => {
       designation: "Dean, Students' Welfare, VSSUT",
       id: "2",
       src: "/clubs/oc1.jpg",
-      boxColor: "rgb(106,198,235)",
+      boxColor: "rgb(252,203,48)",
     },
     {
       name: "Mr. Bidyadhar Rout",
@@ -49,7 +49,7 @@ const Speakers = () => {
       designation: "Faculty Advisor, Technical Society",
       id: "4",
       src: "/clubs/oc4.jpg",
-      boxColor: "rgb(106,198,235)",
+      boxColor: "rgb(252,203,48)",
     },
     {
       name: "Dr. Krushna Prasad Shadangi",
@@ -72,7 +72,7 @@ const Speakers = () => {
       designation: "Coordinator , Cultural Society",
       id: "2",
       src: "/clubs/so2.jpg",
-      boxColor: "rgb(106,198,235)",
+      boxColor: "rgb(252,203,48)",
     },
     {
       name: "Ms. Ananya Anuska",
@@ -86,7 +86,7 @@ const Speakers = () => {
       designation: "Coordinator , Cultural Society",
       id: "4",
       src: "/clubs/so4.jpg",
-      boxColor: "rgba(252,203,48)",
+      boxColor: "rgba(106,198,235)",
     },
   ];
   return (
@@ -258,6 +258,16 @@ const Speakers = () => {
         <Button
           variant="contained"
           size="large"
+          // sx={{
+          //   marginTop: "60px",
+          //   borderRadius: "50px",
+          //   width: "300px",
+          //   height: "100px",
+          //   fontSize: "25px",
+          //   background: "#00af9a",
+          //   border: "3px solid black",
+          //   boxShadow: "12px 14px  #f9efd7 , 12px 13px 0 2px #000000",
+          // }}
           sx={{
             marginTop: "60px",
             borderRadius: "50px",
@@ -266,10 +276,17 @@ const Speakers = () => {
             fontSize: "25px",
             background: "#00af9a",
             border: "3px solid black",
-            boxShadow: "12px 14px  #f9efd7 , 12px 13px 0 2px #000000",
+            boxShadow: "6px 6px  #f9efd7 , 6px 6px 0 2px #000000",
+            "&:hover": {
+              boxShadow: "6px 6px  #f9efd7 , 6px 6px 0 2px #000000",
+              background: "#00af9a",
+            },
           }}
+
+          // button css
         >
-          CLUBS & COMMITTEES <OpenInNewIcon sx={{ marginLeft: "5px" }} />
+          CLUBS & COMMITTEES{" "}
+          <OpenInNewIcon sx={{ marginLeft: "5px", fontSize: "30px" }} />
         </Button>
       </Link>
     </>

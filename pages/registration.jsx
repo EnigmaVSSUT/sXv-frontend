@@ -533,7 +533,15 @@ const Form = () => {
         loading={otpLoading}
         onClick={handleOpen}
         variant="contained"
-        sx={{ width: "100%" }}
+        sx={{
+          width: "100%",
+          borderRadius: "20px",
+          marginRight: "10px",
+          boxShadow: "4px 4px 0px -2px #30302f",
+          "&:hover": {
+            boxShadow: "4px 4px 0px -2px #30302f",
+          },
+        }}
       >
         Register
       </LoadingButton>
