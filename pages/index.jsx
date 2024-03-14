@@ -196,11 +196,11 @@ const Hero = () => {
             />
           </motion.main>
         </Box>
-        <Marqueesv />
+        {/* <Marqueesv /> */}
         <div id="speakers"></div>
         <Speakers />
         <Caraousel />
-        <Sponsor />
+        {/* <Sponsor /> */}
         <div id="organisers"></div>
         <Organisers />
       </Box>

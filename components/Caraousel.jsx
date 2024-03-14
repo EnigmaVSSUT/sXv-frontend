@@ -29,9 +29,11 @@ const Caraousel = () => {
       <Stack sx={{ maxWidth: "98vw", gap: "30px", height: "auto" }}>
         <Stack
           direction="row"
-          alignItems="flex-start"
-          justifyContent="space-between"
-          padding="15px"
+          // alignItems="space-between"
+          justifyContent="center"
+          paddingTop="60px"
+          paddingBottom="50px"
+          // sx={{ height: "200px"}}
         >
           <Typography
             variant="h2"
@@ -41,14 +43,22 @@ const Caraousel = () => {
               WebkitTextStrokeColor: "#857370",
               WebkitTextStrokeWidth: "3px",
               textAlign: "center",
+              justifyContent: "center",
               strokeWidth: "3px",
               color: "transparent",
               letterSpacing: "1.5px",
+              marginBottom: {
+                xl: "100px",
+                md: "20px",
+                lg: "130px",
+                xs: "30px",
+                sm: "20px",
+              },
             }}
           >
             THE ASSEMBLY
           </Typography>
-          <Link href="/events">
+          {/* <Link href="/events">
             <Typography
               sx={{ textDecoration: "underline", color: "#ED1D24" }}
               variant="h6"
@@ -56,7 +66,7 @@ const Caraousel = () => {
             >
               VIEW ALL
             </Typography>
-          </Link>
+          </Link> */}
         </Stack>
         <Marquee direction="right" speed={90} gradient={false}>
           {imgUrls.map((url, i) => (

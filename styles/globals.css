@@ -110,9 +110,27 @@ body {
     size: 5.2in 3.36in;
   }
 }
-.red {
+/* .red {
   color: #ed1d24 !important;
-}
+} */
 .black {
   color: #000000 !important;
+}
+.blue {
+  color: #6ac6eb !important;
+}
+.cream {
+  color: #f9efd7 !important;
+}
+.red {
+  color: #fe6651 !important;
+}
+.green {
+  color: #00af9a !important;
+}
+.purple {
+  color: #c980db !important;
+}
+.yellow {
+  color: #fccb30 !important;
 }

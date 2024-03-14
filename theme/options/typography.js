@@ -29,7 +29,7 @@ const typographyOptions = {
   },
   h5: {
     fontSize: "36px",
-    fontFamily: "Tangelo",
+    fontFamily: "Righteous",
   },
   h6: {
     fontSize: "32px",
