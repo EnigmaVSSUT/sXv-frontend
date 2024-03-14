@@ -17,7 +17,7 @@ const Footer = () => {
     >
       <Box
         sx={{
-          backgroundColor: "#C0000A",
+          backgroundColor: "#fe6651",
           width: "100vw",
           height: "400px",
           display: "flex",
@@ -143,14 +143,6 @@ const Footer = () => {
                 <Link href="https://instagram.com/samavesh.vssut?igshid=YmMyMTA2M2Y=">
                   <InstagramIcon />
                 </Link>
-                {/* <Link href="www.twitter.com">
-                  {" "}
-                  <TwitterIcon />
-                </Link>
-                <Link href="www.youtube.com">
-                  {" "}
-                  <YouTubeIcon />
-                </Link> */}
               </Typography>
             </Box>
           </Box>

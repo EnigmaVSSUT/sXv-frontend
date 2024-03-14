@@ -87,6 +87,15 @@ body {
   background-color: #f3eee8;
 }
 
+button {
+  border-radius: "20px";
+  margin-right: "10px";
+  box-shadow: "4px 4px 0px -2px #30302f";
+}
+button:hover {
+  box-shadow: "4px 4px 0px -2px #30302f";
+}
+
 #black {
   -webkit-text-stroke-color: #000000;
 }

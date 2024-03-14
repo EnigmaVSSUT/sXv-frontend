@@ -27,6 +27,7 @@ const Header = () => {
     setIsAuthenticated(false);
     router.push("/");
   };
+  const [link, setLink] = useState("Home");
   return (
     <AppBar
       sx={{
@@ -73,25 +74,95 @@ const Header = () => {
         }}
       >
         <Typography variant="nav">
-          <Link href="/#home">Home</Link>
+          <Link
+            href="/#home"
+            onClick={() => {
+              setLink("Home");
+            }}
+            style={{
+              color: link === "Home" ? "#ed1d24" : "black",
+            }}
+          >
+            Home
+          </Link>
         </Typography>
         <Typography variant="nav">
-          <Link href="/#theme">Theme</Link>
+          <Link
+            href="/#theme"
+            onClick={() => {
+              setLink("Theme");
+            }}
+            style={{
+              color: link === "Theme" ? "#ed1d24" : "black",
+            }}
+          >
+            Theme
+          </Link>
         </Typography>
         <Typography variant="nav">
-          <Link href="/events">Events</Link>
+          <Link
+            href="/events"
+            onClick={() => {
+              setLink("Events");
+            }}
+            style={{
+              color: link === "Events" ? "#ed1d24" : "black",
+            }}
+          >
+            Events
+          </Link>
         </Typography>
         <Typography variant="nav">
-          <Link href="/clubs">Committies</Link>
+          <Link
+            href="/clubs"
+            onClick={() => {
+              setLink("Committies");
+            }}
+            style={{
+              color: link === "Committies" ? "#ed1d24" : "black",
+            }}
+          >
+            Committies
+          </Link>
         </Typography>
         <Typography variant="nav">
-          <Link href="/#sponsors">Sponsors</Link>
+          <Link
+            href="/#sponsors"
+            onClick={() => {
+              setLink("Sponsors");
+            }}
+            style={{
+              color: link === "Sponsors" ? "#ed1d24" : "black",
+            }}
+          >
+            Sponsors
+          </Link>
         </Typography>
         <Typography variant="nav">
-          <Link href="/#organisers">The Team</Link>
+          <Link
+            href="/#organisers"
+            onClick={() => {
+              setLink("The Team");
+            }}
+            style={{
+              color: link === "The Team" ? "#ed1d24" : "black",
+            }}
+          >
+            The Team
+          </Link>
         </Typography>
         <Typography variant="nav">
-          <Link href="/ContactUs">Contact Us</Link>
+          <Link
+            href="/ContactUs"
+            onClick={() => {
+              setLink("Contact Us");
+            }}
+            style={{
+              color: link === "Contact Us" ? "#ed1d24" : "black",
+            }}
+          >
+            Contact Us
+          </Link>
         </Typography>
       </Box>
       <Box>
@@ -201,7 +272,14 @@ const Header = () => {
                   >
                     <Button
                       variant="contained"
-                      sx={{ borderRadius: "20px", marginRight: "10px" }}
+                      sx={{
+                        borderRadius: "20px",
+                        marginRight: "10px",
+                        boxShadow: "4px 4px 0px -2px #30302f",
+                        "&:hover": {
+                          boxShadow: "4px 4px 0px -2px #30302f",
+                        },
+                      }}
                       onClick={() => setOpen(false)}
                     >
                       Register
@@ -211,7 +289,14 @@ const Header = () => {
                   <Link hidden={router.pathname === "/login"} href="/login">
                     <Button
                       variant="contained"
-                      sx={{ borderRadius: "20px" }}
+                      sx={{
+                        borderRadius: "20px",
+                        marginRight: "10px",
+                        boxShadow: "4px 4px 0px -2px #30302f",
+                        "&:hover": {
+                          boxShadow: "4px 4px 0px -2px #30302f",
+                        },
+                      }}
                       onClick={() => setOpen(false)}
                     >
                       Login

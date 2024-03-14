@@ -11,6 +11,7 @@ import {
   Button,
   Typography,
   Box,
+  Modal,
 } from "@mui/material";
 import { useState, useEffect } from "react";
 import Head from "next/head";
@@ -36,6 +37,10 @@ const Form = () => {
 
   const [email, setEmail] = useState("");
   const [pwd, setPwd] = useState("");
+  const [open, setOpen] = useState(false);
+  const [sendMail, setSendMail] = useState("");
+  const [emailLoading, setEmailLoading] = useState(false);
+
   const router = useRouter();
   useEffect(() => {
     if (isAuthenticated) {
@@ -93,8 +98,114 @@ const Form = () => {
     }
     setLoading(false);
   };
+
+  const emailsend = async (email) => {
+    try {
+      setEmailLoading(true);
+      await axios.post("http://localhost:8000/api/password/fogetpwd", {
+        email,
+      });
+      setEmailLoading(false);
+      toast.success("Email sent successfully");
+    } catch (error) {
+      toast.error("Please enter a valid email address");
+    } finally {
+      setEmailLoading(false);
+    }
+  };
+
   return (
     <Stack direction="row" justifyContent="center">
+      <Modal
+        sx={{
+          border: "none",
+          "&:focus": {
+            outline: "none",
+          },
+        }}
+        open={open}
+        onClose={() => {
+          setOpen(false);
+        }}
+      >
+        <Stack
+          sx={{
+            position: "absolute",
+            top: "50%",
+            left: "50%",
+            transform: "translate(-50%, -50%)",
+            width: 400,
+            bgcolor: "background.paper",
+            // border: "2px solid #000",
+            boxShadow: 24,
+            p: 4,
+          }}
+        >
+          <Typography
+            variant="h6"
+            color="initial"
+            sx={{
+              marginTop: "20px",
+              marginBottom: "45px",
+              border: "none",
+              outline: "none",
+            }}
+          >
+            Forgot Password
+          </Typography>
+          <Stack
+            sx={{
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              gap: "20px",
+              width: "100%",
+              padding: "20px",
+              border: "2px solid transparent",
+              borderRadius: "10px",
+              boxShadow: "0px 2px 5px rgba(0, 0, 0, 0.1)",
+              backgroundColor: "#f9f9f9",
+              "&:focus": {
+                outline: "none",
+              },
+              "&:active": {
+                outline: "none",
+              },
+            }}
+          >
+            <TextField
+              sx={{ width: "100%" }}
+              required
+              id="name"
+              label="Email"
+              variant="outlined"
+              value={sendMail}
+              size="small"
+              onChange={(e) => {
+                setSendMail(e.target.value);
+              }}
+            />
+
+            <LoadingButton
+              loading={loading}
+              variant="contained"
+              sx={{
+                width: "100%",
+                borderRadius: "10px",
+                backgroundColor: "#ed1d24",
+                color: "#fff",
+                "&:hover": {
+                  backgroundColor: "#c0000a",
+                },
+              }}
+              onClick={() => emailsend(sendMail)}
+            >
+              {emailLoading ? "Sending..." : "SEND"}
+            </LoadingButton>
+          </Stack>
+        </Stack>
+      </Modal>
+
       <Head>
         <title>Login</title>
         <meta name="Login Page" content="Meta description for the Home page" />
@@ -111,13 +222,18 @@ const Form = () => {
         <Stack
           //   maxWidth="550px"
           height="auto"
-          padding="25px"
           margin="0 auto"
           gap="25px"
           alignItems="center"
           sx={{
             width: {
+              xs: "95vw",
+              sm: "60vw",
               md: "500px",
+            },
+            padding: {
+              xs: "10px",
+              md: "25px",
             },
           }}
         >
@@ -129,7 +245,7 @@ const Form = () => {
             Login
           </Typography>
           <TextField
-            sx={{ width: "80%" }}
+            fullWidth
             required
             id="name"
             label="Email"
@@ -140,44 +256,20 @@ const Form = () => {
               setEmail(e.target.value);
             }}
           />
-          <Stack sx={{ marginTop: "10px", width: "80%" }}>
-            <TextField
-              id="pwd"
-              label="Password*"
-              type={values.showPassword ? "text" : "password"}
-              value={pwd}
-              size="small"
-              onChange={(e) => {
-                setPwd(e.target.value);
-              }}
-              variant="outlined" // Set the variant to outlined here
-              InputProps={{
-                endAdornment: (
-                  <InputAdornment position="end">
-                    <IconButton
-                      aria-label="toggle password visibility"
-                      onClick={handleClickShowPassword}
-                      onMouseDown={handleMouseDownPassword}
-                      edge="end"
-                    >
-                      {values.showPassword ? <VisibilityOff /> : <Visibility />}
-                    </IconButton>
-                  </InputAdornment>
-                ),
-              }}
-            />
-            {/* <InputLabel htmlFor="outlined-adornment-password">
-              Password*
-            </InputLabel>
-            <OutlinedInput
-              id="pwd"
-              type={values.showPassword ? "text" : "password"}
-              value={pwd}
-              size="small"
-              onChange={(e) => {
-                setPwd(e.target.value);
-              }}
-              endAdornment={
+
+          <TextField
+            fullWidth
+            id="pwd"
+            label="Password*"
+            type={values.showPassword ? "text" : "password"}
+            value={pwd}
+            size="small"
+            onChange={(e) => {
+              setPwd(e.target.value);
+            }}
+            variant="outlined" // Set the variant to outlined here
+            InputProps={{
+              endAdornment: (
                 <InputAdornment position="end">
                   <IconButton
                     aria-label="toggle password visibility"
@@ -188,18 +280,39 @@ const Form = () => {
                     {values.showPassword ? <VisibilityOff /> : <Visibility />}
                   </IconButton>
                 </InputAdornment>
-              }
-              label="Password"
-            /> */}
-          </Stack>
+              ),
+            }}
+          />
+
           <LoadingButton
             loading={loading}
             variant="contained"
             onClick={() => submit(email, pwd)}
-            sx={{ width: "80%", marginTop: "10px" }}
+            sx={{
+              width: "100%",
+              marginTop: "10px",
+              borderRadius: "20px",
+              marginRight: "10px",
+              boxShadow: "4px 4px 0px -2px #30302f",
+              "&:hover": {
+                boxShadow: "4px 4px 0px -2px #30302f",
+              },
+            }}
           >
             Login
           </LoadingButton>
+          <Typography
+            sx={{
+              textDecoration: "underline",
+              textAlign: "center",
+              cursor: "pointer",
+            }}
+            onClick={() => {
+              setOpen(true);
+            }}
+          >
+            Forget Password ?
+          </Typography>
         </Stack>
         <Box
           sx={{
