@@ -1,7 +1,7 @@
 import React from "react";
 import { Box } from "@mui/system";
 import Typography from "@mui/material/Typography";
-const Mentions = ({ title, designation, color, imgUrl }) => {
+const Mentions = ({ title, designation, color, imgUrl, boxShadowColor }) => {
   return (
     <>
       <Box
@@ -9,7 +9,7 @@ const Mentions = ({ title, designation, color, imgUrl }) => {
           border: "2px solid black",
           height: "425px",
           width: "365px",
-          boxShadow: `${color}14px 13px`,
+          boxShadow: `${boxShadowColor}14px 13px`,
         }}
       >
         <Box
@@ -60,7 +60,7 @@ const Mentions = ({ title, designation, color, imgUrl }) => {
             <img src={imgUrl} width="100%" height="100%" />
           </Box>
           <Box sx={{ width: "100%", height: "30%", padding: "10px" }}>
-            <Typography sx={{ fontSize: "1.6vw", fontWeight: "bold" }}>
+            <Typography sx={{ fontSize: "1.3vw", fontWeight: "bold" }}>
               {title}
             </Typography>
             <Typography sx={{ fontSize: "1vw" }}>{designation}</Typography>
