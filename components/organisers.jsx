@@ -209,6 +209,7 @@ const Speakers = () => {
               designation={e.designation}
               color="#000000"
               imgUrl={e.src}
+              key={e.src}
               boxShadowColor={e.boxColor} // Dynamically set box shadow color
             />
           ))}
@@ -325,6 +326,7 @@ const Speakers = () => {
               designation={e.designation}
               color="#000000"
               imgUrl={e.src}
+              key={e.src}
               boxShadowColor={e.boxColor} // Dynamically set box shadow color
             />
           ))}

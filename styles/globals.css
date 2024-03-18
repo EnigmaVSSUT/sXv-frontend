@@ -13,6 +13,29 @@
   /* font-family: 'BentonSans Comp Black'; */
   /* font-family: 'bentonsans-comp-black-regular', sans-serif; */
 }
+
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 5px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: red;
+  border-radius: 3px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #b30000;
+}
+
 html {
   scroll-behavior: smooth !important;
 }
@@ -85,6 +108,15 @@ a {
 }
 body {
   background-color: #f3eee8;
+}
+
+button {
+  border-radius: "20px";
+  margin-right: "10px";
+  box-shadow: "4px 4px 0px -2px #30302f";
+}
+button:hover {
+  box-shadow: "4px 4px 0px -2px #30302f";
 }
 
 #black {
