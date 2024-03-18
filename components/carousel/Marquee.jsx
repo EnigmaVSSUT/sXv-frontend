@@ -152,9 +152,6 @@ export const InteractiveMarquee = (props) => {
         onDrag={handleOnDrag}
         onDragEnd={handleDragEnd}
         dragElastic={0.000001}
-        style={{
-          marginBottom: "32px",
-        }}
       >
         <MarqueeItem speed={speedSpring}>{children}</MarqueeItem>
       </motion.div>
