@@ -2,6 +2,8 @@ import { useState } from "react";
 import { Stack, Typography, Box, Skeleton } from "@mui/material";
 import Image from "next/image";
 import Marquee from "react-fast-marquee";
+import { motion } from "framer-motion";
+import { InteractiveMarquee } from "./carousel/Marquee";
 
 const imgUrls = [
   "https://i.ibb.co/SsRwbJ0/1.webp",
@@ -27,7 +29,12 @@ const LazyImage = ({ src }) => {
   const dimns = { width: 200, height: 200 };
   return (
     <Box position="relative" mx={1} borderRadius={3} overflow="hidden">
-      <Image {...{ src, ...dimns }} alt="" onLoad={() => setLoaded(true)} />
+      <Image
+        {...{ src, ...dimns }}
+        alt=""
+        onLoad={() => setLoaded(true)}
+        style={{ pointerEvents: "none" }}
+      />
       {!loaded && (
         <Skeleton
           sx={{ position: "absolute", top: 0, left: 0 }}
@@ -49,12 +56,11 @@ const Caraousel = () => {
           // alignItems="space-between"
           justifyContent="center"
           paddingTop="60px"
-          paddingBottom="50px"
         >
           <Typography
             variant="h2"
             color="initial"
-            mb={5}
+            mb={1}
             sx={{
               WebkitTextStrokeColor: "#857370",
               WebkitTextStrokeWidth: "3px",
@@ -63,24 +69,17 @@ const Caraousel = () => {
               strokeWidth: "3px",
               color: "transparent",
               letterSpacing: "1.5px",
-              marginBottom: {
-                xl: "100px",
-                md: "20px",
-                lg: "130px",
-                xs: "30px",
-                sm: "20px",
-              },
             }}
           >
             THE ASSEMBLY
           </Typography>
         </Stack>
 
-        <Marquee direction="right" speed={90} gradient={false} pauseOnHover>
+        <InteractiveMarquee>
           {imgUrls.map((url, i) => (
             <LazyImage key={"assembly" + i} src={url} />
           ))}
-        </Marquee>
+        </InteractiveMarquee>
       </Stack>
     </Stack>
   );
