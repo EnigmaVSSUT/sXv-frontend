@@ -1,4 +1,6 @@
 import React from "react";
+import Image from "next/image";
+import { Box, Typography } from "@mui/material";
 
 const SmallCard = ({
   eventname,
@@ -23,7 +25,7 @@ const SmallCard = ({
         }}
       >
         <Box sx={{ border: "5px solid black", width: "23%", height: "55%" }}>
-          <img src={eventimageurl} width="100%" height="100%"></img>
+          <Image src={eventimageurl} width={100} height={100}></Image>
         </Box>
         <Box sx={{ display: "flex", flexDirection: "column", gap: "5px" }}>
           <Typography>{eventname}</Typography>

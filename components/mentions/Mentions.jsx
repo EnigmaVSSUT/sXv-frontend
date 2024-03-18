@@ -1,6 +1,7 @@
 import React from "react";
 import { Box } from "@mui/system";
 import Typography from "@mui/material/Typography";
+import Image from "next/image";
 const Mentions = ({ title, designation, color, imgUrl, boxShadowColor }) => {
   return (
     <>
@@ -8,7 +9,7 @@ const Mentions = ({ title, designation, color, imgUrl, boxShadowColor }) => {
         sx={{
           border: "2px solid black",
           height: "425px",
-          width: "365px",
+          width: "300px",
           boxShadow: `${boxShadowColor}14px 13px`,
         }}
       >
@@ -51,19 +52,34 @@ const Mentions = ({ title, designation, color, imgUrl, boxShadowColor }) => {
         <Box
           sx={{
             border: "2.5px solid black",
-            width: "calc(100% - 48px)",
+            width: "calc(100% - 42px)",
             margin: "32px 24px",
-            height: "calc(89.5% - 68px)",
+            height: "calc(89.5% - 66px)",
           }}
         >
-          <Box sx={{ width: "100%", height: "70%" }}>
-            <img src={imgUrl} width="100%" height="100%" />
+          <Box sx={{ width: "100%", height: "auto" }}>
+            <Image src={imgUrl} width={250} height={250} />
           </Box>
           <Box sx={{ width: "100%", height: "30%", padding: "10px" }}>
-            <Typography sx={{ fontSize: "1.3vw", fontWeight: "bold" }}>
+            <Typography
+              sx={{
+                fontSize: {
+                  xs: "16px",
+                },
+                fontWeight: "bold",
+              }}
+            >
               {title}
             </Typography>
-            <Typography sx={{ fontSize: "1vw" }}>{designation}</Typography>
+            <Typography
+              sx={{
+                fontSize: {
+                  xs: "14px",
+                },
+              }}
+            >
+              {designation}
+            </Typography>
           </Box>
         </Box>
       </Box>

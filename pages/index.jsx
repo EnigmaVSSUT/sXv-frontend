@@ -46,22 +46,23 @@ const Hero = () => {
   // const { isAuthenticated, paymentStatus } = React.useContext(AppContext);
   const [toastMessage, setToastMessage] = useState();
   const GenTicket = () => {
-    const token = localStorage.getItem("token");
-    console.log(token);
-    if (token) {
-      axios
-        .get("https://sxv-backend.onrender.com/api/ticket/genTicket", {
-          headers: { authorisation: token },
-        })
-        .then((data) => {
-          setToastMessage((m) => data.data.message);
-          console.log(data.data.error);
-        });
-    } else {
-      setToastMessage(
-        (m) => "Please login to your account to generate your ticket"
-      );
-    }
+    // const token = localStorage.getItem("token");
+    // console.log(token);
+    // if (token) {
+    //   axios
+    //     .get("https://sxv-backend.onrender.com/api/ticket/genTicket", {
+    //       headers: { authorisation: token },
+    //     })
+    //     .then((data) => {
+    //       setToastMessage((m) => data.data.message);
+    //       console.log(data.data.error);
+    //     });
+    // } else {
+    //   setToastMessage(
+    //     (m) => "Please login to your account to generate your ticket"
+    //   );
+    // }
+    setToastMessage((m) => "Ticket's on the horizon, stay tuned!🚀🎫");
   };
 
   const time = new Date();

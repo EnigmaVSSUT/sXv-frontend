@@ -14,7 +14,7 @@ import PersonIcon from "@mui/icons-material/Person";
 import MenuIcon from "@mui/icons-material/Menu";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import Link from "next/link";
-import { useState, useContext } from "react";
+import { useState, useContext, useEffect } from "react";
 import AppContext from "context/AppContext";
 import { useRouter } from "next/router";
 
@@ -27,6 +27,7 @@ const Header = () => {
     setIsAuthenticated(false);
     router.push("/");
   };
+  const [link, setLink] = useState(router.asPath);
   return (
     <AppBar
       sx={{
@@ -73,25 +74,84 @@ const Header = () => {
         }}
       >
         <Typography variant="nav">
-          <Link href="/#home">Home</Link>
+          <Link
+            href="/#home"
+            onClick={() => {
+              setLink("/#home");
+              console.log(router.asPath);
+            }}
+            style={{
+              color: link === "/#home" ? "#ed1d24" : "black",
+            }}
+          >
+            Home
+          </Link>
         </Typography>
         <Typography variant="nav">
-          <Link href="/#theme">Theme</Link>
+          <Link
+            href="/#theme"
+            onClick={() => {
+              setLink("/#theme");
+            }}
+            style={{
+              color: link === "/#theme" ? "#ed1d24" : "black",
+            }}
+          >
+            Theme
+          </Link>
         </Typography>
         <Typography variant="nav">
-          <Link href="/events">Events</Link>
+          <Link
+            href="/events"
+            onClick={() => {
+              setLink("/events");
+            }}
+            style={{
+              color: link === "/events" ? "#ed1d24" : "black",
+            }}
+          >
+            Events
+          </Link>
         </Typography>
         <Typography variant="nav">
-          <Link href="/clubs">Committies</Link>
+          <Link
+            href="/clubs"
+            onClick={() => {
+              setLink("/clubs");
+            }}
+            style={{
+              color: link === "/clubs" ? "#ed1d24" : "black",
+            }}
+          >
+            Committies
+          </Link>
+        </Typography>
+
+        <Typography variant="nav">
+          <Link
+            href="/#organisers"
+            onClick={() => {
+              setLink("/#organisers");
+            }}
+            style={{
+              color: link === "/#organisers" ? "#ed1d24" : "black",
+            }}
+          >
+            The Team
+          </Link>
         </Typography>
         <Typography variant="nav">
-          <Link href="/#sponsors">Sponsors</Link>
-        </Typography>
-        <Typography variant="nav">
-          <Link href="/#organisers">The Team</Link>
-        </Typography>
-        <Typography variant="nav">
-          <Link href="/ContactUs">Contact Us</Link>
+          <Link
+            href="/ContactUs"
+            onClick={() => {
+              setLink("/ContactUs");
+            }}
+            style={{
+              color: link === "/ContactUs" ? "#ed1d24" : "black",
+            }}
+          >
+            Contact Us
+          </Link>
         </Typography>
       </Box>
       <Box>
@@ -201,7 +261,14 @@ const Header = () => {
                   >
                     <Button
                       variant="contained"
-                      sx={{ borderRadius: "20px", marginRight: "10px" }}
+                      sx={{
+                        borderRadius: "20px",
+                        marginRight: "10px",
+                        boxShadow: "4px 4px 0px -2px #30302f",
+                        "&:hover": {
+                          boxShadow: "4px 4px 0px -2px #30302f",
+                        },
+                      }}
                       onClick={() => setOpen(false)}
                     >
                       Register
@@ -211,7 +278,14 @@ const Header = () => {
                   <Link hidden={router.pathname === "/login"} href="/login">
                     <Button
                       variant="contained"
-                      sx={{ borderRadius: "20px" }}
+                      sx={{
+                        borderRadius: "20px",
+                        marginRight: "10px",
+                        boxShadow: "4px 4px 0px -2px #30302f",
+                        "&:hover": {
+                          boxShadow: "4px 4px 0px -2px #30302f",
+                        },
+                      }}
                       onClick={() => setOpen(false)}
                     >
                       Login
