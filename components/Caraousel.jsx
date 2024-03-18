@@ -2,7 +2,6 @@ import { useState } from "react";
 import { Stack, Typography, Box, Skeleton } from "@mui/material";
 import Image from "next/image";
 import Marquee from "react-fast-marquee";
-import { motion } from "framer-motion";
 import { InteractiveMarquee } from "./carousel/Marquee";
 
 const imgUrls = [
