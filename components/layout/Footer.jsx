@@ -19,7 +19,7 @@ const Footer = () => {
         sx={{
           backgroundColor: "#81C2BD",
           width: "100vw",
-          height: "400px",
+          height: "480px",
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
@@ -47,7 +47,7 @@ const Footer = () => {
             component="img"
             src="./svLogo.png"
             alt="IMAGE"
-            sx={{ width: { xs: "50vw", md: "20vw" } }}
+            sx={{ width: { xs: "30vw", md: "20vw" } }}
           ></Box>
           <Box
             sx={{
