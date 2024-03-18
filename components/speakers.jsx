@@ -6,7 +6,7 @@ import Link from "next/link";
 import { useState, useRef, useEffect } from "react";
 import { motion } from "framer-motion";
 
-const AnimatedDiv = ({ children }) => {
+export const AnimatedDiv = ({ children }) => {
   const [isVisible, setIsVisible] = useState(false);
   const divRef = useRef();
 
@@ -17,7 +17,7 @@ const AnimatedDiv = ({ children }) => {
           setIsVisible(true);
         }
       },
-      { threshold: 0.1 }
+      { threshold: 0.1, rootMargin: "100px" }
     );
 
     if (divRef.current) {
@@ -36,7 +36,8 @@ const AnimatedDiv = ({ children }) => {
       ref={divRef}
       initial={{ y: "30%", opacity: 0 }}
       animate={isVisible ? { y: 0, opacity: 1 } : { y: "30%", opacity: 0 }}
-      transition={{ type: "tween", stiffness: 120 }}
+      transition={{ type: "spring", stiffness: 150, damping: 30 }}
+      style={{ willChange: "transform, opacity" }}
     >
       {children}
     </motion.div>

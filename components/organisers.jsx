@@ -13,6 +13,9 @@ import Image from "next/image";
 import Speaker from "/pictures/speakers.png";
 import Link from "next/link";
 import OpenInNewIcon from "@mui/icons-material/OpenInNew";
+import { useState, useRef, useEffect } from "react";
+import { motion } from "framer-motion";
+import { AnimatedDiv } from "./speakers";
 
 const Speakers = () => {
   const officials = [
@@ -121,140 +124,142 @@ const Speakers = () => {
         alignItems="center"
         justifyContent="center"
       >
-        <Stack
-          margin="25px auto"
-          direction="row"
-          flexWrap="wrap"
-          justifyContent="space-around"
-          alignItems="space-around"
-          rowGap="80px"
-          columnGap="20px"
-        >
-          {officials.map((e) => (
-            // <Stack
-            //   direction="row"
-            //   padding="16px"
-            //   sx={{
-            //     borderRadius: "9px",
-            //     margin: "0",
-            //     width: {
-            //       xs: "300px",
-            //       md: "400px",
-            //     },
-            //     gap: "20px",
-            //     backgroundColor: "white.main",
-            //     color: "#fcfcfc",
-            //   }}
-            //   key={e.id}
-            // >
-            //   <Avatar
-            //     src={e.src}
-            //     sx={{
-            //       height: "80px",
-            //       width: "80px",
-            //     }}
-            //   ></Avatar>
-            //   <Box>
-            //     <Typography variant="h6" color="black">
-            //       {e.name}
-            //     </Typography>
-            //     <Typography
-            //       variant="p"
-            //       color="black"
-            //       fontFamily="Product Sans"
-            //       fontWeight="600"
-            //     >
-            //       {e.designation}
-            //     </Typography>
-            //   </Box>
-            // </Stack>
+        <AnimatedDiv>
+          <Stack
+            margin="25px auto"
+            direction="row"
+            flexWrap="wrap"
+            justifyContent="space-around"
+            alignItems="space-around"
+            rowGap="80px"
+            columnGap="20px"
+          >
+            {officials.map((e) => (
+              // <Stack
+              //   direction="row"
+              //   padding="16px"
+              //   sx={{
+              //     borderRadius: "9px",
+              //     margin: "0",
+              //     width: {
+              //       xs: "300px",
+              //       md: "400px",
+              //     },
+              //     gap: "20px",
+              //     backgroundColor: "white.main",
+              //     color: "#fcfcfc",
+              //   }}
+              //   key={e.id}
+              // >
+              //   <Avatar
+              //     src={e.src}
+              //     sx={{
+              //       height: "80px",
+              //       width: "80px",
+              //     }}
+              //   ></Avatar>
+              //   <Box>
+              //     <Typography variant="h6" color="black">
+              //       {e.name}
+              //     </Typography>
+              //     <Typography
+              //       variant="p"
+              //       color="black"
+              //       fontFamily="Product Sans"
+              //       fontWeight="600"
+              //     >
+              //       {e.designation}
+              //     </Typography>
+              //   </Box>
+              // </Stack>
 
-            <Mentions
-              title={e.name}
-              designation={e.designation}
-              color="#000000"
-              imgUrl={e.src}
-              key={e.src}
-              boxShadowColor={e.boxColor} // Dynamically set box shadow color
-            />
-          ))}
-        </Stack>
-        <Typography
-          textAlign="center"
-          margin="20px 0"
-          variant="h3"
-          sx={{
-            WebkitTextStrokeColor: "#857370",
-            WebkitTextStrokeWidth: "2px",
-            color: "transparent",
-            fontSize: "35px",
-            lineHeight: "52px",
-            fontWeight: "100",
-            letterSpacing: "1px",
-          }}
-        >
-          Student Bodies
-        </Typography>
-        <Stack
-          margin="25px auto"
-          direction="row"
-          flexWrap="wrap"
-          justifyContent="space-around"
-          alignItems="space-around"
-          rowGap="80px"
-          columnGap="20px"
-        >
-          {organisers.map((e) => (
-            // <Stack
-            //   direction="row"
-            //   padding="16px"
-            //   sx={{
-            //     borderRadius: "9px",
-            //     marginLeft: "0px",
-            //     margin: "0",
-            //     width: {
-            //       xs: "300px",
-            //       md: "400px",
-            //     },
-            //     backgroundColor: "white.main",
-            //     color: "#ffffff",
-            //     gap: "20px",
-            //   }}
-            //   key={e.id}
-            // >
-            //   <Avatar
-            //     src={e.src}
-            //     sx={{
-            //       height: "80px",
-            //       width: "80px",
-            //     }}
-            //   >
-            //     p
-            //   </Avatar>
-            //   <Box>
-            //     <Typography variant="h6" color="black">
-            //       {e.name}
-            //     </Typography>
-            //     <Typography
-            //       variant="p"
-            //       color="black"
-            //       fontFamily="Product Sans"
-            //       fontWeight="600"
-            //     >
-            //       {e.designation}
-            //     </Typography>
-            //   </Box>
-            // </Stack>
-            <Mentions
-              title={e.name}
-              designation={e.designation}
-              color="#000000"
-              imgUrl={e.src}
-              key={e.src}
-              boxShadowColor={e.boxColor} // Dynamically set box shadow color
-            />
-          ))}
-        </Stack>
+              <Mentions
+                title={e.name}
+                designation={e.designation}
+                color="#000000"
+                imgUrl={e.src}
+                key={e.src}
+                boxShadowColor={e.boxColor} // Dynamically set box shadow color
+              />
+            ))}
+          </Stack>
+          <Typography
+            textAlign="center"
+            margin="20px 0"
+            variant="h3"
+            sx={{
+              WebkitTextStrokeColor: "#857370",
+              WebkitTextStrokeWidth: "2px",
+              color: "transparent",
+              fontSize: "35px",
+              lineHeight: "52px",
+              fontWeight: "100",
+              letterSpacing: "1px",
+            }}
+          >
+            Student Bodies
+          </Typography>
+          <Stack
+            margin="25px auto"
+            direction="row"
+            flexWrap="wrap"
+            justifyContent="space-around"
+            alignItems="space-around"
+            rowGap="80px"
+            columnGap="20px"
+          >
+            {organisers.map((e) => (
+              // <Stack
+              //   direction="row"
+              //   padding="16px"
+              //   sx={{
+              //     borderRadius: "9px",
+              //     marginLeft: "0px",
+              //     margin: "0",
+              //     width: {
+              //       xs: "300px",
+              //       md: "400px",
+              //     },
+              //     backgroundColor: "white.main",
+              //     color: "#ffffff",
+              //     gap: "20px",
+              //   }}
+              //   key={e.id}
+              // >
+              //   <Avatar
+              //     src={e.src}
+              //     sx={{
+              //       height: "80px",
+              //       width: "80px",
+              //     }}
+              //   >
+              //     p
+              //   </Avatar>
+              //   <Box>
+              //     <Typography variant="h6" color="black">
+              //       {e.name}
+              //     </Typography>
+              //     <Typography
+              //       variant="p"
+              //       color="black"
+              //       fontFamily="Product Sans"
+              //       fontWeight="600"
+              //     >
+              //       {e.designation}
+              //     </Typography>
+              //   </Box>
+              // </Stack>
+              <Mentions
+                title={e.name}
+                designation={e.designation}
+                color="#000000"
+                imgUrl={e.src}
+                key={e.src}
+                boxShadowColor={e.boxColor} // Dynamically set box shadow color
+              />
+            ))}
+          </Stack>
+        </AnimatedDiv>
       </Stack>
       <Link href="/clubs">
         <Button
