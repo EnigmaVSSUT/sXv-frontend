@@ -39,7 +39,7 @@
   gap: 32px;
 }
 .poster {
-  width: 70vw;
+  /* width: 50vw; */
   margin-top: 1rem;
   margin-bottom: 80px;
   z-index: 4;

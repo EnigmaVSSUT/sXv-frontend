@@ -60,7 +60,7 @@ const Caraousel = () => {
           </Typography>
           {/* <Link href="/events">
             <Typography
-              sx={{ textDecoration: "underline", color: "#ED1D24" }}
+              sx={{ textDecoration: "underline", color: "#e14f5a" }}
               variant="h6"
               color="initial"
             >

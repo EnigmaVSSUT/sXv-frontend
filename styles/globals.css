@@ -103,7 +103,7 @@ a {
 }
 #sub2 {
   color: transparent;
-  -webkit-text-stroke-color: #c33219;
+  -webkit-text-stroke-color: #e14f5a;
   -webkit-text-stroke-width: 2px;
 }
 body {
@@ -143,10 +143,16 @@ button:hover {
   }
 }
 /* .red {
-  color: #ed1d24 !important;
+  color: #e14f5a !important;
 } */
 .black {
-  color: #000000 !important;
+  color: #f06d1b !important;
+}
+.Orange {
+  color: #f7a802;
+}
+.Blue {
+  color: #81c2bd;
 }
 .blue {
   color: #6ac6eb !important;

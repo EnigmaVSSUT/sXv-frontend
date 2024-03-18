@@ -115,7 +115,7 @@ const Account = () => {
             <>
               {" "}
               <Typography
-                color={"#ED1D24"}
+                color={"#e14f5a"}
                 fontFamily={"American Captain"}
                 variant="h6"
               >

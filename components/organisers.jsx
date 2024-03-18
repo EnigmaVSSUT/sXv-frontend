@@ -44,20 +44,20 @@ const Speakers = () => {
       src: "/clubs/oc6.jpg",
       boxColor: "rgba(201,128,219)",
     },
-    {
-      name: "Dr.Jatin Kumar Pradhan",
-      designation: "Faculty Advisor, Technical Society",
-      id: "4",
-      src: "/clubs/oc4.jpg",
-      boxColor: "rgb(252,203,48)",
-    },
-    {
-      name: "Dr. Krushna Prasad Shadangi",
-      designation: "Faculty Advisor, Cultural Society",
-      id: "4",
-      src: "/clubs/oc5.jpg",
-      boxColor: "rgba(254,102,81)",
-    },
+    // {
+    //   name: "Dr.Jatin Kumar Pradhan",
+    //   designation: "Faculty Advisor, Technical Society",
+    //   id: "4",
+    //   src: "/clubs/oc4.jpg",
+    //   boxColor: "rgb(252,203,48)",
+    // },
+    // {
+    //   name: "Dr. Krushna Prasad Shadangi",
+    //   designation: "Faculty Advisor, Cultural Society",
+    //   id: "4",
+    //   src: "/clubs/oc5.jpg",
+    //   boxColor: "rgba(254,102,81)",
+    // },
   ];
   const organisers = [
     {
