@@ -11,6 +11,11 @@ const typographyOptions = {
     fontWeight: 400,
     // textTransform:"capitalize"
   },
+  textField: {
+    fontSize: "1rem",
+    fontFamily: "Righteous",
+  },
+
   h1: {
     fontSize: "96px",
     fontFamily: "Tangelo",
@@ -21,7 +26,7 @@ const typographyOptions = {
   },
   h3: {
     fontSize: "48px",
-    fontFamily: "Tangelo",
+    fontFamily: "Righteous",
   },
   h4: {
     fontSize: "40px",
