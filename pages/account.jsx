@@ -62,7 +62,7 @@ const Account = () => {
               name="Accounts"
               content="Meta description fevor the Home page"
             />
-            <link rel="shortcut icon" href="svlogo.ico" />
+            <link rel="shortcut icon" href="svLogo.png" />
           </Head>
           <Grid
           // sx={{fontFamily:'Righteous'}}

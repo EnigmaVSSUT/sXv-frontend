@@ -212,7 +212,7 @@ const Form = () => {
       <Head>
         <title>Login</title>
         <meta name="Login Page" content="Meta description for the Home page" />
-        <link rel="shortcut icon" href="svlogo.ico" />
+        <link rel="shortcut icon" href="svLogo.png" />
       </Head>
       <Stack
         width="90%"

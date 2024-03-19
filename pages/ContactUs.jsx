@@ -58,7 +58,7 @@ const ContactUS = () => {
           <Head>
             <title>Contact Us</title>
             <meta name="Home" content="Meta description fevor the Home page" />
-            <link rel="shortcut icon" href="svlogo.ico" />
+            <link rel="shortcut icon" href="svLogo.png" />
           </Head>
           <Typography
             variant="h3"

@@ -110,7 +110,7 @@ const Hero = () => {
       <Head>
         <title>Samavesh-X-Vassaunt</title>
         <meta name="Home" content="Meta description for the Home page" />
-        <link rel="shortcut icon" href="svlogo.ico" />
+        <link rel="shortcut icon" href="svLogo.png" />
       </Head>
       <Box
         className={styles.hero}

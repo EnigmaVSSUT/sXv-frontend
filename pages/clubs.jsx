@@ -51,7 +51,7 @@ function Clubs() {
       <Head>
         <title>Clubs and Societies</title>
         <meta name="Clubs" content="Meta description fevor the Home page" />
-        <link rel="shortcut icon" href="svlogo.ico" />
+        <link rel="shortcut icon" href="svLogo.png" />
       </Head>
       <Typography
         fontFamily={"American Captain"}
