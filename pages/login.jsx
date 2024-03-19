@@ -103,7 +103,7 @@ const Form = () => {
     try {
       setEmailLoading(true);
       await axios.post(
-        "http://sxv-backend.onrender.com/api/password/fogetpwd",
+        "https://sxv-backend.onrender.com/api/password/fogetpwd",
         {
           email,
         }
