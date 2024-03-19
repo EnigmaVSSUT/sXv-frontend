@@ -25,7 +25,7 @@ const imgUrls = [
 
 const LazyImage = ({ src }) => {
   const [loaded, setLoaded] = useState(false);
-  const dimns = { width: 200, height: 200 };
+  const dimns = { width: 250, height: 320 };
   return (
     <Box position="relative" mx={1} borderRadius={3} overflow="hidden">
       <Image
@@ -49,7 +49,14 @@ const LazyImage = ({ src }) => {
 const Caraousel = () => {
   return (
     <Stack sx={{ overflow: "hidden" }}>
-      <Stack sx={{ maxWidth: "98vw", gap: "30px", height: "auto" }}>
+      <Stack
+        sx={{
+          maxWidth: "98vw",
+          gap: "30px",
+          height: "auto",
+          marginBottom: "80px",
+        }}
+      >
         <Stack
           direction="row"
           // alignItems="space-between"
@@ -57,7 +64,7 @@ const Caraousel = () => {
           paddingTop="60px"
         >
           <Typography
-            variant="h2"
+            variant="h1"
             color="initial"
             mb={1}
             sx={{
@@ -72,7 +79,7 @@ const Caraousel = () => {
           >
             THE ASSEMBLY
           </Typography>
-          <Link href="/events">
+          {/* <Link href="/events">
             <Typography
               sx={{ textDecoration: "underline", color: "#e14f5a" }}
               variant="h6"
@@ -80,8 +87,7 @@ const Caraousel = () => {
             >
               VIEW ALL
             </Typography>
-          </Link>
-
+          </Link> */}
         </Stack>
 
         <InteractiveMarquee>

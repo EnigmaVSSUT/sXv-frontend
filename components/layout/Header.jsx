@@ -54,7 +54,7 @@ const Header = () => {
           fontSize: "1.7rem",
         }}
       >
-        <Link href="/#home">
+        <Link href="/">
           {" "}
           <span className="Orange">SAMAVESH</span>
           <span className="black"> X</span>
@@ -77,13 +77,13 @@ const Header = () => {
       >
         <Typography variant="nav">
           <Link
-            href="/#home"
+            href="/"
             onClick={() => {
-              setLink("/#home");
+              setLink("/");
               console.log(router.asPath);
             }}
             style={{
-              color: link === "/#home" ? "#e14f5a" : "black",
+              color: link === "/" ? "#e14f5a" : "black",
             }}
           >
             Home
@@ -234,7 +234,7 @@ const Header = () => {
           PaperProps={{
             sx: {
               backgroundColor: "#f3eee8",
-              width: "200px",
+              width: "210px",
             },
           }}
           open={open}
@@ -307,7 +307,7 @@ const Header = () => {
             </ListItem>
             <ListItem>
               <Typography variant="nav">
-                <Link href="/#home" onClick={() => setOpen(false)}>
+                <Link href="/" onClick={() => setOpen(false)}>
                   HOME
                 </Link>
               </Typography>

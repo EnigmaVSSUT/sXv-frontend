@@ -17,7 +17,7 @@ const typographyOptions = {
   },
 
   h1: {
-    fontSize: "96px",
+    fontSize: "80px",
     fontFamily: "Tangelo",
   },
   h2: {
