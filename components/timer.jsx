@@ -65,7 +65,7 @@ const Timer = () => {
               display: "flex",
               flexDirection: "column",
               alignItems: "left",
-              padding: "32px",
+              padding: { xs: "15px", md: "25px" },
               gap: "10px",
             }}
           >

@@ -62,7 +62,7 @@ const Hero = () => {
     //     (m) => "Please login to your account to generate your ticket"
     //   );
     // }
-    setToastMessage((m) => "Ticket's on the horizon, stay tuned!🚀🎫");
+    setToastMessage((m) => "Ticket's on the horizon, Stay tuned! 🚀🎫");
   };
 
   const time = new Date();
@@ -110,7 +110,7 @@ const Hero = () => {
       <Head>
         <title>Samavesh-X-Vassaunt</title>
         <meta name="Home" content="Meta description for the Home page" />
-        <link rel="shortcut icon" href="svlogo.ico" />
+        <link rel="shortcut icon" href="svLogo.png" />
       </Head>
       <Box
         className={styles.hero}
@@ -143,9 +143,11 @@ const Hero = () => {
               color="initial"
               sx={{
                 fontSize: {
-                  xs: "2.5rem",
-                  md: "3rem",
+                  xs: "1.8rem",
+                  md: "2.5rem",
+                  lg: "3rem",
                 },
+                lineHeight: { xs: "40px", md: "inherit" },
                 maxWidth: { xs: "300px", md: "380px" },
               }}
             >
@@ -195,7 +197,7 @@ const Hero = () => {
               src="./festposter.jpg"
               alt="Theme"
               className={styles.poster1}
-              sx={{ width: { xs: "50vw", md: "30vw", lg: "25vw" } }}
+              sx={{ width: { xs: "80vw", md: "50vw", lg: "25vw" } }}
             ></Box>
           </motion.main>
         </Box>
@@ -258,7 +260,7 @@ const Hero = () => {
             src="./sv.png"
             alt="Theme"
             className={styles.poster}
-            sx={{ width: { xs: "50vw", md: "30vw" } }}
+            sx={{ width: { xs: "80vw", md: "30vw" } }}
           ></Box>
         </motion.main>
       </div>

@@ -83,7 +83,7 @@ const ClubPage = () => {
               name="Login Page"
               content="Meta description for the Home page"
             />
-            <link rel="shortcut icon" href="svlogo.ico" />
+            <link rel="shortcut icon" href="svLogo.png" />
           </Head>
           <Typography
             variant="h1"

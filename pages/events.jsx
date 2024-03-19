@@ -20,7 +20,7 @@ const Events = () => {
       <Head>
         <title>Event Timeline</title>
         <meta name="Timeline" content="Meta description fevor the Home page" />
-        <link rel="shortcut icon" href="svlogo.ico" />
+        <link rel="shortcut icon" href="svLogo.png" />
       </Head>
       <Stack padding="72px 0">
         <Typography variant="h1" textAlign="center">

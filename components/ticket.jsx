@@ -3,7 +3,7 @@ import { borderRadius, Box } from "@mui/system";
 import { useRef, useState } from "react";
 import React from "react";
 import ReactToPrint from "react-to-print";
-import svlogo from "/pictures/svlogo.png";
+import svlogo from "/pictures/svLogo.png";
 import vssutlogo from "/pictures/vssut_logo.png";
 import Image from "next/image";
 // import jsPDF from "jspdf";

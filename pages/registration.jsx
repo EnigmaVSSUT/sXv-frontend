@@ -242,7 +242,7 @@ const Form = () => {
           name="Registration Page"
           content="Meta description for the Registration page"
         />
-        <link rel="shortcut icon" href="svlogo.ico" />
+        <link rel="shortcut icon" href="svLogo.png" />
       </Head>
       <Stack sx={{ width: "100%" }} direction={"row"} justifyContent="center">
         <Typography variant="h4" color="initial" sx={{ marginTop: "20px" }}>
