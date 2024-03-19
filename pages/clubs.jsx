@@ -20,7 +20,7 @@ function Clubs() {
   const router = useRouter();
   const [loading, setLoading] = useState(false);
   const getDownloadUrl = (dUrl) => {
-    let downloadUrl = `https://drive.google.com/thumbnail?id=${
+    let downloadUrl = `https://drive.google.com/thumbnail?sz=w1000&id=${
       dUrl?.split("/")[5]
     }`;
     return downloadUrl;

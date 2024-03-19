@@ -70,7 +70,7 @@ const Speakers = () => {
       >
         <Typography
           variant="h1"
-          marginTop="10rem"
+          marginTop="5rem"
           sx={{ fontSize: "45px", lineHeight: "52px" }}
         >
           PINNACLE
