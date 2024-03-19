@@ -137,7 +137,7 @@ const ContactUS = () => {
                   id="standard-multiline-static"
                   label="Query"
                   multiline
-                  sx={{ width: { sm: "250px", xs: "100%" } }}
+                  sx={{ width: { sm: "100%", xs: "100%" } }}
                   rows={6}
                   value={query}
                   onChange={(e) => {
@@ -149,7 +149,7 @@ const ContactUS = () => {
                 onClick={submitQuery}
                 loading={loading}
                 variant="contained"
-                sx={{ width: "100%", boxShadow: "2px 4px  #000000" }}
+                sx={{ width: "100%", boxShadow: "3px 4px  #000000" }}
               >
                 Submit
               </LoadingButton>

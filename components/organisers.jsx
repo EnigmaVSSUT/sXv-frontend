@@ -13,6 +13,9 @@ import Image from "next/image";
 import Speaker from "/pictures/speakers.png";
 import Link from "next/link";
 import OpenInNewIcon from "@mui/icons-material/OpenInNew";
+import { useState, useRef, useEffect } from "react";
+import { motion } from "framer-motion";
+import { AnimatedDiv } from "./speakers";
 
 const Speakers = () => {
   const officials = [
@@ -44,20 +47,20 @@ const Speakers = () => {
       src: "/clubs/oc6.jpg",
       boxColor: "rgba(201,128,219)",
     },
-    {
-      name: "Dr.Jatin Kumar Pradhan",
-      designation: "Faculty Advisor, Technical Society",
-      id: "4",
-      src: "/clubs/oc4.jpg",
-      boxColor: "rgb(252,203,48)",
-    },
-    {
-      name: "Dr. Krushna Prasad Shadangi",
-      designation: "Faculty Advisor, Cultural Society",
-      id: "4",
-      src: "/clubs/oc5.jpg",
-      boxColor: "rgba(254,102,81)",
-    },
+    // {
+    //   name: "Dr.Jatin Kumar Pradhan",
+    //   designation: "Faculty Advisor, Technical Society",
+    //   id: "4",
+    //   src: "/clubs/oc4.jpg",
+    //   boxColor: "rgb(252,203,48)",
+    // },
+    // {
+    //   name: "Dr. Krushna Prasad Shadangi",
+    //   designation: "Faculty Advisor, Cultural Society",
+    //   id: "4",
+    //   src: "/clubs/oc5.jpg",
+    //   boxColor: "rgba(254,102,81)",
+    // },
   ];
   const organisers = [
     {
@@ -156,53 +159,54 @@ const Speakers = () => {
         alignItems="center"
         justifyContent="center"
       >
-        <Stack
-          margin="25px auto"
-          direction="row"
-          flexWrap="wrap"
-          justifyContent="space-around"
-          alignItems="space-around"
-          rowGap="80px"
-          columnGap="20px"
-        >
-          {officials.map((e) => (
-            // <Stack
-            //   direction="row"
-            //   padding="16px"
-            //   sx={{
-            //     borderRadius: "9px",
-            //     margin: "0",
-            //     width: {
-            //       xs: "300px",
-            //       md: "400px",
-            //     },
-            //     gap: "20px",
-            //     backgroundColor: "white.main",
-            //     color: "#fcfcfc",
-            //   }}
-            //   key={e.id}
-            // >
-            //   <Avatar
-            //     src={e.src}
-            //     sx={{
-            //       height: "80px",
-            //       width: "80px",
-            //     }}
-            //   ></Avatar>
-            //   <Box>
-            //     <Typography variant="h6" color="black">
-            //       {e.name}
-            //     </Typography>
-            //     <Typography
-            //       variant="p"
-            //       color="black"
-            //       fontFamily="Product Sans"
-            //       fontWeight="600"
-            //     >
-            //       {e.designation}
-            //     </Typography>
-            //   </Box>
-            // </Stack>
+        <AnimatedDiv>
+          <Stack
+            margin="25px auto"
+            direction="row"
+            flexWrap="wrap"
+            justifyContent="space-around"
+            alignItems="space-around"
+            rowGap="80px"
+            columnGap="20px"
+          >
+            {officials.map((e) => (
+              // <Stack
+              //   direction="row"
+              //   padding="16px"
+              //   sx={{
+              //     borderRadius: "9px",
+              //     margin: "0",
+              //     width: {
+              //       xs: "300px",
+              //       md: "400px",
+              //     },
+              //     gap: "20px",
+              //     backgroundColor: "white.main",
+              //     color: "#fcfcfc",
+              //   }}
+              //   key={e.id}
+              // >
+              //   <Avatar
+              //     src={e.src}
+              //     sx={{
+              //       height: "80px",
+              //       width: "80px",
+              //     }}
+              //   ></Avatar>
+              //   <Box>
+              //     <Typography variant="h6" color="black">
+              //       {e.name}
+              //     </Typography>
+              //     <Typography
+              //       variant="p"
+              //       color="black"
+              //       fontFamily="Product Sans"
+              //       fontWeight="600"
+              //     >
+              //       {e.designation}
+              //     </Typography>
+              //   </Box>
+              // </Stack>
 
             <Mentions
               title={e.name}
@@ -331,6 +335,7 @@ const Speakers = () => {
             />
           ))}
         </Stack>
+</AnimatedDiv>
       </Stack>
       <Link href="/clubs">
         <Button

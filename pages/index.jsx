@@ -154,7 +154,7 @@ const Hero = () => {
               <br />
               <span
                 style={{
-                  backgroundColor: "#6ac6eb",
+                  backgroundColor: "#81C2BD",
                   color: "white",
                   padding: "0 10px",
                   boxShadow: "6px 6px 0px -3px #30302f",
@@ -193,11 +193,13 @@ const Hero = () => {
             exit="exit" // Exit state (used later) to variants.exit
             transition={{ x: { duration: 0.5 }, type: "spring" }} // Set the transition to linear
           >
-            <img
-              src="./theme.png"
-              alt="Fest Poster"
+            <Box
+              component="img"
+              src="./festposter.jpg"
+              alt="Theme"
               className={styles.poster1}
-            />
+              sx={{ width: { xs: "50vw", md: "30vw", lg: "25vw" } }}
+            ></Box>
           </motion.main>
         </Box>
         {/* <Marqueesv /> */}
@@ -252,7 +254,13 @@ const Hero = () => {
           exit="exit" // Exit state (used later) to variants.exit
           transition={{ y: { duration: 0.8 }, type: "linear" }} // Set the transition to linear
         >
-          <img src="./festposter.png" alt="Theme" className={styles.poster} />
+          <Box
+            component="img"
+            src="./festposter.jpg"
+            alt="Theme"
+            className={styles.poster}
+            sx={{ width: { xs: "50vw", md: "30vw" } }}
+          ></Box>
         </motion.main>
       </div>
     </>
