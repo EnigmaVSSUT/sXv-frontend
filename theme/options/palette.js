@@ -1,9 +1,9 @@
 const paletteOptions = {
   mode: "light",
   primary: {
-    main: "#ED1D24",
-    light: "#ED1D24",
-    dark: "#ED1D24",
+    main: "#e14f5a",
+    light: "#e14f5a",
+    dark: "#e14f5a",
   },
   surface: {
     main: "#f3eee8",

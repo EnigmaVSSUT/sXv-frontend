@@ -25,7 +25,7 @@ const SmallCard = ({
         }}
       >
         <Box sx={{ border: "5px solid black", width: "23%", height: "55%" }}>
-          <Image src={eventimageurl} width={100} height={100}></Image>
+          <Image src={eventimageurl} alt="" width={100} height={100}></Image>
         </Box>
         <Box sx={{ display: "flex", flexDirection: "column", gap: "5px" }}>
           <Typography>{eventname}</Typography>

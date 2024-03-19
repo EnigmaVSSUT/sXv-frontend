@@ -72,6 +72,16 @@ const Caraousel = () => {
           >
             THE ASSEMBLY
           </Typography>
+          <Link href="/events">
+            <Typography
+              sx={{ textDecoration: "underline", color: "#e14f5a" }}
+              variant="h6"
+              color="initial"
+            >
+              VIEW ALL
+            </Typography>
+          </Link>
+
         </Stack>
 
         <InteractiveMarquee>

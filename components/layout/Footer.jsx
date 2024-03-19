@@ -2,7 +2,7 @@ import { Stack, Typography, Box } from "@mui/material";
 import { Container } from "@mui/system";
 import Image from "next/image";
 import logo from "/pictures/Enigmalogo.png";
-import svlogo from "/pictures/svlogo.png";
+
 import InstagramIcon from "@mui/icons-material/Instagram";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import YouTubeIcon from "@mui/icons-material/YouTube";
@@ -17,9 +17,9 @@ const Footer = () => {
     >
       <Box
         sx={{
-          backgroundColor: "#ed1d24",
+          backgroundColor: "#81C2BD",
           width: "100vw",
-          height: "400px",
+          height: "480px",
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
@@ -43,7 +43,12 @@ const Footer = () => {
             color: "#ffffff",
           }}
         >
-          <Image src={svlogo} alt="IMAGE" height={163} />
+          <Box
+            component="img"
+            src="./svLogo.png"
+            alt="IMAGE"
+            sx={{ width: { xs: "30vw", md: "20vw" } }}
+          ></Box>
           <Box
             sx={{
               display: "flex",

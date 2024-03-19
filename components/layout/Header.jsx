@@ -56,7 +56,9 @@ const Header = () => {
       >
         <Link href="/#home">
           {" "}
-          SAMAVESH <span className="black">X</span> VASSAUNT
+          <span className="Orange">SAMAVESH</span>
+          <span className="black"> X</span>
+          <span className="Blue"> VASSAUNT</span>
         </Link>
       </Typography>
       <Box
@@ -81,7 +83,7 @@ const Header = () => {
               console.log(router.asPath);
             }}
             style={{
-              color: link === "/#home" ? "#ed1d24" : "black",
+              color: link === "/#home" ? "#e14f5a" : "black",
             }}
           >
             Home
@@ -94,7 +96,7 @@ const Header = () => {
               setLink("/#theme");
             }}
             style={{
-              color: link === "/#theme" ? "#ed1d24" : "black",
+              color: link === "/#theme" ? "#e14f5a" : "black",
             }}
           >
             Theme
@@ -107,7 +109,7 @@ const Header = () => {
               setLink("/events");
             }}
             style={{
-              color: link === "/events" ? "#ed1d24" : "black",
+              color: link === "/events" ? "#e14f5a" : "black",
             }}
           >
             Events
@@ -120,7 +122,7 @@ const Header = () => {
               setLink("/clubs");
             }}
             style={{
-              color: link === "/clubs" ? "#ed1d24" : "black",
+              color: link === "/clubs" ? "#e14f5a" : "black",
             }}
           >
             Committies
@@ -134,7 +136,7 @@ const Header = () => {
               setLink("/#organisers");
             }}
             style={{
-              color: link === "/#organisers" ? "#ed1d24" : "black",
+              color: link === "/#organisers" ? "#e14f5a" : "black",
             }}
           >
             The Team
@@ -147,7 +149,7 @@ const Header = () => {
               setLink("/ContactUs");
             }}
             style={{
-              color: link === "/ContactUs" ? "#ed1d24" : "black",
+              color: link === "/ContactUs" ? "#e14f5a" : "black",
             }}
           >
             Contact Us
