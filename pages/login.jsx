@@ -324,7 +324,7 @@ const Form = () => {
         >
           <Image
             alt="helper image"
-            src="/Loginlogo.jpg"
+            src="/login.png"
             height="400"
             width="400"
             sx={{}}
