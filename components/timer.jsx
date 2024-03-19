@@ -33,7 +33,7 @@ const renderer = ({ days, hours, minutes, seconds, completed }) => {
         }}
       >
         {zeroPad(days)}
-        <span id="sub">days</span>
+        <span id="sub">day</span>
         {zeroPad(hours)}
         <span id="sub">hours</span>
         {zeroPad(minutes)}
