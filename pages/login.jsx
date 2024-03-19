@@ -154,7 +154,7 @@ const Form = () => {
               outline: "none",
             }}
           >
-            Forgot Password
+            Forgot Password ?
           </Typography>
           <Stack
             sx={{
@@ -314,7 +314,7 @@ const Form = () => {
               setOpen(true);
             }}
           >
-            Forget Password ?
+            Forgt Password ?
           </Typography>
         </Stack>
         {/* <Box
