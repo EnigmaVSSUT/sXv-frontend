@@ -167,7 +167,12 @@ const ClubCard = ({ title, about, venue, time, src }) => {
                 alignItems: "center",
               }}
             >
-              <Image showSkeleton src="/clubs/enigma1.jpeg" height="70vh" />
+              <Image
+                showSkeleton
+                src="/clubs/enigma1.jpeg"
+                alt=""
+                height="70vh"
+              />
             </Box>
             <Stack
               sx={{

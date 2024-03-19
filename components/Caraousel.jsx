@@ -1,26 +1,25 @@
 import { useState } from "react";
 import { Stack, Typography, Box, Skeleton } from "@mui/material";
 import Image from "next/image";
+import Link from "next/link";
+
 import Marquee from "react-fast-marquee";
 import { InteractiveMarquee } from "./carousel/Marquee";
 
 const imgUrls = [
-  "https://i.ibb.co/SsRwbJ0/1.webp",
-  "https://i.ibb.co/8dM7mjN/2.webp",
-  "https://i.ibb.co/1Gw3q4q/3.webp",
-  "https://i.ibb.co/vjLtRYh/4.webp",
-  "https://i.ibb.co/GJGt8Yy/5.webp",
-  "https://i.ibb.co/Kq0nMKW/6.webp",
-  "https://i.ibb.co/2qmxTH1/7.webp",
-  "https://i.ibb.co/L9svwn9/8.webp",
-  "https://i.ibb.co/mBJcdwT/9.webp",
-  "https://i.ibb.co/3R2GJmM/10.webp",
-  "https://i.ibb.co/X7W7Lvf/11.webp",
-  "https://i.ibb.co/qLS09HN/12.webp",
-  "https://i.ibb.co/Q9NnsWB/13.webp",
-  "https://i.ibb.co/T2XDZw1/14.webp",
-  "https://i.ibb.co/HgC59L3/15.webp",
-  "https://i.ibb.co/1qt0sMD/16.webp",
+  "https://drive.google.com/thumbnail?id=1SyMvaxZacRujOWWy1ykCRo2ApLz2qVWC",
+  " https://drive.google.com/thumbnail?id=1Qzob3vRcr4SUoM3eRC4bMtkoHSng8iaD",
+  "https://drive.google.com/thumbnail?id=1pCR7oDvvKn4FLq_dvlNJKGHozOR_E2nR",
+  "https://drive.google.com/thumbnail?id=1vUdW-VGmp9hkFMydhvRoN3CaiOOzSd7j",
+  "https://drive.google.com/thumbnail?id=1CmwrjGyj_Zd6e0_hfoFfpAARVaHiWc9a",
+  "https://drive.google.com/thumbnail?id=1YJDT_l1zU6Z97r3wx5wr5wTOsA9idt0x",
+  "https://drive.google.com/thumbnail?id=1bsKryeYBz8qPXvfRrRUWCoA7EmmOL4sz",
+  "https://drive.google.com/thumbnail?id=1y8OfgadfWWQzqd7EixJKeyiH5_349f_Q",
+  "https://drive.google.com/thumbnail?id=1wZlDITLSr1oMUw5T3m6Q2suV2T6ANUt6",
+  "https://drive.google.com/thumbnail?id=1o4c7wrGM1mdU_iXNAkEEJfZ82Lkp9S-6",
+  "https://drive.google.com/thumbnail?id=1Vvsfbr18OhHvCgKJOi5-quIqd5oPA4vx",
+  "https://drive.google.com/thumbnail?id=1-lG1OVMUIydPdef53oWQjC0cIuo7-z3c",
+  "https://drive.google.com/thumbnail?id=1-eP3qZ1lUrJ4soWKHLQuRzsoN96SiMES",
 ];
 
 const LazyImage = ({ src }) => {
@@ -81,7 +80,6 @@ const Caraousel = () => {
               VIEW ALL
             </Typography>
           </Link>
-
         </Stack>
 
         <InteractiveMarquee>
