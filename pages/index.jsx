@@ -125,6 +125,7 @@ const Hero = () => {
         <Box
           className={styles.intro}
           sx={{
+            display: "flex",
             justifyContent: {
               xs: "center",
               lg: "space-between",
@@ -143,8 +144,8 @@ const Hero = () => {
               color="initial"
               sx={{
                 fontSize: {
-                  xs: "2.5rem",
-                  md: "2.8rem",
+                  xs: "1.8rem",
+                  md: "2.5rem",
                 },
                 maxWidth: { xs: "300px", md: "380px" },
               }}
@@ -157,6 +158,7 @@ const Hero = () => {
                   color: "white",
                   padding: "0 10px",
                   boxShadow: "6px 6px 0px -3px #30302f",
+                  whiteSpace: "nowrap",
                 }}
               >
                 TECHNO-CULTURAL
@@ -183,6 +185,7 @@ const Hero = () => {
               </Button>
             </Typography>
           </motion.main>
+
           <motion.main
             variants={variants1} // Pass the variant object into Framer Motion
             initial="hidden" // Set the initial state to variants.hidden
