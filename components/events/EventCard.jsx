@@ -7,7 +7,7 @@ const { Stack, Typography, Grid } = require("@mui/material");
 
 const getDownloadUrl = (dUrl) => {
   let segments = dUrl.split("/");
-  let downloadUrl = `https://drive.google.com/thumbnail?id=${segments[5]}`;
+  let downloadUrl = `https://drive.google.com/thumbnail?sz=w1000&id=${segments[5]}`;
   return downloadUrl;
 };
 const arr = ["#6AC6EB", "#FE6651", "#00AF9A", "#C980DB", "#FCCB30"];
