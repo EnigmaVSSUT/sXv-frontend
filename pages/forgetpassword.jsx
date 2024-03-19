@@ -82,7 +82,7 @@ const Form = () => {
       const token = router.query.token;
       console.log(pwd, token);
       const message = await axios.post(
-        "http://localhost:8000/api/password/changepassword",
+        "http://sxv-backend.onrender.com/api/password/changepassword",
         {
           password: pwd,
           token: token,

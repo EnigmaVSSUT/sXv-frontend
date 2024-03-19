@@ -102,9 +102,12 @@ const Form = () => {
   const emailsend = async (email) => {
     try {
       setEmailLoading(true);
-      await axios.post("http://localhost:8000/api/password/fogetpwd", {
-        email,
-      });
+      await axios.post(
+        "http://sxv-backend.onrender.com/api/password/fogetpwd",
+        {
+          email,
+        }
+      );
       setEmailLoading(false);
       toast.success("Email sent successfully");
     } catch (error) {
@@ -314,7 +317,7 @@ const Form = () => {
             Forget Password ?
           </Typography>
         </Stack>
-        <Box
+        {/* <Box
           sx={{
             display: {
               xs: "none",
@@ -324,12 +327,12 @@ const Form = () => {
         >
           <Image
             alt="helper image"
-            src="/login/login.png"
-            height="400"
-            width="400"
+            src="./sv.png"
+            height="300"
+            width="300"
             sx={{}}
           />
-        </Box>
+        </Box> */}
       </Stack>
     </Stack>
   );

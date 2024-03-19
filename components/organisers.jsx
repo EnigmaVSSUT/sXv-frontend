@@ -64,31 +64,31 @@ const Speakers = () => {
   ];
   const organisers = [
     {
-      name: "Mr. Lalit Kumar",
+      name: "Mr. Inayatulla Khan",
       designation: "Coordinator , Technical Society",
       id: "1",
-      src: "/clubs/so1.jpg",
+      src: "https://drive.google.com/thumbnail?sz=w1000&id=11hRakTyOL7_lXLIU2piF8M34sjQh4g-1",
       boxColor: "rgba(201,128,219)",
     },
     {
-      name: "Mr. Ruddhi Narayan Prusty",
+      name: "Mr. Joyesh Deo",
       designation: "Coordinator , Cultural Society",
       id: "2",
-      src: "/clubs/so2.jpg",
+      src: "https://drive.google.com/thumbnail?sz=w1000&id=19-NIpje0NkT0osRuMk7NiaH1YE7kQ0nW",
       boxColor: "rgb(252,203,48)",
     },
     {
-      name: "Ms. Ananya Anuska",
+      name: "Ms. Prathyastee Acharya",
       designation: "Coordinator , Technical Society",
       id: "3",
-      src: "/clubs/so3.jpg",
+      src: "https://drive.google.com/thumbnail?sz=w1000&id=1g7OvYcEkr_dAzQ4-s2cbEE6RxwX8JYzO",
       boxColor: "rgba(254,102,81)",
     },
     {
-      name: "Ms. Gayatri Padhi",
+      name: "Ms. Swastika Mohapatra",
       designation: "Coordinator , Cultural Society",
       id: "4",
-      src: "/clubs/so4.jpg",
+      src: "https://drive.google.com/thumbnail?sz=w1000&id=10YS9ca3d0G1qY87lnS_gAr3rSOjfn1aH",
       boxColor: "rgba(106,198,235)",
     },
   ];
@@ -160,183 +160,181 @@ const Speakers = () => {
         alignItems="center"
         justifyContent="center"
       >
-        <AnimatedDiv>
-          <Stack
-            margin="25px auto"
-            direction="row"
-            flexWrap="wrap"
-            justifyContent="space-around"
-            alignItems="space-around"
-            rowGap="80px"
-            columnGap="50px"
-          >
-            {officials.map((e) => (
-              // <Stack
-              //   direction="row"
-              //   padding="16px"
-              //   sx={{
-              //     borderRadius: "9px",
-              //     margin: "0",
-              //     width: {
-              //       xs: "300px",
-              //       md: "400px",
-              //     },
-              //     gap: "20px",
-              //     backgroundColor: "white.main",
-              //     color: "#fcfcfc",
-              //   }}
-              //   key={e.id}
-              // >
-              //   <Avatar
-              //     src={e.src}
-              //     sx={{
-              //       height: "80px",
-              //       width: "80px",
-              //     }}
-              //   ></Avatar>
-              //   <Box>
-              //     <Typography variant="h6" color="black">
-              //       {e.name}
-              //     </Typography>
-              //     <Typography
-              //       variant="p"
-              //       color="black"
-              //       fontFamily="Product Sans"
-              //       fontWeight="600"
-              //     >
-              //       {e.designation}
-              //     </Typography>
-              //   </Box>
-              // </Stack>
+        <Stack
+          margin="25px auto"
+          direction="row"
+          flexWrap="wrap"
+          justifyContent="space-around"
+          alignItems="space-around"
+          rowGap="80px"
+          columnGap="50px"
+        >
+          {officials.map((e) => (
+            // <Stack
+            //   direction="row"
+            //   padding="16px"
+            //   sx={{
+            //     borderRadius: "9px",
+            //     margin: "0",
+            //     width: {
+            //       xs: "300px",
+            //       md: "400px",
+            //     },
+            //     gap: "20px",
+            //     backgroundColor: "white.main",
+            //     color: "#fcfcfc",
+            //   }}
+            //   key={e.id}
+            // >
+            //   <Avatar
+            //     src={e.src}
+            //     sx={{
+            //       height: "80px",
+            //       width: "80px",
+            //     }}
+            //   ></Avatar>
+            //   <Box>
+            //     <Typography variant="h6" color="black">
+            //       {e.name}
+            //     </Typography>
+            //     <Typography
+            //       variant="p"
+            //       color="black"
+            //       fontFamily="Product Sans"
+            //       fontWeight="600"
+            //     >
+            //       {e.designation}
+            //     </Typography>
+            //   </Box>
+            // </Stack>
 
-              <Mentions
-                title={e.name}
-                designation={e.designation}
-                color="#000000"
-                imgUrl={e.src}
-                key={e.src}
-                boxShadowColor={e.boxColor} // Dynamically set box shadow color
-              />
-            ))}
-          </Stack>
-          <Stack
+            <Mentions
+              title={e.name}
+              designation={e.designation}
+              color="#000000"
+              imgUrl={e.src}
+              key={e.src}
+              boxShadowColor={e.boxColor} // Dynamically set box shadow color
+            />
+          ))}
+        </Stack>
+        <Stack
+          sx={{
+            marginTop: "50px",
+            width: "auto",
+            position: "relative",
+            height: "100px",
+          }}
+        >
+          <svg
+            width="54"
+            height="62"
+            viewBox="0 0 54 62"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M54 30.9779C43.408 32.0827 37.3224 33.0991 33.5863 36.4576C29.1954 40.3906 28.1555 47.5937 27 62C25.806 47.0634 24.7275 39.9045 19.913 36.0599C16.1769 33.0549 10.1298 32.0827 0 31.0221C10.5535 29.9173 16.6776 28.9009 20.3752 25.5866C24.8046 21.6094 25.8445 14.4505 27 0C28.0785 13.3015 29.0414 20.4163 32.6234 24.526C36.2054 28.6358 42.4451 29.7847 54 30.9779Z"
+              fill="#00AF9A"
+            />
+          </svg>
+          <Typography
+            margin="-25px 40px -10px 40px"
+            textAlign="center"
+            // margin="20px 0"
+            variant="h3"
             sx={{
-              marginTop: "50px",
-              width: "auto",
-              position: "relative",
-              height: "100px",
+              fontSize: {
+                xs: "28px !important",
+                sm: "35px !important",
+                md: "35px !important",
+                lg: "35px !important",
+              },
+              WebkitTextStrokeColor: "#000000",
+              WebkitTextStrokeWidth: "2px",
+              color: "#FFF8E5",
+              // fontSize: "35px",
+              lineHeight: "52px",
+              fontWeight: "100",
+              letterSpacing: "1px",
             }}
           >
-            <svg
-              width="54"
-              height="62"
-              viewBox="0 0 54 62"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M54 30.9779C43.408 32.0827 37.3224 33.0991 33.5863 36.4576C29.1954 40.3906 28.1555 47.5937 27 62C25.806 47.0634 24.7275 39.9045 19.913 36.0599C16.1769 33.0549 10.1298 32.0827 0 31.0221C10.5535 29.9173 16.6776 28.9009 20.3752 25.5866C24.8046 21.6094 25.8445 14.4505 27 0C28.0785 13.3015 29.0414 20.4163 32.6234 24.526C36.2054 28.6358 42.4451 29.7847 54 30.9779Z"
-                fill="#00AF9A"
-              />
-            </svg>
-            <Typography
-              margin="-25px 40px -10px 40px"
-              textAlign="center"
-              // margin="20px 0"
-              variant="h3"
-              sx={{
-                fontSize: {
-                  xs: "28px !important",
-                  sm: "35px !important",
-                  md: "35px !important",
-                  lg: "35px !important",
-                },
-                WebkitTextStrokeColor: "#000000",
-                WebkitTextStrokeWidth: "2px",
-                color: "#FFF8E5",
-                // fontSize: "35px",
-                lineHeight: "52px",
-                fontWeight: "100",
-                letterSpacing: "1px",
-              }}
-            >
-              STUDENT BODIES
-            </Typography>
-            <svg
-              width="54"
-              height="62"
-              viewBox="0 0 54 62"
-              fill="none"
-              style={{ position: "absolute", right: "0px", bottom: "0px" }}
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M54 30.9779C43.408 32.0827 37.3224 33.0991 33.5863 36.4576C29.1954 40.3906 28.1555 47.5937 27 62C25.806 47.0634 24.7275 39.9045 19.913 36.0599C16.1769 33.0549 10.1298 32.0827 0 31.0221C10.5535 29.9173 16.6776 28.9009 20.3752 25.5866C24.8046 21.6094 25.8445 14.4505 27 0C28.0785 13.3015 29.0414 20.4163 32.6234 24.526C36.2054 28.6358 42.4451 29.7847 54 30.9779Z"
-                fill="#C980DB"
-              />
-            </svg>
-          </Stack>
-          <Stack
-            margin="25px auto"
-            direction="row"
-            flexWrap="wrap"
-            justifyContent="space-around"
-            alignItems="space-around"
-            rowGap="80px"
-            columnGap="50px"
+            STUDENT BODIES
+          </Typography>
+          <svg
+            width="54"
+            height="62"
+            viewBox="0 0 54 62"
+            fill="none"
+            style={{ position: "absolute", right: "-10px", bottom: "-10px" }}
+            xmlns="http://www.w3.org/2000/svg"
           >
-            {organisers.map((e) => (
-              // <Stack
-              //   direction="row"
-              //   padding="16px"
-              //   sx={{
-              //     borderRadius: "9px",
-              //     marginLeft: "0px",
-              //     margin: "0",
-              //     width: {
-              //       xs: "300px",
-              //       md: "400px",
-              //     },
-              //     backgroundColor: "white.main",
-              //     color: "#ffffff",
-              //     gap: "20px",
-              //   }}
-              //   key={e.id}
-              // >
-              //   <Avatar
-              //     src={e.src}
-              //     sx={{
-              //       height: "80px",
-              //       width: "80px",
-              //     }}
-              //   >
-              //     p
-              //   </Avatar>
-              //   <Box>
-              //     <Typography variant="h6" color="black">
-              //       {e.name}
-              //     </Typography>
-              //     <Typography
-              //       variant="p"
-              //       color="black"
-              //       fontFamily="Product Sans"
-              //       fontWeight="600"
-              //     >
-              //       {e.designation}
-              //     </Typography>
-              //   </Box>
-              // </Stack>
-              <Mentions
-                title={e.name}
-                designation={e.designation}
-                color="#000000"
-                imgUrl={e.src}
-                key={e.src}
-                boxShadowColor={e.boxColor} // Dynamically set box shadow color
-              />
-            ))}
-          </Stack>
-        </AnimatedDiv>
+            <path
+              d="M54 30.9779C43.408 32.0827 37.3224 33.0991 33.5863 36.4576C29.1954 40.3906 28.1555 47.5937 27 62C25.806 47.0634 24.7275 39.9045 19.913 36.0599C16.1769 33.0549 10.1298 32.0827 0 31.0221C10.5535 29.9173 16.6776 28.9009 20.3752 25.5866C24.8046 21.6094 25.8445 14.4505 27 0C28.0785 13.3015 29.0414 20.4163 32.6234 24.526C36.2054 28.6358 42.4451 29.7847 54 30.9779Z"
+              fill="#C980DB"
+            />
+          </svg>
+        </Stack>
+        <Stack
+          margin="25px auto"
+          direction="row"
+          flexWrap="wrap"
+          justifyContent="space-around"
+          alignItems="space-around"
+          rowGap="80px"
+          columnGap="50px"
+        >
+          {organisers.map((e) => (
+            // <Stack
+            //   direction="row"
+            //   padding="16px"
+            //   sx={{
+            //     borderRadius: "9px",
+            //     marginLeft: "0px",
+            //     margin: "0",
+            //     width: {
+            //       xs: "300px",
+            //       md: "400px",
+            //     },
+            //     backgroundColor: "white.main",
+            //     color: "#ffffff",
+            //     gap: "20px",
+            //   }}
+            //   key={e.id}
+            // >
+            //   <Avatar
+            //     src={e.src}
+            //     sx={{
+            //       height: "80px",
+            //       width: "80px",
+            //     }}
+            //   >
+            //     p
+            //   </Avatar>
+            //   <Box>
+            //     <Typography variant="h6" color="black">
+            //       {e.name}
+            //     </Typography>
+            //     <Typography
+            //       variant="p"
+            //       color="black"
+            //       fontFamily="Product Sans"
+            //       fontWeight="600"
+            //     >
+            //       {e.designation}
+            //     </Typography>
+            //   </Box>
+            // </Stack>
+            <Mentions
+              title={e.name}
+              designation={e.designation}
+              color="#000000"
+              imgUrl={e.src}
+              key={e.src}
+              boxShadowColor={e.boxColor} // Dynamically set box shadow color
+            />
+          ))}
+        </Stack>
       </Stack>
       <Link href="/clubs">
         <Button
@@ -353,7 +351,7 @@ const Speakers = () => {
           //   boxShadow: "12px 14px  #f9efd7 , 12px 13px 0 2px #000000",
           // }}
           sx={{
-            margin: "60px 0px",
+            margin: { xs: "30px 0px 10px 0px", md: "60px 0px" },
             borderRadius: "50px",
             display: "flex",
             gap: "20px",

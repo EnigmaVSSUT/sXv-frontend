@@ -7,6 +7,7 @@
   height: auto;
   scroll-behavior: smooth;
   background-color: #f3eee8;
+
   /* background-image: url('/back.avif'); */
 }
 .intro {
@@ -17,7 +18,7 @@
   /* justify-content: center; */
   padding: 0px;
   width: 70vw;
-  gap: 4vmin;
+  gap: 10vmin;
   min-height: 90vh;
   margin: 0 auto;
 }
