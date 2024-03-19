@@ -96,7 +96,7 @@ const ContactUS = () => {
                 Email:
               </Typography>
               <Typography variant="h6" color="#444444">
-                fest.vssut2023@gmail.com
+                festvssut2024@gmail.com
               </Typography>
             </Stack>
             <Stack>
