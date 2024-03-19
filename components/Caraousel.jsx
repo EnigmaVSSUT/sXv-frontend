@@ -59,13 +59,14 @@ const Caraousel = () => {
       >
         <Stack
           direction="row"
-          alignItems="flex-end" // Align items at the bottom
-          justifyContent="space-between" // Space between the two items
+          // alignItems="space-between"
+          justifyContent="center"
           paddingTop="60px"
         >
           <Typography
             variant="h1"
             color="initial"
+            mb={1}
             sx={{
               WebkitTextStrokeColor: "#857370",
               WebkitTextStrokeWidth: "3px",
@@ -74,32 +75,14 @@ const Caraousel = () => {
               strokeWidth: "3px",
               color: "transparent",
               letterSpacing: "1.5px",
-              width: "100%",
-              // border: "2px solid black",
-              display: "flex",
-              alignItems: "flex-end",
             }}
           >
             THE ASSEMBLY
           </Typography>
-          <Link
-            href="/events"
-            style={{
-              // border: "1px solid black",
-              display: "flex",
-              alignItems: "flex-end",
-              paddingBottom: "6px",
-            }}
-          >
+          <Link href="/events">
             <Typography
-              sx={{
-                textDecoration: "underline",
-                color: "#e14f5a",
-                whiteSpace: "nowrap",
-                fontSize: "20px",
-                margin: "0 10px",
-              }}
-              variant="h4"
+              sx={{ textDecoration: "underline", color: "#e14f5a" }}
+              variant="h6"
               color="initial"
             >
               <OpenInNewIcon sx={{ marginLeft: "5px", fontSize: "30px" }} />
