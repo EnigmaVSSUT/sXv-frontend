@@ -79,27 +79,13 @@ const Caraousel = () => {
           >
             THE ASSEMBLY
           </Typography>
-          <Link
-            href="/events"
-            style={{
-              // border: "1px solid black",
-              display: "flex",
-              alignItems: "flex-end",
-              paddingBottom: "6px",
-            }}
-          >
+          <Link href="/events">
             <Typography
-              sx={{
-                textDecoration: "underline",
-                color: "#e14f5a",
-                whiteSpace: "nowrap",
-                fontSize: "20px",
-                margin: "0 10px",
-              }}
-              variant="h4"
+              sx={{ textDecoration: "underline", color: "#e14f5a" }}
+              variant="h6"
               color="initial"
             >
-              VIEW ALL
+              <OpenInNewIcon sx={{ marginLeft: "5px", fontSize: "30px" }} />
             </Typography>
           </Link>
         </Stack>
