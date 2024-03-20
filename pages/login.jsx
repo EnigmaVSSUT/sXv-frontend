@@ -102,9 +102,12 @@ const Form = () => {
   const emailsend = async (email) => {
     try {
       setEmailLoading(true);
-      await axios.post("http://localhost:8000/api/password/fogetpwd", {
-        email,
-      });
+      await axios.post(
+        "https://sxv-backend.onrender.com/api/password/forgetpwd",
+        {
+          email,
+        }
+      );
       setEmailLoading(false);
       toast.success("Email sent successfully");
     } catch (error) {
