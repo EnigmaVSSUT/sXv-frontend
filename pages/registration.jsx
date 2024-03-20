@@ -126,6 +126,7 @@ const Form = () => {
     }
     sendOTP();
   };
+
   const handleClose = () => {
     setOpen(false);
     setVerifyLoad(false);
@@ -141,7 +142,7 @@ const Form = () => {
       setOtpTyped("");
       setOpen(false);
       const { data } = await axios.post(
-        "https://fest-backend-p8lk.onrender.com/api/auth/signup",
+        "https://sxv-backend.onrender.com/api/auth/signup",
         {
           username: name,
           email,
@@ -196,7 +197,7 @@ const Form = () => {
     setOtpTyped("");
     setOtpLoading(true);
     const { data } = await axios.post(
-      "https://fest-backend-p8lk.onrender.com/api/auth/sendOTP",
+      "https://sxv-backend.onrender.com/api/auth/sendOTP",
       { email },
       {
         headers: {
@@ -221,7 +222,7 @@ const Form = () => {
     top: "50%",
     left: "50%",
     transform: "translate(-50%, -50%)",
-    width: 400,
+    width: 360,
     bgcolor: "background.paper",
     border: "1px solid ",
     boxShadow: 24,
@@ -553,7 +554,13 @@ const Form = () => {
         aria-describedby="modal-modal-description"
       >
         <Box sx={style}>
-          <Typography sx={{ marginBottom: "1rem" }} variant="h6">
+          <Typography
+            sx={{
+              marginBottom: "1rem",
+              fontSize: "16px !important",
+              fontFamily: "Tangelo",
+            }}
+          >
             {" "}
             {`Enter 4 digit OTP sent to ${email}`}
           </Typography>

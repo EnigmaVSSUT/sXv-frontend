@@ -197,7 +197,7 @@ const Hero = () => {
               src="./festposter.jpg"
               alt="Theme"
               className={styles.poster1}
-              sx={{ width: { xs: "80vw", md: "50vw", lg: "25vw" } }}
+              sx={{ width: { xs: "75vw", md: "30vw", lg: "25vw" } }}
             ></Box>
           </motion.main>
         </Box>

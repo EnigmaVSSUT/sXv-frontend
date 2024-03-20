@@ -337,13 +337,13 @@ const Header = () => {
               </Typography>
             </ListItem>
 
-            <ListItem>
+            {/* <ListItem>
               <Typography variant="nav">
                 <Link href="/#sponsors" onClick={() => setOpen(false)}>
                   SPONSORS
                 </Link>
               </Typography>
-            </ListItem>
+            </ListItem> */}
 
             <ListItem>
               <Typography variant="nav">
