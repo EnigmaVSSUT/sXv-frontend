@@ -92,6 +92,16 @@ const Speakers = () => {
           }}
         >
           <Image
+            src="/DJ 1111.png"
+            width={400}
+            height={400}
+            alt="IMAGE"
+            id="speak"
+            style={{
+              objectFit: "contain",
+            }}
+          />
+          <Image
             src="/raj.jpg"
             width={400}
             height={400}
@@ -100,6 +110,16 @@ const Speakers = () => {
             style={{
               objectFit: "contain",
             }}
+          />
+          <Image
+            src="/IC FINAL COPY.png"
+            width={400}
+            height={400}
+            alt="IMAGE"
+            id="speak"
+            // style={{
+            //   objectFit: "contain",
+            // }}
           />
         </Box>
       </Box>
