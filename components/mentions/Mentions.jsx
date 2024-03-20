@@ -58,7 +58,12 @@ const Mentions = ({ title, designation, color, imgUrl, boxShadowColor }) => {
           }}
         >
           <Box sx={{ width: "100%", height: "auto" }}>
-            <Image src={imgUrl} width={250} height={250} />
+            <Image
+              src={imgUrl}
+              width={250}
+              height={250}
+              style={{ objectFit: "cover" }}
+            />
           </Box>
           <Box sx={{ width: "100%", height: "30%", padding: "10px" }}>
             <Typography

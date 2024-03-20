@@ -64,31 +64,31 @@ const Speakers = () => {
   ];
   const organisers = [
     {
-      name: "Mr. Lalit Kumar",
+      name: "Mr. Inayatulla Khan",
       designation: "Coordinator , Technical Society",
       id: "1",
-      src: "/clubs/so1.jpg",
+      src: "https://drive.google.com/thumbnail?sz=w1000&id=11hRakTyOL7_lXLIU2piF8M34sjQh4g-1",
       boxColor: "rgba(201,128,219)",
     },
     {
-      name: "Mr. Ruddhi Narayan Prusty",
+      name: "Mr. Joyesh Deo",
       designation: "Coordinator , Cultural Society",
       id: "2",
-      src: "/clubs/so2.jpg",
+      src: "https://drive.google.com/thumbnail?sz=w1000&id=19-NIpje0NkT0osRuMk7NiaH1YE7kQ0nW",
       boxColor: "rgb(252,203,48)",
     },
     {
-      name: "Ms. Ananya Anuska",
+      name: "Ms. Prathyastee Acharya",
       designation: "Coordinator , Technical Society",
       id: "3",
-      src: "/clubs/so3.jpg",
+      src: "https://drive.google.com/thumbnail?sz=w1000&id=1g7OvYcEkr_dAzQ4-s2cbEE6RxwX8JYzO",
       boxColor: "rgba(254,102,81)",
     },
     {
-      name: "Ms. Gayatri Padhi",
+      name: "Ms. Swastika Mohapatra",
       designation: "Coordinator , Cultural Society",
       id: "4",
-      src: "/clubs/so4.jpg",
+      src: "https://drive.google.com/thumbnail?sz=w1000&id=10YS9ca3d0G1qY87lnS_gAr3rSOjfn1aH",
       boxColor: "rgba(106,198,235)",
     },
   ];
@@ -97,10 +97,11 @@ const Speakers = () => {
       <Typography
         variant="h1"
         textAlign="center"
-        margin="3rem 0"
-        sx={{ fontSize: "45px", lineHeight: "52px" }}
+        margin="2rem 0"
+        mb="0px"
+        sx={{ fontSize: "45px" }}
       >
-        The Team
+        THE TEAM
       </Typography>
       <Stack sx={{ width: "auto", position: "relative", height: "125px" }}>
         <svg
@@ -159,54 +160,53 @@ const Speakers = () => {
         alignItems="center"
         justifyContent="center"
       >
-        <AnimatedDiv>
-          <Stack
-            margin="25px auto"
-            direction="row"
-            flexWrap="wrap"
-            justifyContent="space-around"
-            alignItems="space-around"
-            rowGap="80px"
-            columnGap="20px"
-          >
-            {officials.map((e) => (
-              // <Stack
-              //   direction="row"
-              //   padding="16px"
-              //   sx={{
-              //     borderRadius: "9px",
-              //     margin: "0",
-              //     width: {
-              //       xs: "300px",
-              //       md: "400px",
-              //     },
-              //     gap: "20px",
-              //     backgroundColor: "white.main",
-              //     color: "#fcfcfc",
-              //   }}
-              //   key={e.id}
-              // >
-              //   <Avatar
-              //     src={e.src}
-              //     sx={{
-              //       height: "80px",
-              //       width: "80px",
-              //     }}
-              //   ></Avatar>
-              //   <Box>
-              //     <Typography variant="h6" color="black">
-              //       {e.name}
-              //     </Typography>
-              //     <Typography
-              //       variant="p"
-              //       color="black"
-              //       fontFamily="Product Sans"
-              //       fontWeight="600"
-              //     >
-              //       {e.designation}
-              //     </Typography>
-              //   </Box>
-              // </Stack>
+        <Stack
+          margin="25px auto"
+          direction="row"
+          flexWrap="wrap"
+          justifyContent="space-around"
+          alignItems="space-around"
+          rowGap="80px"
+          columnGap="50px"
+        >
+          {officials.map((e) => (
+            // <Stack
+            //   direction="row"
+            //   padding="16px"
+            //   sx={{
+            //     borderRadius: "9px",
+            //     margin: "0",
+            //     width: {
+            //       xs: "300px",
+            //       md: "400px",
+            //     },
+            //     gap: "20px",
+            //     backgroundColor: "white.main",
+            //     color: "#fcfcfc",
+            //   }}
+            //   key={e.id}
+            // >
+            //   <Avatar
+            //     src={e.src}
+            //     sx={{
+            //       height: "80px",
+            //       width: "80px",
+            //     }}
+            //   ></Avatar>
+            //   <Box>
+            //     <Typography variant="h6" color="black">
+            //       {e.name}
+            //     </Typography>
+            //     <Typography
+            //       variant="p"
+            //       color="black"
+            //       fontFamily="Product Sans"
+            //       fontWeight="600"
+            //     >
+            //       {e.designation}
+            //     </Typography>
+            //   </Box>
+            // </Stack>
 
             <Mentions
               title={e.name}
@@ -220,10 +220,10 @@ const Speakers = () => {
         </Stack>
         <Stack
           sx={{
-            marginTop: "30px",
+            marginTop: "50px",
             width: "auto",
             position: "relative",
-            height: "125px",
+            height: "100px",
           }}
         >
           <svg
@@ -266,7 +266,7 @@ const Speakers = () => {
             height="62"
             viewBox="0 0 54 62"
             fill="none"
-            style={{ position: "absolute", right: "0px", bottom: "0px" }}
+            style={{ position: "absolute", right: "-10px", bottom: "-10px" }}
             xmlns="http://www.w3.org/2000/svg"
           >
             <path
@@ -282,7 +282,7 @@ const Speakers = () => {
           justifyContent="space-around"
           alignItems="space-around"
           rowGap="80px"
-          columnGap="20px"
+          columnGap="50px"
         >
           {organisers.map((e) => (
             // <Stack
@@ -335,7 +335,6 @@ const Speakers = () => {
             />
           ))}
         </Stack>
-</AnimatedDiv>
       </Stack>
       <Link href="/clubs">
         <Button
@@ -352,11 +351,12 @@ const Speakers = () => {
           //   boxShadow: "12px 14px  #f9efd7 , 12px 13px 0 2px #000000",
           // }}
           sx={{
-            marginTop: "60px",
+            margin: { xs: "30px 0px 10px 0px", md: "60px 0px" },
             borderRadius: "50px",
-            width: "300px",
-            height: "100px",
-            fontSize: "25px",
+            display: "flex",
+            gap: "20px",
+            height: "90px",
+            fontSize: "22px",
             background: "#00af9a",
             border: "3px solid black",
             boxShadow: "6px 6px  #f9efd7 , 6px 6px 0 2px #000000",

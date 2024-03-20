@@ -20,7 +20,7 @@ function Clubs() {
   const router = useRouter();
   const [loading, setLoading] = useState(false);
   const getDownloadUrl = (dUrl) => {
-    let downloadUrl = `https://drive.google.com/thumbnail?id=${
+    let downloadUrl = `https://drive.google.com/thumbnail?sz=w1000&id=${
       dUrl?.split("/")[5]
     }`;
     return downloadUrl;
@@ -51,7 +51,7 @@ function Clubs() {
       <Head>
         <title>Clubs and Societies</title>
         <meta name="Clubs" content="Meta description fevor the Home page" />
-        <link rel="shortcut icon" href="svlogo.ico" />
+        <link rel="shortcut icon" href="svLogo.png" />
       </Head>
       <Typography
         fontFamily={"American Captain"}

@@ -33,7 +33,7 @@ const renderer = ({ days, hours, minutes, seconds, completed }) => {
         }}
       >
         {zeroPad(days)}
-        <span id="sub">days</span>
+        <span id="sub">day</span>
         {zeroPad(hours)}
         <span id="sub">hours</span>
         {zeroPad(minutes)}
@@ -65,7 +65,7 @@ const Timer = () => {
               display: "flex",
               flexDirection: "column",
               alignItems: "left",
-              padding: "32px",
+              padding: { xs: "15px", md: "25px" },
               gap: "10px",
             }}
           >

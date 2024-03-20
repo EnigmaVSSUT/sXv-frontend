@@ -80,7 +80,7 @@ const Events = () => {
         <Head>
           <title>Events Page</title>
           <meta name="Event" content="Meta description for the Home page" />
-          <link rel="shortcut icon" href="svlogo.ico" />
+          <link rel="shortcut icon" href="svLogo.png" />
         </Head>
         <Typography
           variant="ACH1"

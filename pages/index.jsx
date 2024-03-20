@@ -62,7 +62,7 @@ const Hero = () => {
     //     (m) => "Please login to your account to generate your ticket"
     //   );
     // }
-    setToastMessage((m) => "Ticket's on the horizon, stay tuned!🚀🎫");
+    setToastMessage((m) => "Ticket's on the horizon, Stay tuned! 🚀🎫");
   };
 
   const time = new Date();
@@ -110,7 +110,7 @@ const Hero = () => {
       <Head>
         <title>Samavesh-X-Vassaunt</title>
         <meta name="Home" content="Meta description for the Home page" />
-        <link rel="shortcut icon" href="svlogo.ico" />
+        <link rel="shortcut icon" href="svLogo.png" />
       </Head>
       <Box
         className={styles.hero}
@@ -125,7 +125,6 @@ const Hero = () => {
         <Box
           className={styles.intro}
           sx={{
-            display: "flex",
             justifyContent: {
               xs: "center",
               lg: "space-between",
@@ -146,7 +145,9 @@ const Hero = () => {
                 fontSize: {
                   xs: "1.8rem",
                   md: "2.5rem",
+                  lg: "3rem",
                 },
+                lineHeight: { xs: "40px", md: "inherit" },
                 maxWidth: { xs: "300px", md: "380px" },
               }}
             >
@@ -158,7 +159,6 @@ const Hero = () => {
                   color: "white",
                   padding: "0 10px",
                   boxShadow: "6px 6px 0px -3px #30302f",
-                  whiteSpace: "nowrap",
                 }}
               >
                 TECHNO-CULTURAL
@@ -169,8 +169,8 @@ const Hero = () => {
               <Button
                 variant="contained"
                 sx={{
-                  bottom: "20px",
-                  fontSize: "15px",
+                  mt: "20px",
+                  fontSize: { xs: "15px", md: "18px" },
                   padding: "10px 50px",
                   boxShadow: "6px 6px 0px -3px #30302f",
                   "&:hover": {
@@ -185,7 +185,6 @@ const Hero = () => {
               </Button>
             </Typography>
           </motion.main>
-
           <motion.main
             variants={variants1} // Pass the variant object into Framer Motion
             initial="hidden" // Set the initial state to variants.hidden
@@ -198,7 +197,7 @@ const Hero = () => {
               src="./festposter.jpg"
               alt="Theme"
               className={styles.poster1}
-              sx={{ width: { xs: "50vw", md: "30vw", lg: "25vw" } }}
+              sx={{ width: { xs: "80vw", md: "50vw", lg: "25vw" } }}
             ></Box>
           </motion.main>
         </Box>
@@ -232,18 +231,20 @@ const Hero = () => {
             <Typography
               variant="h3"
               color="initial"
-              sx={{ fontSize: "2.5rem" }}
+              sx={{ fontSize: "2.5rem", mb: "10px" }}
             >
-              MARVEL AT VSSUT
+              Retro Carnival at VSSUT
             </Typography>
             <Typography variant="nav" color="initial" sx={{ color: "#4D4544" }}>
-              Marvel Cinematic Universe, fondly known as MCU, is an essence of
-              childhood where it takes even an adult to the nostalgia of falling
-              in love with their superheroes all over again. Be it Ironman,
-              Deadpool, Groot or Captain America, their fanbase knows no age
-              restrictions. The marvellous love for those friendly superheroes
-              would just increase with time as one learns about their pure
-              intentions and morals for which they fight against injustice.
+              The Retro Carnival at VSSUT is a delightful journey back in time,
+              evoking a sense of nostalgia and fun for all ages. From classic
+              arcade games to vintage rides, the carnival transports attendees
+              to a bygone era of innocence and joy. Whether it's the neon
+              lights, the retro music, or the old-fashioned treats, there's
+              something magical about stepping into this world of yesteryear. As
+              attendees wander through the carnival grounds, they can't help but
+              smile as they reminisce about simpler times and embrace the spirit
+              of fun and camaraderie.
             </Typography>
           </motion.main>
         </Box>
@@ -256,10 +257,10 @@ const Hero = () => {
         >
           <Box
             component="img"
-            src="./festposter.jpg"
+            src="./sv.png"
             alt="Theme"
             className={styles.poster}
-            sx={{ width: { xs: "50vw", md: "30vw" } }}
+            sx={{ width: { xs: "80vw", md: "30vw" } }}
           ></Box>
         </motion.main>
       </div>

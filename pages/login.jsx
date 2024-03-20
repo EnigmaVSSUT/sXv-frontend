@@ -157,7 +157,7 @@ const Form = () => {
               outline: "none",
             }}
           >
-            Forgot Password
+            Forgot Password ?
           </Typography>
           <Stack
             sx={{
@@ -215,7 +215,7 @@ const Form = () => {
       <Head>
         <title>Login</title>
         <meta name="Login Page" content="Meta description for the Home page" />
-        <link rel="shortcut icon" href="svlogo.ico" />
+        <link rel="shortcut icon" href="svLogo.png" />
       </Head>
       <Stack
         width="90%"
@@ -317,10 +317,10 @@ const Form = () => {
               setOpen(true);
             }}
           >
-            Forget Password ?
+            Forgt Password ?
           </Typography>
         </Stack>
-        <Box
+        {/* <Box
           sx={{
             display: {
               xs: "none",
@@ -330,12 +330,12 @@ const Form = () => {
         >
           <Image
             alt="helper image"
-            src="/login/login.png"
-            height="400"
-            width="400"
+            src="./sv.png"
+            height="300"
+            width="300"
             sx={{}}
           />
-        </Box>
+        </Box> */}
       </Stack>
     </Stack>
   );
