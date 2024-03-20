@@ -110,13 +110,13 @@ const Form = () => {
       );
       setEmailLoading(false);
       toast.success("Email sent successfully");
-    } catch (error) {
-      toast.error("Please enter a valid email address");
-    } finally {
+
       setEmailLoading(false);
-      // router.push("/login")
       setOpen(false);
       setSendMail("");
+      router.push("/");
+    } catch (error) {
+      toast.error("Please enter a valid email address");
     }
   };
 
