@@ -111,16 +111,6 @@ const Speakers = () => {
               objectFit: "contain",
             }}
           />
-          <Image
-            src="/IC FINAL COPY.png"
-            width={400}
-            height={400}
-            alt="IMAGE"
-            id="speak"
-            // style={{
-            //   objectFit: "contain",
-            // }}
-          />
         </Box>
       </Box>
     </Stack>
