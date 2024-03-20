@@ -497,7 +497,7 @@ const Form = () => {
           <MenuItem value={2028}>Other</MenuItem>
         </Select> */}
         <FormControl fullWIdth>
-          <InputLabel id="demo-simple-select-label">Graduation-Year</InputLabel>
+          <InputLabel id="demo-simple-select-label">Graduation-year</InputLabel>
           <Select
             // size="medium"
             labelId="demo-simple-select-label"
@@ -516,8 +516,35 @@ const Form = () => {
             <MenuItem value={2028}>Other</MenuItem>
           </Select>
         </FormControl>
+        <FormControl fullWIdth>
+          <InputLabel id="demo-simple-select-label">Branch</InputLabel>
+          <Select
+            // size="medium"
+            labelId="demo-simple-select-label"
+            id="demo-simple-select"
+            value={branch}
+            label="Graduation-year"
+            onChange={(e) => {
+              setBranch(e.target.value);
+            }}
+          >
+            <MenuItem value={"CSE"}>CSE</MenuItem>
+            <MenuItem value={"IT"}>IT</MenuItem>
+            <MenuItem value={"ETC"}>ETC</MenuItem>
+            <MenuItem value={"MECH"}>MECHANICAL</MenuItem>
+            <MenuItem value={"CHEM"}>CHEMICAL</MenuItem>
+            <MenuItem value={"CE"}>CIVIL</MenuItem>
+            <MenuItem value={"MME"}>MME</MenuItem>
+            <MenuItem value={"EEE"}>EEE</MenuItem>
+            <MenuItem value={"EE"}>ELECTRICAL</MenuItem>
+            <MenuItem value={"PROD"}>PRODUCTION</MenuItem>
+            <MenuItem value={"MSC"}>MSC</MenuItem>
+            <MenuItem value={"MTECH"}>MTECH</MenuItem>
+            <MenuItem value={"OTHERS"}>OTHERS</MenuItem>
+          </Select>
+        </FormControl>
 
-        <TextField
+        {/* <TextField
           required
           id="branch"
           // size="small"
@@ -527,7 +554,7 @@ const Form = () => {
           onChange={(e) => {
             setBranch(e.target.value);
           }}
-        />
+        /> */}
       </Stack>
 
       <LoadingButton

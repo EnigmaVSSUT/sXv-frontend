@@ -46,23 +46,23 @@ const Hero = () => {
   // const { isAuthenticated, paymentStatus } = React.useContext(AppContext);
   const [toastMessage, setToastMessage] = useState();
   const GenTicket = () => {
-    // const token = localStorage.getItem("token");
-    // console.log(token);
-    // if (token) {
-    //   axios
-    //     .get("https://sxv-backend.onrender.com/api/ticket/genTicket", {
-    //       headers: { authorisation: token },
-    //     })
-    //     .then((data) => {
-    //       setToastMessage((m) => data.data.message);
-    //       console.log(data.data.error);
-    //     });
-    // } else {
-    //   setToastMessage(
-    //     (m) => "Please login to your account to generate your ticket"
-    //   );
-    // }
-    setToastMessage((m) => "Ticket's on the horizon, Stay tuned! 🚀🎫");
+    const token = localStorage.getItem("token");
+    console.log(token);
+    if (token) {
+      axios
+        .get("https://sxv-backend.onrender.com/api/ticket/genTicket", {
+          headers: { authorisation: token },
+        })
+        .then((data) => {
+          setToastMessage((m) => data.data.message);
+          console.log(data.data.error);
+        });
+    } else {
+      setToastMessage(
+        (m) => "Please login to your account to generate your ticket"
+      );
+    }
+    // setToastMessage((m) => "Ticket's on the horizon, Stay tuned! 🚀🎫");
   };
 
   const time = new Date();
@@ -108,7 +108,7 @@ const Hero = () => {
       </Script>
       <div id="home"></div>
       <Head>
-        <title>Samavesh-X-Vassaunt</title>
+        <title>Samavesh-X-Vassaunt 2024</title>
         <meta name="Home" content="Meta description for the Home page" />
         <link rel="shortcut icon" href="svLogo.png" />
       </Head>
