@@ -41,7 +41,7 @@ const Speakers = () => {
       boxColor: "rgba(254,102,81)",
     },
     {
-      name: "Dr. Mihir Kumar Sutar",
+      name: "Dr. Trupti Ranjan Mahapatra",
       designation: "Vice President , Cultural Society",
       id: "4",
       src: "/clubs/oc6.jpg",
