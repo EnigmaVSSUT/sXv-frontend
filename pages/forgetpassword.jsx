@@ -98,6 +98,7 @@ const Form = () => {
       console.log(message);
       toast.success("Password changed Successfully");
       setLoading(false);
+      router.push("/login");
     } catch (error) {
       toast.error(error);
     }
