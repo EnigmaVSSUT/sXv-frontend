@@ -201,7 +201,7 @@ const Form = () => {
                 backgroundColor: "#e14f5a",
                 color: "#fff",
                 "&:hover": {
-                  backgroundColor: "#c0000a",
+                  backgroundColor: "#e14f5a",
                 },
               }}
               onClick={() => emailsend(sendMail)}
