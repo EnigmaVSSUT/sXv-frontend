@@ -68,15 +68,29 @@ const ClubPage = () => {
         }}
         gap="24px"
       >
-        <Stack gap="32px">
-          <Stack alignItems="center">
+        <Stack
+          gap="32px"
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <Avatar
+            alignItems="center"
+            sx={{
+              height: "150px",
+              width: "150px",
+              backgroundColor: "black",
+            }}
+          >
             <Image
               src={getDownloadUrl(clubFetched?.logo)}
               alt={clubFetched?.name}
-              width={300}
-              height={300}
+              width={100}
+              height={100}
             />
-          </Stack>
+          </Avatar>
           <Head>
             <title>{clubFetched?.name}</title>
             <meta
