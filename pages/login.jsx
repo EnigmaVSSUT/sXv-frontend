@@ -314,7 +314,7 @@ const Form = () => {
               setOpen(true);
             }}
           >
-            Forgt Password ?
+            Forgot Password ?
           </Typography>
         </Stack>
         {/* <Box
