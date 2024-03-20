@@ -102,15 +102,21 @@ const Form = () => {
   const emailsend = async (email) => {
     try {
       setEmailLoading(true);
-      await axios.post("http://localhost:8000/api/password/fogetpwd", {
-        email,
-      });
+      await axios.post(
+        "https://sxv-backend.onrender.com/api/password/forgetpwd",
+        {
+          email,
+        }
+      );
       setEmailLoading(false);
       toast.success("Email sent successfully");
     } catch (error) {
       toast.error("Please enter a valid email address");
     } finally {
       setEmailLoading(false);
+      // router.push("/login")
+      setOpen(false);
+      setSendMail("");
     }
   };
 
@@ -151,7 +157,7 @@ const Form = () => {
               outline: "none",
             }}
           >
-            Forgot Password
+            Forgot Password ?
           </Typography>
           <Stack
             sx={{
@@ -195,7 +201,7 @@ const Form = () => {
                 backgroundColor: "#e14f5a",
                 color: "#fff",
                 "&:hover": {
-                  backgroundColor: "#c0000a",
+                  backgroundColor: "#e14f5a",
                 },
               }}
               onClick={() => emailsend(sendMail)}
@@ -209,7 +215,7 @@ const Form = () => {
       <Head>
         <title>Login</title>
         <meta name="Login Page" content="Meta description for the Home page" />
-        <link rel="shortcut icon" href="svlogo.ico" />
+        <link rel="shortcut icon" href="svLogo.png" />
       </Head>
       <Stack
         width="90%"
@@ -237,11 +243,7 @@ const Form = () => {
             },
           }}
         >
-          <Typography
-            variant="h3"
-            color="initial"
-            sx={{ marginTop: "80px", marginBottom: "45px" }}
-          >
+          <Typography variant="h3" color="initial" sx={{ margin: "45px" }}>
             Login
           </Typography>
           <TextField
@@ -306,15 +308,16 @@ const Form = () => {
               textDecoration: "underline",
               textAlign: "center",
               cursor: "pointer",
+              mb: "40px",
             }}
             onClick={() => {
               setOpen(true);
             }}
           >
-            Forget Password ?
+            Forgt Password ?
           </Typography>
         </Stack>
-        <Box
+        {/* <Box
           sx={{
             display: {
               xs: "none",
@@ -324,12 +327,12 @@ const Form = () => {
         >
           <Image
             alt="helper image"
-            src="/login.png"
-            height="400"
-            width="400"
+            src="./sv.png"
+            height="300"
+            width="300"
             sx={{}}
           />
-        </Box>
+        </Box> */}
       </Stack>
     </Stack>
   );

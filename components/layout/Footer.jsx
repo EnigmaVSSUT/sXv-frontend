@@ -19,7 +19,7 @@ const Footer = () => {
         sx={{
           backgroundColor: "#81C2BD",
           width: "100vw",
-          height: "480px",
+
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
@@ -36,10 +36,10 @@ const Footer = () => {
             justifyContent: "space-between",
             alignItems: {
               xs: "center",
-              md: "flex-start",
+              md: "center",
             },
-            padding: "32px",
-            gap: "10px",
+            padding: { xs: "60px 30px", md: "80px 32px" },
+            gap: "30px",
             color: "#ffffff",
           }}
         >
@@ -47,7 +47,7 @@ const Footer = () => {
             component="img"
             src="./svLogo.png"
             alt="IMAGE"
-            sx={{ width: { xs: "30vw", md: "20vw" } }}
+            sx={{ width: { xs: "60vw", md: "18vw" } }}
           ></Box>
           <Box
             sx={{
@@ -55,7 +55,6 @@ const Footer = () => {
               flexDirection: "row",
               justifyContent: "space-between",
               alignItems: {
-                xs: "center",
                 md: "flex-start",
               },
               marginTop: {
@@ -63,7 +62,7 @@ const Footer = () => {
                 md: "0px",
               },
               padding: "0px",
-              gap: "60px",
+              gap: { xs: "40px", md: "60px" },
             }}
           >
             <Box
@@ -80,7 +79,7 @@ const Footer = () => {
                 variant="nav"
                 sx={{ fontSize: { xs: "1rem", md: "1.1rem" } }}
               >
-                <Link href="/#home">HOME</Link>
+                <Link href="/">HOME</Link>
               </Typography>
               <Typography
                 variant="nav"
@@ -133,7 +132,7 @@ const Footer = () => {
                 variant="nav"
                 sx={{ fontSize: { xs: "1rem", md: "1.1rem" } }}
               >
-                FOLLOW OUR SOCIALS
+                SOCIALS
               </Typography>
               <Typography
                 variant="nav"
@@ -149,9 +148,11 @@ const Footer = () => {
       </Box>
       <Box
         sx={{
-          backgroundColor: "#000000",
+          backgroundColor: "#1e1e1e",
           width: "100vw",
-          height: "158.17px",
+          // height: "158.17px",
+          padding: "30px 0px",
+          gap: "7px",
           display: "flex",
           justifyContent: "center",
           alignItems: "center",

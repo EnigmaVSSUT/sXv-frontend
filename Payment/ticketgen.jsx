@@ -87,7 +87,7 @@ const Ticketgen = () => {
             name="Ticket Generation"
             content="Meta description fevor the Home page"
           />
-          <link rel="shortcut icon" href="svlogo.ico" />
+          <link rel="shortcut icon" href="svLogo.png" />
         </Head>
         <Typography variant="h4" color="initial">
           Generate your Ticket

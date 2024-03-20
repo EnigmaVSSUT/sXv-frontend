@@ -78,7 +78,7 @@ const PaymentPage = () => {
       <Head>
         <title>Payment Page</title>
         <meta name="Home" content="Meta description fevor the Home page" />
-        <link rel="shortcut icon" href="svlogo.ico" />
+        <link rel="shortcut icon" href="svLogo.png" />
       </Head>
       <Typography
         variant="h4"

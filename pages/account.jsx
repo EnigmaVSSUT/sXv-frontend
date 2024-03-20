@@ -62,7 +62,7 @@ const Account = () => {
               name="Accounts"
               content="Meta description fevor the Home page"
             />
-            <link rel="shortcut icon" href="svlogo.ico" />
+            <link rel="shortcut icon" href="svLogo.png" />
           </Head>
           <Grid
           // sx={{fontFamily:'Righteous'}}
@@ -104,20 +104,25 @@ const Account = () => {
           <Grid item xs={12} textAlign="center">
             {" "}
             {/* Adjust the width as needed */}
-            <Typography variant="h3">
-              <span className="black">Registered Events</span>
+            <Typography variant="h3" color={"#81c2bd"}>
+              <span>Registered Events</span>
             </Typography>
           </Grid>
 
-          {events ? (
+          {events && events.length != 0 ? (
             events.map((eve) => <EventCard key={eve.eventName} event={eve} />)
           ) : (
             <>
               {" "}
               <Typography
-                color={"#e14f5a"}
+                color={"#81c2bd"}
+                className="black"
                 fontFamily={"American Captain"}
                 variant="h6"
+                sx={{
+                  fontStyle: "italic",
+                  marginTop: "20px",
+                }}
               >
                 No events participated
               </Typography>

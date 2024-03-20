@@ -18,8 +18,8 @@ const MarqueeItem = (props) => {
 
     const xPercentage = (x.current / rectRef.current.width) * 100;
 
-    if (xPercentage < -90) {
-      x.current = 0;
+    if (xPercentage < -57) {
+      x.current = 0; // Reset position when it reaches the end
     }
 
     if (xPercentage > 0) {
@@ -32,6 +32,8 @@ const MarqueeItem = (props) => {
   useEffect(() => {
     if (itemRef.current) {
       rectRef.current = itemRef.current.getBoundingClientRect();
+      // Ensure content starts from the beginning
+      itemRef.current.style.transform = `translate3d(0%, 0, 0)`;
     }
   }, [width, height]);
 
@@ -90,20 +92,6 @@ export const InteractiveMarquee = (props) => {
     [1, 0, 1]
   );
 
-  // const handleOnWheel = e => {
-  //   const normalized = normalizeWheel(e)
-
-  //   x.current = normalized.pixelY * wheelFactor
-
-  //   if (isScrolling.current) {
-  //     window.clearTimeout(isScrolling.current)
-  //   }
-
-  //   isScrolling.current = setTimeout(() => {
-  //     speedSpring.set(speed)
-  //   }, 30)
-  // }
-
   const handleDragStart = () => {
     slowDown.current = true;
     marqueeRef.current.classList.add("drag");
@@ -122,6 +110,8 @@ export const InteractiveMarquee = (props) => {
 
   const loop = () => {
     if (slowDown.current || Math.abs(x.current) < threshold) {
+      // Reset position when animation ends
+      x.current = 0;
       return;
     }
     x.current *= 0.66;
@@ -144,7 +134,6 @@ export const InteractiveMarquee = (props) => {
         className="marquee"
         ref={marqueeRef}
         style={{ skewX }}
-        // onWheel={handleOnWheel}
         drag="x"
         dragPropagation={true}
         dragConstraints={{ left: 0, right: 0 }}

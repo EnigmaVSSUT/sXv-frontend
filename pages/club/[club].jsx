@@ -51,7 +51,7 @@ const ClubPage = () => {
     // )
   }, [club]);
   const getDownloadUrl = (dUrl) => {
-    let downloadUrl = ` https://drive.google.com/thumbnail?id=${
+    let downloadUrl = ` https://drive.google.com/thumbnail?sz=w1000&id=${
       dUrl?.split("/")[5]
     }`;
     return downloadUrl;
@@ -83,7 +83,7 @@ const ClubPage = () => {
               name="Login Page"
               content="Meta description for the Home page"
             />
-            <link rel="shortcut icon" href="svlogo.ico" />
+            <link rel="shortcut icon" href="svLogo.png" />
           </Head>
           <Typography
             variant="h1"
