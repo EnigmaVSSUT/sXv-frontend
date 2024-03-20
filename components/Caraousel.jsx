@@ -10,16 +10,16 @@ const imgUrls = [
   "https://drive.google.com/thumbnail?sz=w1000&id=1SyMvaxZacRujOWWy1ykCRo2ApLz2qVWC",
 
   " https://drive.google.com/thumbnail?sz=w1000&id=1Qzob3vRcr4SUoM3eRC4bMtkoHSng8iaD",
-  "https://drive.google.com/thumbnail?sz=w1000&id=1pCR7oDvvKn4FLq_dvlNJKGHozOR_E2nR",
+  "https://drive.google.com/thumbnail?sz=w1000&id=1hmwAjVAh_nfJlpNZPEsLGmpIg63wFgWe",
   "https://drive.google.com/thumbnail?sz=w1000&id=1vUdW-VGmp9hkFMydhvRoN3CaiOOzSd7j",
-  "https://drive.google.com/thumbnail?sz=w1000&id=1CmwrjGyj_Zd6e0_hfoFfpAARVaHiWc9a",
+  "https://drive.google.com/thumbnail?sz=w1000&id=1-R0WXMSVSgIjBOdYB4VWVztx4jRuVoKX",
   "https://drive.google.com/thumbnail?sz=w1000&id=1YJDT_l1zU6Z97r3wx5wr5wTOsA9idt0x",
-  "https://drive.google.com/thumbnail?sz=w1000&id=1bsKryeYBz8qPXvfRrRUWCoA7EmmOL4sz",
-  "https://drive.google.com/thumbnail?sz=w1000&id=1y8OfgadfWWQzqd7EixJKeyiH5_349f_Q",
-  "https://drive.google.com/thumbnail?sz=w1000&id=1wZlDITLSr1oMUw5T3m6Q2suV2T6ANUt6",
-  "https://drive.google.com/thumbnail?sz=w1000&id=1o4c7wrGM1mdU_iXNAkEEJfZ82Lkp9S-6",
+  "https://drive.google.com/thumbnail?sz=w1000&id=1k4cHjqE5iieCG6_253eXq2O_wjD-PaKh",
+  "https://drive.google.com/thumbnail?sz=w1000&id=1iDC4FdeYSS2WiLlkFpP3XaiMDy4xLgvs",
+  "https://drive.google.com/thumbnail?sz=w1000&id=1LpigTmvDckbjBF6wj9T_NRPTLiDgstuV",
+  "https://drive.google.com/thumbnail?sz=w1000&id=1MKKsaI2Mmzk9Q70g84Fa0bWimBBvT49E",
   "https://drive.google.com/thumbnail?sz=w1000&id=1Vvsfbr18OhHvCgKJOi5-quIqd5oPA4vx",
-  "https://drive.google.com/thumbnail?sz=w1000&id=1-lG1OVMUIydPdef53oWQjC0cIuo7-z3c",
+  "https://drive.google.com/thumbnail?sz=w1000&id=1Al-nppxg_vR-WiHtCC7qCaiAOLrjEe8K",
   "https://drive.google.com/thumbnail?sz=w1000&id=1-eP3qZ1lUrJ4soWKHLQuRzsoN96SiMES",
 ];
 
