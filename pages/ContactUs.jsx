@@ -155,31 +155,33 @@ const ContactUS = () => {
               </LoadingButton>
             </Stack>
           </Stack>
-
-          <Stack
-            sx={{
-              display: "flex",
-              justifyContent: "center",
-              height: "300px",
-              alignItems: "center",
-            }}
-          >
-            <iframe
-              id="map"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3712.2621706404398!2d83.90142197475228!3d21.497448580271683!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a213da4ec28af2d%3A0xb33a5cc9af8c33c7!2sVeer%20Surendra%20Sai%20University%20of%20Technology!5e0!3m2!1sen!2sin!4v1710784004014!5m2!1sen!2sin"
-              style={{
-                border: "2px solid #ccc",
-                width: "80%",
-                height: "100%",
-                display: "flex",
+          <Stack width="100%" justifyContent="center" alignItems="center">
+            <Stack
+              sx={{
                 justifyContent: "center",
-                borderRadius: "10px",
-                boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
+                height: "300px",
+                alignItems: "center",
+                margin: "20px 0px",
+                width: { xs: "95%", md: "50%" },
               }}
-              allowfullscreen=""
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-            ></iframe>
+            >
+              <iframe
+                id="map"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3712.2621706404398!2d83.90142197475228!3d21.497448580271683!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a213da4ec28af2d%3A0xb33a5cc9af8c33c7!2sVeer%20Surendra%20Sai%20University%20of%20Technology!5e0!3m2!1sen!2sin!4v1710784004014!5m2!1sen!2sin"
+                style={{
+                  border: "2px solid #ccc",
+                  width: "100%",
+                  height: "100%",
+                  display: "flex",
+                  justifyContent: "center",
+                  borderRadius: "10px",
+                  boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
+                }}
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </Stack>
           </Stack>
         </Stack>
       </motion.div>

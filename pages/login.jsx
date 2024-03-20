@@ -201,7 +201,7 @@ const Form = () => {
                 backgroundColor: "#e14f5a",
                 color: "#fff",
                 "&:hover": {
-                  backgroundColor: "#c0000a",
+                  backgroundColor: "#e14f5a",
                 },
               }}
               onClick={() => emailsend(sendMail)}
@@ -243,11 +243,7 @@ const Form = () => {
             },
           }}
         >
-          <Typography
-            variant="h3"
-            color="initial"
-            sx={{ marginTop: "80px", marginBottom: "45px" }}
-          >
+          <Typography variant="h3" color="initial" sx={{ margin: "45px" }}>
             Login
           </Typography>
           <TextField
@@ -312,6 +308,7 @@ const Form = () => {
               textDecoration: "underline",
               textAlign: "center",
               cursor: "pointer",
+              mb: "40px",
             }}
             onClick={() => {
               setOpen(true);

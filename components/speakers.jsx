@@ -92,26 +92,14 @@ const Speakers = () => {
           }}
         >
           <Image
-            src="/geekify.jpg"
+            src="/raj.jpg"
             width={400}
             height={400}
             alt="IMAGE"
             id="speak"
-          />
-
-          <Image
-            src="/asess.jpg"
-            width={400}
-            height={400}
-            alt="IMAGE"
-            id="speak"
-          />
-          <Image
-            src="/conclave.jpg"
-            width={400}
-            height={400}
-            alt="IMAGE"
-            id="speak"
+            style={{
+              objectFit: "contain",
+            }}
           />
         </Box>
       </Box>

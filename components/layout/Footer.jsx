@@ -132,7 +132,7 @@ const Footer = () => {
                 variant="nav"
                 sx={{ fontSize: { xs: "1rem", md: "1.1rem" } }}
               >
-                FOLLOW OUR SOCIALS
+                SOCIALS
               </Typography>
               <Typography
                 variant="nav"
