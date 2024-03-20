@@ -114,6 +114,9 @@ const Form = () => {
       toast.error("Please enter a valid email address");
     } finally {
       setEmailLoading(false);
+      // router.push("/login")
+      setOpen(false);
+      setSendMail("");
     }
   };
 
