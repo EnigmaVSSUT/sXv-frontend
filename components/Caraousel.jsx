@@ -77,25 +77,16 @@ const Caraousel = () => {
           <Link
             href="/events"
             style={{
-              // border: "1px solid black",
               display: "flex",
               alignItems: "flex-end",
-              paddingBottom: "6px",
+              textDecoration: "underline",
+              color: "#e14f5a",
+              whiteSpace: "nowrap",
+              fontSize: "20px",
+              margin: "0 10px",
             }}
           >
-            <Typography
-              sx={{
-                textDecoration: "underline",
-                color: "#e14f5a",
-                whiteSpace: "nowrap",
-                fontSize: "20px",
-                margin: "0 10px",
-              }}
-              variant="h4"
-              color="initial"
-            >
-              VIEW ALL
-            </Typography>
+            VIEW ALL
           </Link>
         </Stack>
 
