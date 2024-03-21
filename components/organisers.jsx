@@ -23,7 +23,7 @@ const Speakers = () => {
       name: "Prof.Dr.Bansidhar Majhi",
       designation: "Hon'ble Vice Chancellor , VSSUT",
       id: "1",
-      src: "/clubs/oc2.jpg",
+      src: "/clubs/vc.webp",
       boxColor: "rgba(201,128,219)",
     },
     {

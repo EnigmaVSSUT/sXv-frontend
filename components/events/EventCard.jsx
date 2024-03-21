@@ -76,7 +76,7 @@ const EventCard = ({ event }) => {
               {`${event.startTime} - ${event.endTime}`}
             </Typography>
             <Typography fontWeight={600}>
-              {`0${3 + event.day}/03/2023`}
+              {`${22 + event.day}/03/2024`}
             </Typography>
           </Stack>
         </Stack>
