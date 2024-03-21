@@ -102,6 +102,13 @@ const Speakers = () => {
             }}
           />
           <Image
+            src="/game.jpg"
+            width={400}
+            height={400}
+            alt="IMAGE"
+            id="speak"
+          />
+          <Image
             src="/raj.jpg"
             width={400}
             height={400}
