@@ -82,7 +82,19 @@ const EventDetails = () => {
   return (
     <Stack alignItems="center">
       <Toast message={toastMessage} setMessage={setToastMessage} />
-      {loading && <CircularProgress />}
+      {loading && (
+        <>
+          <Stack
+            sx={{
+              justifyContent: "center",
+              alignItems: "center",
+              minHeight: "90vh",
+            }}
+          >
+            <CircularProgress />
+          </Stack>
+        </>
+      )}
       {error && <>Not Found</>}
       {event && (
         <Stack
