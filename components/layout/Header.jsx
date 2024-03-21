@@ -51,7 +51,7 @@ const Header = () => {
         sx={{
           color: "#C0000A",
           fontFamily: "Tangelo",
-          fontSize: "1.7rem",
+          fontSize: {xs:"1.5rem",md:"1.7rem"},
         }}
       >
         <Link href="/">

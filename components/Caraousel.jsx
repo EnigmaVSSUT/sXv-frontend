@@ -7,20 +7,19 @@ import Marquee from "react-fast-marquee";
 import { InteractiveMarquee } from "./carousel/Marquee";
 
 const imgUrls = [
-  "https://drive.google.com/thumbnail?sz=w1000&id=1SyMvaxZacRujOWWy1ykCRo2ApLz2qVWC",
+  "https://res.cloudinary.com/dml2v8bov/image/upload/v1711015623/DRISHYA_POSTER_VASSAUNT_we2yhx.png",
 
-  " https://drive.google.com/thumbnail?sz=w1000&id=1Qzob3vRcr4SUoM3eRC4bMtkoHSng8iaD",
-  "https://drive.google.com/thumbnail?sz=w1000&id=1pCR7oDvvKn4FLq_dvlNJKGHozOR_E2nR",
-  "https://drive.google.com/thumbnail?sz=w1000&id=1vUdW-VGmp9hkFMydhvRoN3CaiOOzSd7j",
-  "https://drive.google.com/thumbnail?sz=w1000&id=1CmwrjGyj_Zd6e0_hfoFfpAARVaHiWc9a",
-  "https://drive.google.com/thumbnail?sz=w1000&id=1YJDT_l1zU6Z97r3wx5wr5wTOsA9idt0x",
-  "https://drive.google.com/thumbnail?sz=w1000&id=1bsKryeYBz8qPXvfRrRUWCoA7EmmOL4sz",
-  "https://drive.google.com/thumbnail?sz=w1000&id=1y8OfgadfWWQzqd7EixJKeyiH5_349f_Q",
-  "https://drive.google.com/thumbnail?sz=w1000&id=1wZlDITLSr1oMUw5T3m6Q2suV2T6ANUt6",
-  "https://drive.google.com/thumbnail?sz=w1000&id=1o4c7wrGM1mdU_iXNAkEEJfZ82Lkp9S-6",
-  "https://drive.google.com/thumbnail?sz=w1000&id=1Vvsfbr18OhHvCgKJOi5-quIqd5oPA4vx",
-  "https://drive.google.com/thumbnail?sz=w1000&id=1-lG1OVMUIydPdef53oWQjC0cIuo7-z3c",
-  "https://drive.google.com/thumbnail?sz=w1000&id=1-eP3qZ1lUrJ4soWKHLQuRzsoN96SiMES",
+  "https://res.cloudinary.com/dml2v8bov/image/upload/v1711014795/VGROOVE_jzanf3.png",
+  "https://res.cloudinary.com/dml2v8bov/image/upload/v1711014706/Carnival_classics_a4_size_2_qajact.png",
+  "https://res.cloudinary.com/dml2v8bov/image/upload/v1711015720/ASME_SXV_banner.pdf_fillpb.png",
+  "https://res.cloudinary.com/dml2v8bov/image/upload/v1711014888/DANCE_PARTY_1_jfixsk.png",
+  "https://res.cloudinary.com/dml2v8bov/image/upload/v1711014040/3_pr3iae.png",
+  "https://res.cloudinary.com/dml2v8bov/image/upload/v1711015027/face_painting_comp_1_gorkjk.png",
+  "https://res.cloudinary.com/dml2v8bov/image/upload/v1711015121/WAR_OF_HOUSES_2000_x_3000_px_2_cpsj0u.jpg",
+  "https://res.cloudinary.com/dml2v8bov/image/upload/v1711014445/RETRO_QUIZ_2000_x_3000_px__POSTERPRINT_ulwtyc.jpg",
+  "https://res.cloudinary.com/dml2v8bov/image/upload/v1711015248/tos_axfc5y.png",
+  "https://res.cloudinary.com/dml2v8bov/image/upload/v1711015383/HOUSE_PARTY_1_ocxwnv.png",
+  "https://res.cloudinary.com/dml2v8bov/image/upload/v1711015524/Tyre_on_fire_ua5gzi.png",
 ];
 
 const LazyImage = ({ src }) => {

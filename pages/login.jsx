@@ -110,12 +110,12 @@ const Form = () => {
       );
       setEmailLoading(false);
       toast.success("Email sent successfully");
+      setOpen(false);
+      router.push("/");
     } catch (error) {
       toast.error("Please enter a valid email address");
     } finally {
       setEmailLoading(false);
-      // router.push("/login")
-      setOpen(false);
       setSendMail("");
     }
   };
@@ -314,7 +314,7 @@ const Form = () => {
               setOpen(true);
             }}
           >
-            Forgt Password ?
+            Forgot Password ?
           </Typography>
         </Stack>
         {/* <Box

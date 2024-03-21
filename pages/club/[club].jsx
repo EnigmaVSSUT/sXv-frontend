@@ -68,15 +68,29 @@ const ClubPage = () => {
         }}
         gap="24px"
       >
-        <Stack gap="32px">
-          <Stack alignItems="center">
+        <Stack
+          gap="32px"
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <Avatar
+            alignItems="center"
+            sx={{
+              height: "150px",
+              width: "150px",
+              backgroundColor: "black",
+            }}
+          >
             <Image
               src={getDownloadUrl(clubFetched?.logo)}
               alt={clubFetched?.name}
-              width={300}
-              height={300}
+              width={100}
+              height={100}
             />
-          </Stack>
+          </Avatar>
           <Head>
             <title>{clubFetched?.name}</title>
             <meta
@@ -154,6 +168,7 @@ const ClubPage = () => {
                 {clubFetched?.facultyAdvisorDepartment}
               </Typography>
             </Stack>
+
             <Stack sx={{ alignItems: "center", marginRight: "10px" }}>
               <Avatar
                 src={getDownloadUrl(clubFetched?.poc1pic)}
@@ -169,10 +184,17 @@ const ClubPage = () => {
               >
                 {clubFetched?.poc1}
               </Typography>
-              <Typography variant="caption" color="initial">
+              <Typography
+                variant="caption"
+                color="initial"
+                sx={{
+                  fontSize: { xs: "10px", md: "12px" },
+                }}
+              >
                 {clubFetched?.poc1ph}
               </Typography>
             </Stack>
+
             <Stack sx={{ alignItems: "center", marginRight: "10px" }}>
               <Avatar
                 src={getDownloadUrl(clubFetched?.poc2pic)}
@@ -188,7 +210,13 @@ const ClubPage = () => {
               >
                 {clubFetched?.poc2}
               </Typography>
-              <Typography variant="caption" color="initial">
+              <Typography
+                variant="caption"
+                color="initial"
+                sx={{
+                  fontSize: { xs: "10px", md: "12px" },
+                }}
+              >
                 {clubFetched?.poc2ph}
               </Typography>
             </Stack>
