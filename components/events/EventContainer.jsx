@@ -18,7 +18,7 @@ const eTMap = {
   2: "F",
 };
 
-const filterTypeOptions = ["technical", "cultural", "Fun event"];
+const filterTypeOptions = ["technical", "cultural", "fun"];
 
 const filterDayOptions = [1, 2, 3];
 
