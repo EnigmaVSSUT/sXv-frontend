@@ -45,7 +45,7 @@ const Footer = () => {
         >
           <Box
             component="img"
-            src="./svLogo.png"
+            src="https://res.cloudinary.com/dml2v8bov/image/upload/v1711021911/svLogo_t6lyfx.png"
             alt="IMAGE"
             sx={{ width: { xs: "60vw", md: "18vw" } }}
           ></Box>

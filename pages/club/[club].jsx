@@ -168,6 +168,7 @@ const ClubPage = () => {
                 {clubFetched?.facultyAdvisorDepartment}
               </Typography>
             </Stack>
+
             <Stack sx={{ alignItems: "center", marginRight: "10px" }}>
               <Avatar
                 src={getDownloadUrl(clubFetched?.poc1pic)}
@@ -183,10 +184,17 @@ const ClubPage = () => {
               >
                 {clubFetched?.poc1}
               </Typography>
-              <Typography variant="caption" color="initial">
+              <Typography
+                variant="caption"
+                color="initial"
+                sx={{
+                  fontSize: { xs: "10px", md: "12px" },
+                }}
+              >
                 {clubFetched?.poc1ph}
               </Typography>
             </Stack>
+
             <Stack sx={{ alignItems: "center", marginRight: "10px" }}>
               <Avatar
                 src={getDownloadUrl(clubFetched?.poc2pic)}
@@ -202,7 +210,13 @@ const ClubPage = () => {
               >
                 {clubFetched?.poc2}
               </Typography>
-              <Typography variant="caption" color="initial">
+              <Typography
+                variant="caption"
+                color="initial"
+                sx={{
+                  fontSize: { xs: "10px", md: "12px" },
+                }}
+              >
                 {clubFetched?.poc2ph}
               </Typography>
             </Stack>
