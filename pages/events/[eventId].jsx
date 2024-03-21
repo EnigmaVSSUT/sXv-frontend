@@ -30,6 +30,7 @@ const EventDetails = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [eventId, setEventId] = useState();
   const [toastMessage, setToastMessage] = useState();
+  const [currentUserID, setCurrentUserID] = useState();
 
   useEffect(() => {
     if (!router.isReady) return;
@@ -57,14 +58,37 @@ const EventDetails = () => {
 
   const userDetails = async (event) => {
     api.users.getUser().then((response) => {
+      setCurrentUserID(response.data._id);
       const exist = event?.participants.find(
         (ele) => ele === response.data._id
       );
       if (exist) {
         setParticipationStatus(true);
-        console.log(exist);
       }
     });
+  };
+
+  const withdrawTicket = async () => {
+    setIsLoading((v) => true);
+    console.log(currentUserID, router.query.eventId, event.eventName);
+    api.events
+      .withDraw({
+        userId: currentUserID,
+        eventId: router.query.eventId,
+        eventName: event.eventName,
+      })
+      .then((res) => res.data)
+      .then(({ Message, success }) => {
+        if (!success) throw Error("Request failed");
+        setToastMessage((m) => Message);
+        setParticipationStatus((v) => false);
+      })
+      .catch((error) => {
+        console.log("error: " + error.message);
+      })
+      .finally(() => {
+        setIsLoading((v) => false);
+      });
   };
 
   const handleRegister = () => {
@@ -144,17 +168,30 @@ const EventDetails = () => {
                 md: "start",
               }}
             >
-              <Button
-                variant="contained"
-                startIcon={participationStatus ? <Check /> : <PersonAdd />}
-                onClick={handleRegister}
-                endIcon={
-                  isLoading && <CircularProgress size={12} color="white" />
-                }
-                disabled={participationStatus}
-              >
-                {participationStatus ? "Already registered" : "Register"}
-              </Button>
+              {participationStatus ? (
+                <Button
+                  variant="contained"
+                  startIcon={participationStatus ? <Check /> : <PersonAdd />}
+                  onClick={withdrawTicket}
+                  endIcon={
+                    isLoading && <CircularProgress size={12} color="white" />
+                  }
+                >
+                  Withdraw
+                </Button>
+              ) : (
+                <Button
+                  variant="contained"
+                  startIcon={participationStatus ? <Check /> : <PersonAdd />}
+                  onClick={handleRegister}
+                  endIcon={
+                    isLoading && <CircularProgress size={12} color="white" />
+                  }
+                >
+                  Register
+                </Button>
+              )}
+
               <Button
                 onClick={() => {
                   copy("https://www.festvssut.in/" + router.asPath, {
