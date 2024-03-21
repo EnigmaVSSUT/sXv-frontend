@@ -34,9 +34,9 @@ const EventDetails = () => {
   useEffect(() => {
     if (!router.isReady) return;
     setEventId((v) => router.query.eventId);
-    isParticipated(router.query.eventId).then((r) =>
-      setParticipationStatus((v) => r)
-    );
+    // isParticipated(router.query.eventId).then((r) =>
+    //   setParticipationStatus((v) => r)
+    // );
     // console.log("participated", participationStatus);
     setLoading((v) => true);
     api.events
@@ -45,6 +45,7 @@ const EventDetails = () => {
       .then(({ events }) => events[0])
       .then((event) => {
         setEvent((e) => event);
+        userDetails(event);
       })
       .catch((err) => {
         setError((v) => "Event not found");
@@ -53,6 +54,18 @@ const EventDetails = () => {
         setLoading((v) => false);
       });
   }, [router.isReady]);
+
+  const userDetails = async (event) => {
+    api.users.getUser().then((response) => {
+      const exist = event?.participants.find(
+        (ele) => ele === response.data._id
+      );
+      if (exist) {
+        setParticipationStatus(true);
+        console.log(exist);
+      }
+    });
+  };
 
   const handleRegister = () => {
     if (participationStatus) return;
@@ -126,6 +139,7 @@ const EventDetails = () => {
                 endIcon={
                   isLoading && <CircularProgress size={12} color="white" />
                 }
+                disabled={participationStatus}
               >
                 {participationStatus ? "Already registered" : "Register"}
               </Button>
