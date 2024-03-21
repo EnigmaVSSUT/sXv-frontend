@@ -59,7 +59,7 @@ const EventCard = ({ event }) => {
           <Link href={`/events/${event._id}`}>
             <Typography
               variant="h4"
-              sx={{ fontSize: { xs: "25px", sm: "48px" } }}
+              sx={{ fontSize: { xs: "25px", sm: "36px" } }}
             >
               {event.eventName}
             </Typography>
