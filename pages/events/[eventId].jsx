@@ -30,13 +30,14 @@ const EventDetails = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [eventId, setEventId] = useState();
   const [toastMessage, setToastMessage] = useState();
+  const [currentUserID, setCurrentUserID] = useState();
 
   useEffect(() => {
     if (!router.isReady) return;
     setEventId((v) => router.query.eventId);
-    isParticipated(router.query.eventId).then((r) =>
-      setParticipationStatus((v) => r)
-    );
+    // isParticipated(router.query.eventId).then((r) =>
+    //   setParticipationStatus((v) => r)
+    // );
     // console.log("participated", participationStatus);
     setLoading((v) => true);
     api.events
@@ -45,6 +46,7 @@ const EventDetails = () => {
       .then(({ events }) => events[0])
       .then((event) => {
         setEvent((e) => event);
+        userDetails(event);
       })
       .catch((err) => {
         setError((v) => "Event not found");
@@ -53,6 +55,41 @@ const EventDetails = () => {
         setLoading((v) => false);
       });
   }, [router.isReady]);
+
+  const userDetails = async (event) => {
+    api.users.getUser().then((response) => {
+      setCurrentUserID(response.data._id);
+      const exist = event?.participants.find(
+        (ele) => ele === response.data._id
+      );
+      if (exist) {
+        setParticipationStatus(true);
+      }
+    });
+  };
+
+  const withdrawTicket = async () => {
+    setIsLoading((v) => true);
+    console.log(currentUserID, router.query.eventId, event.eventName);
+    api.events
+      .withDraw({
+        userId: currentUserID,
+        eventId: router.query.eventId,
+        eventName: event.eventName,
+      })
+      .then((res) => res.data)
+      .then(({ Message, success }) => {
+        if (!success) throw Error("Request failed");
+        setToastMessage((m) => Message);
+        setParticipationStatus((v) => false);
+      })
+      .catch((error) => {
+        console.log("error: " + error.message);
+      })
+      .finally(() => {
+        setIsLoading((v) => false);
+      });
+  };
 
   const handleRegister = () => {
     if (participationStatus) return;
@@ -82,7 +119,19 @@ const EventDetails = () => {
   return (
     <Stack alignItems="center">
       <Toast message={toastMessage} setMessage={setToastMessage} />
-      {loading && <CircularProgress />}
+      {loading && (
+        <>
+          <Stack
+            sx={{
+              justifyContent: "center",
+              alignItems: "center",
+              minHeight: "90vh",
+            }}
+          >
+            <CircularProgress />
+          </Stack>
+        </>
+      )}
       {error && <>Not Found</>}
       {event && (
         <Stack
@@ -119,16 +168,30 @@ const EventDetails = () => {
                 md: "start",
               }}
             >
-              <Button
-                variant="contained"
-                startIcon={participationStatus ? <Check /> : <PersonAdd />}
-                onClick={handleRegister}
-                endIcon={
-                  isLoading && <CircularProgress size={12} color="white" />
-                }
-              >
-                {participationStatus ? "Already registered" : "Register"}
-              </Button>
+              {participationStatus ? (
+                <Button
+                  variant="contained"
+                  startIcon={participationStatus ? <Check /> : <PersonAdd />}
+                  onClick={withdrawTicket}
+                  endIcon={
+                    isLoading && <CircularProgress size={12} color="white" />
+                  }
+                >
+                  Withdraw
+                </Button>
+              ) : (
+                <Button
+                  variant="contained"
+                  startIcon={participationStatus ? <Check /> : <PersonAdd />}
+                  onClick={handleRegister}
+                  endIcon={
+                    isLoading && <CircularProgress size={12} color="white" />
+                  }
+                >
+                  Register
+                </Button>
+              )}
+
               <Button
                 onClick={() => {
                   copy("https://www.festvssut.in/" + router.asPath, {

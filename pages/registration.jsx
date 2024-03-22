@@ -512,8 +512,8 @@ const Form = () => {
             <MenuItem value={2025}>2025</MenuItem>
             <MenuItem value={2026}>2026</MenuItem>
             <MenuItem value={2027}>2027</MenuItem>
-            <MenuItem value={2027}>2028</MenuItem>
-            <MenuItem value={2028}>Other</MenuItem>
+            <MenuItem value={2028}>2028</MenuItem>
+            <MenuItem value={"Other"}>Other</MenuItem>
           </Select>
         </FormControl>
         <FormControl fullWIdth>
