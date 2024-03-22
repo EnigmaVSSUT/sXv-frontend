@@ -111,7 +111,7 @@ const Form = () => {
       setEmailLoading(false);
       toast.success("Email sent successfully");
       setOpen(false);
-      router.push("/");
+      // router.push("/");
     } catch (error) {
       toast.error("Please enter a valid email address");
     } finally {
