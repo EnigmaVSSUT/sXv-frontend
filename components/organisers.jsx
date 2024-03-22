@@ -207,7 +207,6 @@ const Speakers = () => {
             //     </Typography>
             //   </Box>
             // </Stack>
-
             <Mentions
               title={e.name}
               designation={e.designation}
@@ -244,19 +243,10 @@ const Speakers = () => {
             // margin="20px 0"
             variant="h3"
             sx={{
-              fontSize: {
-                xs: "28px !important",
-                sm: "35px !important",
-                md: "35px !important",
-                lg: "35px !important",
-              },
-              WebkitTextStrokeColor: "#000000",
-              WebkitTextStrokeWidth: "2px",
-              color: "#FFF8E5",
-              // fontSize: "35px",
-              lineHeight: "52px",
-              fontWeight: "100",
-              letterSpacing: "1px",
+              marginTop: "30px",
+              width: "auto",
+              position: "relative",
+              height: "125px",
             }}
           >
             STUDENT BODIES
